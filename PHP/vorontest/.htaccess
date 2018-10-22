@@ -1,0 +1,24 @@
+# -FrontPage-
+
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+
+<Limit GET POST>
+order deny,allow
+deny from all
+allow from all
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+AuthName kamensk.ws
+AuthUserFile /home/kamensk/public_html/_vti_pvt/service.pwd
+AuthGroupFile /home/kamensk/public_html/_vti_pvt/service.grp
+AddHandler server-parsed .html .htm
+php_value upload_max_filesize 5M
+php_value memory_limit 64M
+# This works for PHP5 in both Apache versions 1 and 2
+<IfModule mod_php5.c>
+  php_value include_path        ".:/usr/share/pear:/usr/share/php:/home/localhost/www/vorontest/library"
+</IfModule>
+

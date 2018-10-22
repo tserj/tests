@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contactFormStructure>
+	<formItems>
+		<item id="1" required="true" type="text" x="0" y="0" width="200" height="20">
+			<label><![CDATA[Name]]></label>
+			<textToShow><![CDATA[Name]]></textToShow>
+			<validator/>
+			<minChars>0</minChars>
+			<regExp/>
+			<regExpFlags/>
+			<minValue>0</minValue>
+			<maxValue>2147483647</maxValue>
+			<allowNegative>false</allowNegative>
+			<minLettersAfterLastPoint>2</minLettersAfterLastPoint>
+			<maxLettersAfterLastPoint>4</maxLettersAfterLastPoint>
+			<minLettersBeforeAt>1</minLettersBeforeAt>
+			<maxLettersBeforeAt>64</maxLettersBeforeAt>
+			<mask/>
+			<minDateAllowed>0</minDateAllowed>
+			<maxDateAllowed>0</maxDateAllowed>
+			<restrict/>
+			<maxChars>512</maxChars>
+			<password>false</password>
+			<multiline>false</multiline>
+			<defaultValue/>
+		</item>
+		<item id="2" required="true" type="text" x="0" y="30" width="200" height="20">
+			<label><![CDATA[Email]]></label>
+			<textToShow><![CDATA[Email]]></textToShow>
+			<validator>EmailValidator</validator>
+			<minChars>0</minChars>
+			<regExp/>
+			<regExpFlags/>
+			<minValue>0</minValue>
+			<maxValue>2147483647</maxValue>
+			<allowNegative>false</allowNegative>
+			<minLettersAfterLastPoint>2</minLettersAfterLastPoint>
+			<maxLettersAfterLastPoint>4</maxLettersAfterLastPoint>
+			<minLettersBeforeAt>1</minLettersBeforeAt>
+			<maxLettersBeforeAt>64</maxLettersBeforeAt>
+			<mask/>
+			<minDateAllowed>0</minDateAllowed>
+			<maxDateAllowed>0</maxDateAllowed>
+			<restrict/>
+			<maxChars>512</maxChars>
+			<password>false</password>
+			<multiline>false</multiline>
+			<defaultValue/>
+		</item>
+		<item id="3" required="true" type="text" x="0" y="60" width="200" height="100">
+			<label><![CDATA[Message]]></label>
+			<textToShow><![CDATA[Message]]></textToShow>
+			<validator/>
+			<minChars>0</minChars>
+			<regExp/>
+			<regExpFlags/>
+			<minValue>0</minValue>
+			<maxValue>2147483647</maxValue>
+			<allowNegative>false</allowNegative>
+			<minLettersAfterLastPoint>2</minLettersAfterLastPoint>
+			<maxLettersAfterLastPoint>4</maxLettersAfterLastPoint>
+			<minLettersBeforeAt>1</minLettersBeforeAt>
+			<maxLettersBeforeAt>64</maxLettersBeforeAt>
+			<mask/>
+			<minDateAllowed>0</minDateAllowed>
+			<maxDateAllowed>0</maxDateAllowed>
+			<restrict/>
+			<maxChars>512</maxChars>
+			<password>false</password>
+			<multiline>false</multiline>
+			<defaultValue/>
+		</item>
+	</formItems>
+	<formControls>
+		<item type="submitButton" x="100" y="165" width="95" height="20"/>
+		<item type="resetButton" x="150" y="165" width="95" height="20"/>
+		<item type="statusMessage" x="0" y="180" width="200" height="20"/>
+	</formControls>
+</contactFormStructure>

@@ -1,0 +1,729 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print">
+<meta content="MotoAnimatedItemRenderer,com.moto.template.common.view.MotoAnimatedItemRenderer,hideLabel,outLabel,overLabel,showLabel,data,extra,index,moduleItemVO,mouseIsOver,pathPrefix,selected,changeState,createEventListeners,createTextFieldLinkListener,getContentDimensions,getDimensions,getInstance,hide,init,mouseOut,mouseOver,out,over,removeEventListeners,setSize,show,textFieldLinkHandler,updateRenderer" name="keywords">
+<title>com.moto.template.common.view.MotoAnimatedItemRenderer</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'MotoAnimatedItemRenderer - Moto CMS API Documentation';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Moto CMS API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../index-list.html')" href="../../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../../index.html?com/moto/template/common/view/MotoAnimatedItemRenderer.html&amp;com/moto/template/common/view/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;MotoAnimatedItemRenderer</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class MotoAnimatedItemRenderer"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.moto.template.common.view</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class MotoAnimatedItemRenderer</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">MotoAnimatedItemRenderer <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../../images/inherit-arrow.gif"> flash.display.MovieClip</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Implements</td><td><a href="../../shell/view/components/IHasPathPrefix.html">IHasPathPrefix</a>, <a href="IInteractiveItemRenderer.html">IInteractiveItemRenderer</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Subclasses</td><td><a href="../../modules/menu/AbstractMenuItemRenderer.html">AbstractMenuItemRenderer</a>, <a href="../../modules/gallery/GalleryThumbnail.html">GalleryThumbnail</a>, <a href="../../modules/gallery/GalleryThumbnailCover.html">GalleryThumbnailCover</a></td>
+</tr>
+</table>
+<p></p>
+  The class which implements the general logic for animated itemRenderers.
+    <p> The general logic of itemRenderer's work is implemented in this class.
+  It can be extended to a more complicated animation by inheriting this class and:
+  <ul>
+  <li>Implement override methods <code>over</code> and <code>out</code> and describe the compliant logic of the image change.</li>
+  <li>Implement override method <code>changeState(state:String)</code> and describe the compliant logic of the image change depending on the dedicated state.</li>
+  <li>Describe the additional animation logic on the timeline; this method is especially suitable in the cases when there are embedded MovieClips with their timelines.</li>
+  </ul>
+  </p>
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#data">data</a> : Object<div class="summaryTableDescription">[read-only]
+   Item renderer data
+   </div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#extra">extra</a> : Object<div class="summaryTableDescription">[read-only]
+   Item renderer extra data.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#hideLabel">hideLabel</a> : String = "hide"<div class="summaryTableDescription">
+   State mode and frame name of timeline for hiding.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#index">index</a> : uint<div class="summaryTableDescription">[read-only]
+   Element index.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#moduleItemVO">moduleItemVO</a> : <a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a>
+<div class="summaryTableDescription">[read-only]
+   
+   Module value object
+   </div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#mouseIsOver">mouseIsOver</a> : Boolean<div class="summaryTableDescription">[read-only]
+   The mouse pointer is over the class instance.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#outLabel">outLabel</a> : String = "out"<div class="summaryTableDescription">
+   State mode and frame name of timeline for outing.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#overLabel">overLabel</a> : String = "over"<div class="summaryTableDescription">
+   State mode and frame name of timeline for overing.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#pathPrefix">pathPrefix</a> : String<div class="summaryTableDescription">
+   URL address prefix of the external content elements.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#selected">selected</a> : Boolean<div class="summaryTableDescription">
+   Selected object.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#showLabel">showLabel</a> : String = "show"<div class="summaryTableDescription">
+   State mode and frame name of timeline for showing.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#MotoAnimatedItemRenderer()">MotoAnimatedItemRenderer</a>()</div>
+<div class="summaryTableDescription">
+   MotoItemRenderer Constructor.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#changeState()">changeState</a>(state:String):void</div>
+<div class="summaryTableDescription">
+   Change state.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createEventListeners()">createEventListeners</a>():void</div>
+<div class="summaryTableDescription">
+   An abstract method of creating EventListeners.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getContentDimensions()">getContentDimensions</a>():Rectangle</div>
+<div class="summaryTableDescription">
+   Get content dimensions from <code>MotoAnimatedItemRenderer</code>.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getDimensions()">getDimensions</a>():Rectangle</div>
+<div class="summaryTableDescription">
+   Get dimensions from <code>MotoAnimatedItemRenderer</code>.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getInstance()">getInstance</a>():DisplayObject</div>
+<div class="summaryTableDescription">
+   Get <code>DisplayObject</code> from <code>MotoAnimatedItemRenderer</code>.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#hide()">hide</a>():void</div>
+<div class="summaryTableDescription">
+   Perform hiding.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#init()">init</a>(index:uint, data:Object, extra:Object = null):void</div>
+<div class="summaryTableDescription">
+   Initializes item renderer by passing data object.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#mouseOut()">mouseOut</a>():void</div>
+<div class="summaryTableDescription">
+   Perform operations associated with the mouse roll out visualization.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#mouseOver()">mouseOver</a>():void</div>
+<div class="summaryTableDescription">
+   Perform operations associated with the mouse roll over visualization.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#removeEventListeners()">removeEventListeners</a>():void</div>
+<div class="summaryTableDescription">
+   An abstract method of removing EventListeners.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setSize()">setSize</a>(newWidth:Number, newHeight:Number):void</div>
+<div class="summaryTableDescription">
+   Resizes item renderer.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#show()">show</a>():void</div>
+<div class="summaryTableDescription">
+   Perform showing.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#updateRenderer()">updateRenderer</a>(data:Object):void</div>
+<div class="summaryTableDescription">
+   Updates item renderer by passing new data object.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+</table>
+</div>
+<a name="protectedMethodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Methods</div>
+<table id="summaryTableProtectedMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createTextFieldLinkListener()">createTextFieldLinkListener</a>(targetTextField:TextField):void</div>
+<div class="summaryTableDescription">
+   Creates textfield LINK event listener for the target textfield
+   and adds textFieldLinkHandler as event handler method.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#out()">out</a>():void</div>
+<div class="summaryTableDescription">
+   Mouse roll out.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#over()">over</a>():void</div>
+<div class="summaryTableDescription">
+   Mouse roll over.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#textFieldLinkHandler()">textFieldLinkHandler</a>(event:TextEvent):void</div>
+<div class="summaryTableDescription">
+   Handles textfields LINK events and generates MotoEvent with the
+   event text as parameter.</div>
+</td><td class="summaryTableOwnerCol">MotoAnimatedItemRenderer</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="data"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">data</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>data:Object</code>&nbsp;&nbsp;[read-only]<p>
+   Item renderer data
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get data():Object</code>
+<br>
+</div>
+<a name="extra"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">extra</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>extra:Object</code>&nbsp;&nbsp;[read-only]<p>
+   Item renderer extra data.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get extra():Object</code>
+<br>
+</div>
+<a name="hideLabel"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hideLabel</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var hideLabel:String = "hide"</code><p>
+   State mode and frame name of timeline for hiding.
+   </p></div>
+<a name="index"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">index</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>index:uint</code>&nbsp;&nbsp;[read-only]<p>
+   Element index.
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get index():uint</code>
+<br>
+</div>
+<a name="moduleItemVO"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">moduleItemVO</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>moduleItemVO:<a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a></code>&nbsp;&nbsp;[read-only]<p>
+   
+   Module value object
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get moduleItemVO():<a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a></code>
+<br>
+</div>
+<a name="mouseIsOver"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">mouseIsOver</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>mouseIsOver:Boolean</code>&nbsp;&nbsp;[read-only]<p>
+   The mouse pointer is over the class instance.
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get mouseIsOver():Boolean</code>
+<br>
+</div>
+<a name="outLabel"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">outLabel</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var outLabel:String = "out"</code><p>
+   State mode and frame name of timeline for outing.
+   </p></div>
+<a name="overLabel"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">overLabel</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var overLabel:String = "over"</code><p>
+   State mode and frame name of timeline for overing.
+   </p></div>
+<a name="pathPrefix"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">pathPrefix</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>pathPrefix:String</code>&nbsp;&nbsp;[read-write]<p>
+   URL address prefix of the external content elements.
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get pathPrefix():String</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set pathPrefix(value:String):void</code>
+<br>
+</div>
+<a name="selected"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">selected</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>selected:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+   Selected object.
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get selected():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set selected(value:Boolean):void</code>
+<br>
+</div>
+<a name="showLabel"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">showLabel</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var showLabel:String = "show"</code><p>
+   State mode and frame name of timeline for showing.
+   </p></div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="MotoAnimatedItemRenderer()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">MotoAnimatedItemRenderer</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function MotoAnimatedItemRenderer()</code><p>
+   MotoItemRenderer Constructor.
+   </p></div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="changeState()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">changeState</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function changeState(state:String):void</code><p>
+   Change state.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">state</span>:String</code> &mdash; A state that we need to proceed to; it's a name or a number of frame on the timeline.
+   </td>
+</tr>
+</table>
+</div>
+<a name="createEventListeners()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createEventListeners</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function createEventListeners():void</code><p>
+   An abstract method of creating EventListeners.
+   </p></div>
+<a name="createTextFieldLinkListener()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createTextFieldLinkListener</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function createTextFieldLinkListener(targetTextField:TextField):void</code><p>
+   Creates textfield LINK event listener for the target textfield
+   and adds textFieldLinkHandler as event handler method.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">targetTextField</span>:TextField</code> &mdash; Textfield to add event listener to.
+   </td>
+</tr>
+</table>
+</div>
+<a name="getContentDimensions()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getContentDimensions</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getContentDimensions():Rectangle</code><p>
+   Get content dimensions from <code>MotoAnimatedItemRenderer</code>.
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Rectangle</code> &mdash; Rectangle
+   </td>
+</tr>
+</table>
+</div>
+<a name="getDimensions()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getDimensions</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getDimensions():Rectangle</code><p>
+   Get dimensions from <code>MotoAnimatedItemRenderer</code>.
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Rectangle</code> &mdash; Rectangle
+   </td>
+</tr>
+</table>
+</div>
+<a name="getInstance()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getInstance</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getInstance():DisplayObject</code><p>
+   Get <code>DisplayObject</code> from <code>MotoAnimatedItemRenderer</code>.
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>DisplayObject</code> &mdash; DisplayObject
+   </td>
+</tr>
+</table>
+</div>
+<a name="hide()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hide</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function hide():void</code><p>
+   Perform hiding.
+   </p></div>
+<a name="init()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">init</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function init(index:uint, data:Object, extra:Object = null):void</code><p>
+   Initializes item renderer by passing data object.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">index</span>:uint</code> &mdash; Element index
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">data</span>:Object</code> &mdash; Object with item renderer data
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">extra</span>:Object</code> (default = <code>null</code>)<code></code> &mdash; Additional general data
+   </td>
+</tr>
+</table>
+</div>
+<a name="mouseOut()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">mouseOut</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public final function mouseOut():void</code><p>
+   Perform operations associated with the mouse roll out visualization.
+   </p></div>
+<a name="mouseOver()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">mouseOver</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public final function mouseOver():void</code><p>
+   Perform operations associated with the mouse roll over visualization.
+   </p></div>
+<a name="out()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">out</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function out():void</code><p>
+   Mouse roll out.
+   </p></div>
+<a name="over()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">over</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function over():void</code><p>
+   Mouse roll over.
+   </p></div>
+<a name="removeEventListeners()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">removeEventListeners</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function removeEventListeners():void</code><p>
+   An abstract method of removing EventListeners.
+   </p></div>
+<a name="setSize()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setSize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setSize(newWidth:Number, newHeight:Number):void</code><p>
+   Resizes item renderer.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">newWidth</span>:Number</code> &mdash; New item renderer width
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">newHeight</span>:Number</code> &mdash; New item renderer height
+   </td>
+</tr>
+</table>
+</div>
+<a name="show()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">show</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function show():void</code><p>
+   Perform showing.
+   </p></div>
+<a name="textFieldLinkHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">textFieldLinkHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function textFieldLinkHandler(event:TextEvent):void</code><p>
+   Handles textfields LINK events and generates MotoEvent with the
+   event text as parameter.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:TextEvent</code> &mdash; TextEvent that needs to be handled.
+   </td>
+</tr>
+</table>
+</div>
+<a name="updateRenderer()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">updateRenderer</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function updateRenderer(data:Object):void</code><p>
+   Updates item renderer by passing new data object.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">data</span>:Object</code> &mdash; Object with item renderer data
+   </td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

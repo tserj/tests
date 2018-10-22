@@ -1,0 +1,2877 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="IMoto,com.moto.template.common.IMoto,animationIsPlaying,currentLayout,currentPage,currentPageType,debugModeEnabled,deepLink,eventDispatcher,previousLayout,previousPage,previousPageType,stageHeight,stageWidth,useFlashScroll,website,websiteApplicationDomain,websiteSoundsEnabled,getApplicationDomainByName,getContentHolderByID,getCurrentLayoutHolder,getCurrentPageHolder,getLayoutHolder,getLayoutModule,getLayoutModuleByName,getLayoutObject,getLayoutObjectByName,getLayoutSlot,getLayoutSlotByName,getMenuByID,getPageHolder,getPageIDs,getPageModule,getPageModuleByName,getPageObject,getPageObjectByName,getPagePropertyByID,getPagePropertyValueByID,getPageSlot,getPageSlotByName,getPageVOByID,getParentMotoObject,getPopup,getPopupByType,getPopupHolder,getPopupIDs,getPopupModule,getPopupModuleByName,getPopupObject,getPopupObjectByName,getPopupPropertyByID,getPopupPropertyValueByID,getPopupSlot,getPopupSlotByName,getPopupVOByID,getRichContentModuleObjects,getScreenRect,getWebsiteHolder,getWebsiteModule,getWebsiteModuleByName,getWebsiteObject,getWebsiteObjectByName,getWebsitePropertyByID,getWebsitePropertyValueByID,getWebsiteSlot,getWebsiteSlotByName,isAssetPreloaded,registerLayoutModule,registerLayoutObject,registerLayoutSlot,registerPageModule,registerPageObject,registerPageSlot,registerPopupModule,registerPopupObject,registerPopupSlot,registerWebsiteModule,registerWebsiteObject,registerWebsiteSlot" name="keywords">
+<title>com.moto.template.common.IMoto</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'IMoto - Moto CMS API Documentation';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Moto CMS API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?com/moto/template/common/IMoto.html&amp;com/moto/template/common/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Interface&nbsp;IMoto</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Interface IMoto"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.moto.template.common</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Interface</td><td class="classSignature">public interface IMoto</td>
+</tr>
+</table>
+<p></p>
+  Interface which gives access to the CMS: site elements, structure and content.
+  Access can be get from any place of the site by calling <code>Moto.getInstance()</code>.
+    <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../common/Moto.html" target="">com.moto.template.common.Moto</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#animationIsPlaying">animationIsPlaying</a> : Boolean<div class="summaryTableDescription">
+   Global flag which indicates that the animation is playing.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#currentLayout">currentLayout</a> : uint<div class="summaryTableDescription">[read-only]
+   Current layout index.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#currentPage">currentPage</a> : uint<div class="summaryTableDescription">[read-only]
+   Current page index.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#currentPageType">currentPageType</a> : int<div class="summaryTableDescription">[read-only]
+   Current page type.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#debugModeEnabled">debugModeEnabled</a> : Boolean<div class="summaryTableDescription">
+   Enabled show debug information
+   </div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#deepLink">deepLink</a> : <a href="tools/MotoDeepLink.html">MotoDeepLink</a>
+<div class="summaryTableDescription">[read-only]
+      </div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#eventDispatcher">eventDispatcher</a> : <a href="events/MotoEventDispatcher.html">MotoEventDispatcher</a>
+<div class="summaryTableDescription">[read-only]
+   Events gateway.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#previousLayout">previousLayout</a> : uint<div class="summaryTableDescription">[read-only]
+   Previous layout index.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#previousPage">previousPage</a> : uint<div class="summaryTableDescription">[read-only]
+   Previous page index.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#previousPageType">previousPageType</a> : int<div class="summaryTableDescription">[read-only]
+   Previous page type.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#stageHeight">stageHeight</a> : Number<div class="summaryTableDescription">[read-only]
+   Stage height.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#stageWidth">stageWidth</a> : Number<div class="summaryTableDescription">[read-only]
+   Stage width.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#useFlashScroll">useFlashScroll</a> : Boolean<div class="summaryTableDescription">[read-only]
+   Return what scroll to use browser or flash.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#website">website</a> : MovieClip<div class="summaryTableDescription">[read-only]
+   Returns website holder instance.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#websiteApplicationDomain">websiteApplicationDomain</a> : ApplicationDomain<div class="summaryTableDescription">[read-only]
+   Get website applicationDomain
+   </div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#websiteSoundsEnabled">websiteSoundsEnabled</a> : Boolean<div class="summaryTableDescription">
+   Enable sound effects playback.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getApplicationDomainByName()">getApplicationDomainByName</a>(name:String):ApplicationDomain</div>
+<div class="summaryTableDescription">
+   Get applicationDomain by name
+      </div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getContentHolderByID()">getContentHolderByID</a>(contentHolderID:uint):<a href="../shell/model/vo/ContentHolderVO.html">ContentHolderVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get content holder by ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getCurrentLayoutHolder()">getCurrentLayoutHolder</a>(holderID:uint, target:Sprite):void</div>
+<div class="summaryTableDescription">
+   Creates elements of current layout holder by ID in the target Sprite.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getCurrentPageHolder()">getCurrentPageHolder</a>(holderID:uint, target:Sprite):void</div>
+<div class="summaryTableDescription">
+   Creates elements of current page holder by ID in the target Sprite.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getLayoutHolder()">getLayoutHolder</a>(layoutID:uint, holderID:uint, target:Sprite):void</div>
+<div class="summaryTableDescription">
+   Creates elements of layout holder by ID in the target Sprite.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getLayoutModule()">getLayoutModule</a>(layoutID:uint, moduleID:uint):<a href="../shell/model/vo/ModuleVO.html">ModuleVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get layout module value object by ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getLayoutModuleByName()">getLayoutModuleByName</a>(layoutID:uint, name:String):<a href="../shell/model/vo/ModuleVO.html">ModuleVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get layout module value object by name.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getLayoutObject()">getLayoutObject</a>(layoutID:uint, objectID:uint):<a href="../shell/model/vo/ObjectVO.html">ObjectVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get layout object by ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getLayoutObjectByName()">getLayoutObjectByName</a>(layoutID:uint, name:String):<a href="../shell/model/vo/ObjectVO.html">ObjectVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get layout object by name.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getLayoutSlot()">getLayoutSlot</a>(layoutID:uint, slotID:uint):<a href="../shell/model/vo/SlotVO.html">SlotVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get layout slot value object by ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getLayoutSlotByName()">getLayoutSlotByName</a>(layoutID:uint, name:String):<a href="../shell/model/vo/SlotVO.html">SlotVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get layout slot value object by name.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getMenuByID()">getMenuByID</a>(menuID:uint):<a href="../modules/menu/vo/MenuVO.html">MenuVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get menu value object by ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPageHolder()">getPageHolder</a>(pageID:uint, holderID:uint, target:Sprite):void</div>
+<div class="summaryTableDescription">
+   Creates elements of page holder by ID in the target Sprite.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPageIDs()">getPageIDs</a>(layoutID:uint = 0):Array</div>
+<div class="summaryTableDescription">
+   Get array of page IDs.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPageModule()">getPageModule</a>(pageID:uint, moduleID:uint):<a href="../shell/model/vo/ModuleVO.html">ModuleVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get page module value object by ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPageModuleByName()">getPageModuleByName</a>(pageID:uint, name:String):<a href="../shell/model/vo/ModuleVO.html">ModuleVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get page module value object by name.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPageObject()">getPageObject</a>(pageID:uint, objectID:uint):<a href="../shell/model/vo/ObjectVO.html">ObjectVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get page object VO by ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPageObjectByName()">getPageObjectByName</a>(pageID:uint, name:String):<a href="../shell/model/vo/ObjectVO.html">ObjectVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get page object VO by name.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPagePropertyByID()">getPagePropertyByID</a>(pageID:uint, propertyID:uint):<a href="../shell/model/vo/PropertyVO.html">PropertyVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get page property value object by given page ID and property ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPagePropertyValueByID()">getPagePropertyValueByID</a>(pageID:uint, propertyID:uint):Object</div>
+<div class="summaryTableDescription">
+   Get page property value by given page ID and property ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPageSlot()">getPageSlot</a>(pageID:uint, slotID:uint):<a href="../shell/model/vo/SlotVO.html">SlotVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get page slot value object by ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPageSlotByName()">getPageSlotByName</a>(pageID:uint, name:String):<a href="../shell/model/vo/SlotVO.html">SlotVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get page slot value object by name.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPageVOByID()">getPageVOByID</a>(pageID:uint):<a href="../shell/model/vo/PageVO.html">PageVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get page value object by ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getParentMotoObject()">getParentMotoObject</a>(target:DisplayObject):<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>
+</div>
+<div class="summaryTableDescription">
+   Get parent IMotoObject
+      </div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPopup()">getPopup</a>(popupID:uint):Sprite</div>
+<div class="summaryTableDescription">
+   Creates popup by ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPopupByType()">getPopupByType</a>(popupTypeID:uint, data:Object):Sprite</div>
+<div class="summaryTableDescription">
+   Creates empty popup of given type.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPopupHolder()">getPopupHolder</a>(popupID:uint, holderID:uint, target:Sprite):void</div>
+<div class="summaryTableDescription">
+   Creates elements of popup holder by ID in the target Sprite.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPopupIDs()">getPopupIDs</a>():Array</div>
+<div class="summaryTableDescription">
+   Get array of popup IDs.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPopupModule()">getPopupModule</a>(popupID:uint, moduleID:uint):<a href="../shell/model/vo/ModuleVO.html">ModuleVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get popup module value object by ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPopupModuleByName()">getPopupModuleByName</a>(popupID:uint, name:String):<a href="../shell/model/vo/ModuleVO.html">ModuleVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get popup module value object by name.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPopupObject()">getPopupObject</a>(popupID:uint, objectID:uint):<a href="../shell/model/vo/ObjectVO.html">ObjectVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get popup object VO by ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPopupObjectByName()">getPopupObjectByName</a>(popupID:uint, name:String):<a href="../shell/model/vo/ObjectVO.html">ObjectVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get popup object VO by name.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPopupPropertyByID()">getPopupPropertyByID</a>(popupID:uint, propertyID:uint):<a href="../shell/model/vo/PropertyVO.html">PropertyVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get popup property value object by given popup ID and property ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPopupPropertyValueByID()">getPopupPropertyValueByID</a>(popupID:uint, propertyID:uint):Object</div>
+<div class="summaryTableDescription">
+   Get popup property value by given popup ID and property ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPopupSlot()">getPopupSlot</a>(popupID:uint, slotID:uint):<a href="../shell/model/vo/SlotVO.html">SlotVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get popup slot value object by ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPopupSlotByName()">getPopupSlotByName</a>(popupID:uint, name:String):<a href="../shell/model/vo/SlotVO.html">SlotVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get popup slot value object by name.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPopupVOByID()">getPopupVOByID</a>(popupID:uint):<a href="../shell/model/vo/PopupVO.html">PopupVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get popup value object by ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getRichContentModuleObjects()">getRichContentModuleObjects</a>(rawObjectsData:XML, target:Sprite):void</div>
+<div class="summaryTableDescription">
+   Creates objects from XML in the target Sprite.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getScreenRect()">getScreenRect</a>():Rectangle</div>
+<div class="summaryTableDescription">
+   Returns the flash visible area in the HTML container.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getWebsiteHolder()">getWebsiteHolder</a>(holderID:uint, target:MovieClip):void</div>
+<div class="summaryTableDescription">s
+   Creates elements of website holder by ID in the target MovieClip.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getWebsiteModule()">getWebsiteModule</a>(moduleID:uint):<a href="../shell/model/vo/ModuleVO.html">ModuleVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get website module value object by ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getWebsiteModuleByName()">getWebsiteModuleByName</a>(name:String):<a href="../shell/model/vo/ModuleVO.html">ModuleVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get website module value object by name.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getWebsiteObject()">getWebsiteObject</a>(objectID:uint):<a href="../shell/model/vo/ObjectVO.html">ObjectVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get website object VO by ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getWebsiteObjectByName()">getWebsiteObjectByName</a>(name:String):<a href="../shell/model/vo/ObjectVO.html">ObjectVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get website object VO by name.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getWebsitePropertyByID()">getWebsitePropertyByID</a>(propertyID:uint):<a href="../shell/model/vo/PropertyVO.html">PropertyVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get website property value object by ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getWebsitePropertyValueByID()">getWebsitePropertyValueByID</a>(propertyID:uint):Object</div>
+<div class="summaryTableDescription">
+   Get website property value by ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getWebsiteSlot()">getWebsiteSlot</a>(slotID:uint):<a href="../shell/model/vo/SlotVO.html">SlotVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get website slot value object by ID.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getWebsiteSlotByName()">getWebsiteSlotByName</a>(name:String):<a href="../shell/model/vo/SlotVO.html">SlotVO</a>
+</div>
+<div class="summaryTableDescription">
+   Get website slot value object by name.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#isAssetPreloaded()">isAssetPreloaded</a>(source:String):Boolean</div>
+<div class="summaryTableDescription">
+   Checks if the resource was preloaded and cached on site loading.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#registerLayoutModule()">registerLayoutModule</a>(layoutID:uint, moduleID:uint, module:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</div>
+<div class="summaryTableDescription">
+   Initializes layout module that is already on the stage.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#registerLayoutObject()">registerLayoutObject</a>(layoutID:uint, objectID:uint, object:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</div>
+<div class="summaryTableDescription">
+   Initializes layout object that is already on the stage.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#registerLayoutSlot()">registerLayoutSlot</a>(layoutID:uint, slotID:uint, slot:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</div>
+<div class="summaryTableDescription">
+   Initializes layout slot that is already on the stage.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#registerPageModule()">registerPageModule</a>(pageID:uint, moduleID:uint, module:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</div>
+<div class="summaryTableDescription">
+   Initializes page module that is already on the stage.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#registerPageObject()">registerPageObject</a>(pageID:uint, objectID:uint, object:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</div>
+<div class="summaryTableDescription">
+   Initializes page object that is already on the stage.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#registerPageSlot()">registerPageSlot</a>(pageID:uint, slotID:uint, slot:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</div>
+<div class="summaryTableDescription">
+   Initializes page slot that is already on the stage.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#registerPopupModule()">registerPopupModule</a>(popupID:uint, moduleID:uint, module:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</div>
+<div class="summaryTableDescription">
+   Initializes popup module that is already on the stage.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#registerPopupObject()">registerPopupObject</a>(popupID:uint, objectID:uint, object:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</div>
+<div class="summaryTableDescription">
+   Initializes popup object that is already on the stage.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#registerPopupSlot()">registerPopupSlot</a>(popupID:uint, slotID:uint, slot:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</div>
+<div class="summaryTableDescription">
+   Initializes popup slot that is already on the stage.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#registerWebsiteModule()">registerWebsiteModule</a>(moduleID:uint, module:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</div>
+<div class="summaryTableDescription">
+   Initializes website module that is already on the stage.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#registerWebsiteObject()">registerWebsiteObject</a>(objectID:uint, object:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</div>
+<div class="summaryTableDescription">
+   Initializes website object that is already on the stage.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#registerWebsiteSlot()">registerWebsiteSlot</a>(slotID:uint, slot:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</div>
+<div class="summaryTableDescription">
+   Initializes website slot that is already on the stage.</div>
+</td><td class="summaryTableOwnerCol">IMoto</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="animationIsPlaying"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">animationIsPlaying</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>animationIsPlaying:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+   Global flag which indicates that the animation is playing.
+      </p><p>Often used to prevent animation collisions on page change.
+   At the start of animation this flag is set to true, at the end - to false.</p>
+      <p><code>Moto.getInstance().animationIsPlaying = true;</code></p>
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get animationIsPlaying():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set animationIsPlaying(value:Boolean):void</code>
+<br>
+</div>
+<a name="currentLayout"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">currentLayout</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>currentLayout:uint</code>&nbsp;&nbsp;[read-only]<p>
+   Current layout index.
+      </p><p><code>Moto.getInstance().currentLayout</code></p>
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get currentLayout():uint</code>
+<br>
+</div>
+<a name="currentPage"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">currentPage</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>currentPage:uint</code>&nbsp;&nbsp;[read-only]<p>
+   Current page index.
+      </p><p><code>Moto.getInstance().currentPage</code></p>
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get currentPage():uint</code>
+<br>
+</div>
+<a name="currentPageType"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">currentPageType</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>currentPageType:int</code>&nbsp;&nbsp;[read-only]<p>
+   Current page type.
+      </p><p><code>Moto.getInstance().currentPageType</code></p>
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get currentPageType():int</code>
+<br>
+</div>
+<a name="debugModeEnabled"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">debugModeEnabled</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>debugModeEnabled:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+   Enabled show debug information
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get debugModeEnabled():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set debugModeEnabled(value:Boolean):void</code>
+<br>
+</div>
+<a name="deepLink"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">deepLink</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>deepLink:<a href="tools/MotoDeepLink.html">MotoDeepLink</a></code>&nbsp;&nbsp;[read-only]<p>
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get deepLink():<a href="tools/MotoDeepLink.html">MotoDeepLink</a></code>
+<br>
+</div>
+<a name="eventDispatcher"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">eventDispatcher</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>eventDispatcher:<a href="events/MotoEventDispatcher.html">MotoEventDispatcher</a></code>&nbsp;&nbsp;[read-only]<p>
+   Events gateway. Endpoint which all system events run through -
+   <code>Moto.getInstance().eventDispatcher</code>, and with the help
+   of which events can be exchanged among system elements both in front-end
+   and in the control panel.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get eventDispatcher():<a href="events/MotoEventDispatcher.html">MotoEventDispatcher</a></code>
+<br>
+</div>
+<a name="previousLayout"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">previousLayout</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>previousLayout:uint</code>&nbsp;&nbsp;[read-only]<p>
+   Previous layout index.
+      </p><p><code>Moto.getInstance().previousLayout</code></p>
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get previousLayout():uint</code>
+<br>
+</div>
+<a name="previousPage"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">previousPage</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>previousPage:uint</code>&nbsp;&nbsp;[read-only]<p>
+   Previous page index.
+      </p><p><code>Moto.getInstance().previousPage</code></p>
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get previousPage():uint</code>
+<br>
+</div>
+<a name="previousPageType"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">previousPageType</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>previousPageType:int</code>&nbsp;&nbsp;[read-only]<p>
+   Previous page type.
+      </p><p><code>Moto.getInstance().previousPageType</code></p>
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get previousPageType():int</code>
+<br>
+</div>
+<a name="stageHeight"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">stageHeight</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>stageHeight:Number</code>&nbsp;&nbsp;[read-only]<p>
+   Stage height. Stage height can be get with the help of
+   <code>Moto.getInstance().stageHeight</code> even when your component
+   has not been added to it yet, because usually stage is not defined in
+   the constructor at that moment.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get stageHeight():Number</code>
+<br>
+</div>
+<a name="stageWidth"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">stageWidth</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>stageWidth:Number</code>&nbsp;&nbsp;[read-only]<p>
+   Stage width. Stage width can be get with the help of
+   <code>Moto.getInstance().stageWidth</code> even when your component
+   has not been added to it yet, because usually stage is not defined in
+   the constructor at that moment.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get stageWidth():Number</code>
+<br>
+</div>
+<a name="useFlashScroll"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">useFlashScroll</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>useFlashScroll:Boolean</code>&nbsp;&nbsp;[read-only]<p>
+   Return what scroll to use browser or flash.
+   
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get useFlashScroll():Boolean</code>
+<br>
+</div>
+<a name="website"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">website</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>website:MovieClip</code>&nbsp;&nbsp;[read-only]<p>
+   Returns website holder instance.
+      </p><p>The site consists of two swf files - preloader and website.
+   The website is loaded by preloader and added to the stage as a child.
+   This method returns this <code>MovieClip</code>.</p>
+      <p><code>Moto.getInstance().website.stop();</code></p>
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get website():MovieClip</code>
+<br>
+</div>
+<a name="websiteApplicationDomain"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">websiteApplicationDomain</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>websiteApplicationDomain:ApplicationDomain</code>&nbsp;&nbsp;[read-only]<p>
+   Get website applicationDomain
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get websiteApplicationDomain():ApplicationDomain</code>
+<br>
+</div>
+<a name="websiteSoundsEnabled"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">websiteSoundsEnabled</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>websiteSoundsEnabled:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+   Enable sound effects playback.
+      </p><p>Used to turn off sound effects which are called on timeline in fla files.
+   It's necessary to check <code>Moto.getInstance().websiteSoundsEnabled</code>
+   before playing the sound effect. On site initialization this property can be
+   set to true or to false according to the site settings.</p>
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get websiteSoundsEnabled():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set websiteSoundsEnabled(value:Boolean):void</code>
+<br>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="getApplicationDomainByName()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getApplicationDomainByName</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getApplicationDomainByName(name:String):ApplicationDomain</code><p>
+   Get applicationDomain by name
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; applicationDomain name
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>ApplicationDomain</code> &mdash; ApplicationDomain
+   </td>
+</tr>
+</table>
+</div>
+<a name="getContentHolderByID()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getContentHolderByID</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getContentHolderByID(contentHolderID:uint):<a href="../shell/model/vo/ContentHolderVO.html">ContentHolderVO</a></code><p>
+   Get content holder by ID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">contentHolderID</span>:uint</code> &mdash; Content holder ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/ContentHolderVO.html">ContentHolderVO</a></code> &mdash; 
+                        Content Holder Value Object
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getCurrentLayoutHolder()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getCurrentLayoutHolder</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getCurrentLayoutHolder(holderID:uint, target:Sprite):void</code><p>
+   Creates elements of current layout holder by ID in the target Sprite.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">holderID</span>:uint</code> &mdash; Holder ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">target</span>:Sprite</code> &mdash; Sprite where the holder objects are created
+   </td>
+</tr>
+</table>
+</div>
+<a name="getCurrentPageHolder()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getCurrentPageHolder</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getCurrentPageHolder(holderID:uint, target:Sprite):void</code><p>
+   Creates elements of current page holder by ID in the target Sprite.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">holderID</span>:uint</code> &mdash; Holder ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">target</span>:Sprite</code> &mdash; Sprite where the holder objects are created
+   </td>
+</tr>
+</table>
+</div>
+<a name="getLayoutHolder()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getLayoutHolder</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getLayoutHolder(layoutID:uint, holderID:uint, target:Sprite):void</code><p>
+   Creates elements of layout holder by ID in the target Sprite.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">layoutID</span>:uint</code> &mdash; Layout ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">holderID</span>:uint</code> &mdash; Layout content holder ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">target</span>:Sprite</code> &mdash; Sprite where the holder objects are created
+   </td>
+</tr>
+</table>
+</div>
+<a name="getLayoutModule()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getLayoutModule</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getLayoutModule(layoutID:uint, moduleID:uint):<a href="../shell/model/vo/ModuleVO.html">ModuleVO</a></code><p>
+   Get layout module value object by ID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">layoutID</span>:uint</code> &mdash; Layout ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">moduleID</span>:uint</code> &mdash; Module ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/ModuleVO.html">ModuleVO</a></code> &mdash; 
+                        Returns module value object with specified ID; if the specified index doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getLayoutModuleByName()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getLayoutModuleByName</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getLayoutModuleByName(layoutID:uint, name:String):<a href="../shell/model/vo/ModuleVO.html">ModuleVO</a></code><p>
+   Get layout module value object by name.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">layoutID</span>:uint</code> &mdash; Layout ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; Module name
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/ModuleVO.html">ModuleVO</a></code> &mdash; 
+                        Returns module value object with specified name; if the specified name doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getLayoutObject()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getLayoutObject</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getLayoutObject(layoutID:uint, objectID:uint):<a href="../shell/model/vo/ObjectVO.html">ObjectVO</a></code><p>
+   Get layout object by ID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">layoutID</span>:uint</code> &mdash; Layout ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">objectID</span>:uint</code> &mdash; Object ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/ObjectVO.html">ObjectVO</a></code> &mdash; 
+                        Returns object VO with specified ID; if the specified index doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getLayoutObjectByName()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getLayoutObjectByName</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getLayoutObjectByName(layoutID:uint, name:String):<a href="../shell/model/vo/ObjectVO.html">ObjectVO</a></code><p>
+   Get layout object by name.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">layoutID</span>:uint</code> &mdash; Layout ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; Object name
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/ObjectVO.html">ObjectVO</a></code> &mdash; 
+                        Returns object VO with specified name; if the specified name doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getLayoutSlot()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getLayoutSlot</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getLayoutSlot(layoutID:uint, slotID:uint):<a href="../shell/model/vo/SlotVO.html">SlotVO</a></code><p>
+   Get layout slot value object by ID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">layoutID</span>:uint</code> &mdash; Layout ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">slotID</span>:uint</code> &mdash; Slot ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/SlotVO.html">SlotVO</a></code> &mdash; 
+                        Returns slot value object with specified ID; if the specified index doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getLayoutSlotByName()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getLayoutSlotByName</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getLayoutSlotByName(layoutID:uint, name:String):<a href="../shell/model/vo/SlotVO.html">SlotVO</a></code><p>
+   Get layout slot value object by name.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">layoutID</span>:uint</code> &mdash; Layout ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; Slot name
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/SlotVO.html">SlotVO</a></code> &mdash; 
+                        Returns slot value object with specified name; if the specified name doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getMenuByID()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getMenuByID</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getMenuByID(menuID:uint):<a href="../modules/menu/vo/MenuVO.html">MenuVO</a></code><p>
+   Get menu value object by ID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">menuID</span>:uint</code> &mdash; Menu ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../modules/menu/vo/MenuVO.html">MenuVO</a></code> &mdash; 
+                        Returns MenuVO with specified ID; if the specified index doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getPageHolder()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPageHolder</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPageHolder(pageID:uint, holderID:uint, target:Sprite):void</code><p>
+   Creates elements of page holder by ID in the target Sprite.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pageID</span>:uint</code> &mdash; Page ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">holderID</span>:uint</code> &mdash; Holder ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">target</span>:Sprite</code> &mdash; Sprite where the holder objects are created
+   </td>
+</tr>
+</table>
+</div>
+<a name="getPageIDs()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPageIDs</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPageIDs(layoutID:uint = 0):Array</code><p>
+   Get array of page IDs.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">layoutID</span>:uint</code> (default = <code>0</code>)<code></code> &mdash; Layout ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Array</code> &mdash; Array of page IDs.
+   </td>
+</tr>
+</table>
+</div>
+<a name="getPageModule()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPageModule</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPageModule(pageID:uint, moduleID:uint):<a href="../shell/model/vo/ModuleVO.html">ModuleVO</a></code><p>
+   Get page module value object by ID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pageID</span>:uint</code> &mdash; Page ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">moduleID</span>:uint</code> &mdash; Module ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/ModuleVO.html">ModuleVO</a></code> &mdash; 
+                        Returns module value object with specified ID; if the specified index doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getPageModuleByName()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPageModuleByName</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPageModuleByName(pageID:uint, name:String):<a href="../shell/model/vo/ModuleVO.html">ModuleVO</a></code><p>
+   Get page module value object by name.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pageID</span>:uint</code> &mdash; Page ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; Module name
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/ModuleVO.html">ModuleVO</a></code> &mdash; 
+                        Returns module value object with specified ID; if the specified index doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getPageObject()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPageObject</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPageObject(pageID:uint, objectID:uint):<a href="../shell/model/vo/ObjectVO.html">ObjectVO</a></code><p>
+   Get page object VO by ID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pageID</span>:uint</code> &mdash; Page ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">objectID</span>:uint</code> &mdash; Object ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/ObjectVO.html">ObjectVO</a></code> &mdash; 
+                        Returns object VO with specified ID; if the specified index doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getPageObjectByName()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPageObjectByName</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPageObjectByName(pageID:uint, name:String):<a href="../shell/model/vo/ObjectVO.html">ObjectVO</a></code><p>
+   Get page object VO by name.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pageID</span>:uint</code> &mdash; Page ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; Object name
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/ObjectVO.html">ObjectVO</a></code> &mdash; 
+                        Returns object VO with specified name; if the specified name doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getPagePropertyByID()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPagePropertyByID</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPagePropertyByID(pageID:uint, propertyID:uint):<a href="../shell/model/vo/PropertyVO.html">PropertyVO</a></code><p>
+   Get page property value object by given page ID and property ID.
+   You can then retrieve property value and parameters.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pageID</span>:uint</code> &mdash; Page ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">propertyID</span>:uint</code> &mdash; Property ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/PropertyVO.html">PropertyVO</a></code> &mdash; 
+                        Returns PropertyVO with specified ID; if the specified index doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../shell/model/vo/PropertyVO.html" target="">com.moto.template.shell.model.vo.PropertyVO</a>
+</div>
+</div>
+<a name="getPagePropertyValueByID()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPagePropertyValueByID</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPagePropertyValueByID(pageID:uint, propertyID:uint):Object</code><p>
+   Get page property value by given page ID and property ID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pageID</span>:uint</code> &mdash; Page ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">propertyID</span>:uint</code> &mdash; Property ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Object</code> &mdash; Returns value of VO with specified ID; if the specified index doesn't exist, null is returned
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../shell/model/vo/PropertyVO.html" target="">com.moto.template.shell.model.vo.PropertyVO</a>
+</div>
+</div>
+<a name="getPageSlot()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPageSlot</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPageSlot(pageID:uint, slotID:uint):<a href="../shell/model/vo/SlotVO.html">SlotVO</a></code><p>
+   Get page slot value object by ID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pageID</span>:uint</code> &mdash; Page ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">slotID</span>:uint</code> &mdash; Slot ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/SlotVO.html">SlotVO</a></code> &mdash; 
+                        Returns slot value object with specified ID; if the specified index doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getPageSlotByName()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPageSlotByName</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPageSlotByName(pageID:uint, name:String):<a href="../shell/model/vo/SlotVO.html">SlotVO</a></code><p>
+   Get page slot value object by name.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pageID</span>:uint</code> &mdash; Page ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; Slot name
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/SlotVO.html">SlotVO</a></code> &mdash; 
+                        Returns slot value object with specified name; if the specified name doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getPageVOByID()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPageVOByID</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPageVOByID(pageID:uint):<a href="../shell/model/vo/PageVO.html">PageVO</a></code><p>
+   Get page value object by ID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pageID</span>:uint</code> &mdash; Page ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/PageVO.html">PageVO</a></code> &mdash; 
+                        Page value object
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getParentMotoObject()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getParentMotoObject</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getParentMotoObject(target:DisplayObject):<a href="../shell/view/components/IMotoObject.html">IMotoObject</a></code><p>
+   Get parent IMotoObject
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">target</span>:DisplayObject</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/view/components/IMotoObject.html">IMotoObject</a></code> &mdash; 
+                        IMotoObject
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getPopup()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPopup</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPopup(popupID:uint):Sprite</code><p>
+   Creates popup by ID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">popupID</span>:uint</code> &mdash; ID of popup which needs to be created
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Sprite</code> &mdash; Popup Sprite with all objects from this popup
+   </td>
+</tr>
+</table>
+</div>
+<a name="getPopupByType()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPopupByType</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPopupByType(popupTypeID:uint, data:Object):Sprite</code><p>
+   Creates empty popup of given type.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">popupTypeID</span>:uint</code> &mdash; Type of popup which needs to be created
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">data</span>:Object</code> &mdash; An object for popup initialization, can be empty
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Sprite</code> &mdash; Popup Sprite
+   </td>
+</tr>
+</table>
+</div>
+<a name="getPopupHolder()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPopupHolder</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPopupHolder(popupID:uint, holderID:uint, target:Sprite):void</code><p>
+   Creates elements of popup holder by ID in the target Sprite.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">popupID</span>:uint</code> &mdash; Popup ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">holderID</span>:uint</code> &mdash; Holder ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">target</span>:Sprite</code> &mdash; Sprite where the holder objects are created
+   </td>
+</tr>
+</table>
+</div>
+<a name="getPopupIDs()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPopupIDs</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPopupIDs():Array</code><p>
+   Get array of popup IDs.
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Array</code> &mdash; Array of popup IDs.
+   </td>
+</tr>
+</table>
+</div>
+<a name="getPopupModule()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPopupModule</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPopupModule(popupID:uint, moduleID:uint):<a href="../shell/model/vo/ModuleVO.html">ModuleVO</a></code><p>
+   Get popup module value object by ID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">popupID</span>:uint</code> &mdash; Popup ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">moduleID</span>:uint</code> &mdash; Module ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/ModuleVO.html">ModuleVO</a></code> &mdash; 
+                        Returns module value object with specified ID; if the specified index doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getPopupModuleByName()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPopupModuleByName</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPopupModuleByName(popupID:uint, name:String):<a href="../shell/model/vo/ModuleVO.html">ModuleVO</a></code><p>
+   Get popup module value object by name.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">popupID</span>:uint</code> &mdash; Popup ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; Module name
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/ModuleVO.html">ModuleVO</a></code> &mdash; 
+                        Returns module value object with specified name; if the specified name doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getPopupObject()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPopupObject</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPopupObject(popupID:uint, objectID:uint):<a href="../shell/model/vo/ObjectVO.html">ObjectVO</a></code><p>
+   Get popup object VO by ID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">popupID</span>:uint</code> &mdash; Popup ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">objectID</span>:uint</code> &mdash; Object ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/ObjectVO.html">ObjectVO</a></code> &mdash; 
+                        Returns object VO with specified ID; if the specified index doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getPopupObjectByName()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPopupObjectByName</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPopupObjectByName(popupID:uint, name:String):<a href="../shell/model/vo/ObjectVO.html">ObjectVO</a></code><p>
+   Get popup object VO by name.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">popupID</span>:uint</code> &mdash; Popup ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; Object name
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/ObjectVO.html">ObjectVO</a></code> &mdash; 
+                        Returns object VO with specified name; if the specified name doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getPopupPropertyByID()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPopupPropertyByID</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPopupPropertyByID(popupID:uint, propertyID:uint):<a href="../shell/model/vo/PropertyVO.html">PropertyVO</a></code><p>
+   Get popup property value object by given popup ID and property ID.
+   You can then retrieve property value and parameters.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">popupID</span>:uint</code> &mdash; Popup ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">propertyID</span>:uint</code> &mdash; Property ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/PropertyVO.html">PropertyVO</a></code> &mdash; 
+                        Returns PropertyVO with specified ID; if the specified index doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../shell/model/vo/PropertyVO.html" target="">com.moto.template.shell.model.vo.PropertyVO</a>
+</div>
+</div>
+<a name="getPopupPropertyValueByID()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPopupPropertyValueByID</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPopupPropertyValueByID(popupID:uint, propertyID:uint):Object</code><p>
+   Get popup property value by given popup ID and property ID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">popupID</span>:uint</code> &mdash; Popup ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">propertyID</span>:uint</code> &mdash; Property ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Object</code> &mdash; Returns value of VO with specified ID; if the specified index doesn't exist, null is returned
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../shell/model/vo/PropertyVO.html" target="">com.moto.template.shell.model.vo.PropertyVO</a>
+</div>
+</div>
+<a name="getPopupSlot()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPopupSlot</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPopupSlot(popupID:uint, slotID:uint):<a href="../shell/model/vo/SlotVO.html">SlotVO</a></code><p>
+   Get popup slot value object by ID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">popupID</span>:uint</code> &mdash; Popup ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">slotID</span>:uint</code> &mdash; Slot ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/SlotVO.html">SlotVO</a></code> &mdash; 
+                        Returns slot value object with specified ID; if the specified index doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getPopupSlotByName()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPopupSlotByName</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPopupSlotByName(popupID:uint, name:String):<a href="../shell/model/vo/SlotVO.html">SlotVO</a></code><p>
+   Get popup slot value object by name.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">popupID</span>:uint</code> &mdash; Popup ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; Slot name
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/SlotVO.html">SlotVO</a></code> &mdash; 
+                        Returns slot value object with specified name; if the specified name doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getPopupVOByID()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPopupVOByID</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPopupVOByID(popupID:uint):<a href="../shell/model/vo/PopupVO.html">PopupVO</a></code><p>
+   Get popup value object by ID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">popupID</span>:uint</code> &mdash; Popup ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/PopupVO.html">PopupVO</a></code> &mdash; 
+                        Popup value object
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getRichContentModuleObjects()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getRichContentModuleObjects</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getRichContentModuleObjects(rawObjectsData:XML, target:Sprite):void</code><p>
+   Creates objects from XML in the target Sprite.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">rawObjectsData</span>:XML</code> &mdash; Raw XML
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">target</span>:Sprite</code> &mdash; Target Sprite where the objects are created
+   </td>
+</tr>
+</table>
+</div>
+<a name="getScreenRect()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getScreenRect</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getScreenRect():Rectangle</code><p>
+   Returns the flash visible area in the HTML container.
+   
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Rectangle</code> &mdash; Rectangle
+   </td>
+</tr>
+</table>
+</div>
+<a name="getWebsiteHolder()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getWebsiteHolder</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getWebsiteHolder(holderID:uint, target:MovieClip):void</code><p>s
+   Creates elements of website holder by ID in the target MovieClip.
+      </p><p>For example, create objects of website content holder with ID=1
+   in the current clip:</p>
+   <p><code>Moto.getInstance().getWebsiteHolder(1, this);</code></p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">holderID</span>:uint</code> &mdash; Website content holder ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">target</span>:MovieClip</code> &mdash; MovieClip where the holder objects are created
+   </td>
+</tr>
+</table>
+</div>
+<a name="getWebsiteModule()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getWebsiteModule</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getWebsiteModule(moduleID:uint):<a href="../shell/model/vo/ModuleVO.html">ModuleVO</a></code><p>
+   Get website module value object by ID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">moduleID</span>:uint</code> &mdash; Module ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/ModuleVO.html">ModuleVO</a></code> &mdash; 
+                        Returns module value object with specified ID; if the specified index doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getWebsiteModuleByName()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getWebsiteModuleByName</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getWebsiteModuleByName(name:String):<a href="../shell/model/vo/ModuleVO.html">ModuleVO</a></code><p>
+   Get website module value object by name.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; Module name
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/ModuleVO.html">ModuleVO</a></code> &mdash; 
+                        Returns module value object with specified name; if the specified name doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getWebsiteObject()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getWebsiteObject</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getWebsiteObject(objectID:uint):<a href="../shell/model/vo/ObjectVO.html">ObjectVO</a></code><p>
+   Get website object VO by ID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">objectID</span>:uint</code> &mdash; Object ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/ObjectVO.html">ObjectVO</a></code> &mdash; 
+                        Returns object VO with specified ID; if the specified index doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getWebsiteObjectByName()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getWebsiteObjectByName</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getWebsiteObjectByName(name:String):<a href="../shell/model/vo/ObjectVO.html">ObjectVO</a></code><p>
+   Get website object VO by name.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; Object name
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/ObjectVO.html">ObjectVO</a></code> &mdash; 
+                        Returns object VO with specified name; if the specified name doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getWebsitePropertyByID()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getWebsitePropertyByID</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getWebsitePropertyByID(propertyID:uint):<a href="../shell/model/vo/PropertyVO.html">PropertyVO</a></code><p>
+   Get website property value object by ID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">propertyID</span>:uint</code> &mdash; Property ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/PropertyVO.html">PropertyVO</a></code> &mdash; 
+                        Returns PropertyVO with specified ID; if the specified index doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getWebsitePropertyValueByID()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getWebsitePropertyValueByID</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getWebsitePropertyValueByID(propertyID:uint):Object</code><p>
+   Get website property value by ID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">propertyID</span>:uint</code> &mdash; Property ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Object</code> &mdash; Returns value of VO with specified ID; if the specified index doesn't exist, null is returned
+   </td>
+</tr>
+</table>
+</div>
+<a name="getWebsiteSlot()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getWebsiteSlot</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getWebsiteSlot(slotID:uint):<a href="../shell/model/vo/SlotVO.html">SlotVO</a></code><p>
+   Get website slot value object by ID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">slotID</span>:uint</code> &mdash; Slot ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/SlotVO.html">SlotVO</a></code> &mdash; 
+                        Returns slot value object with specified ID; if the specified index doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getWebsiteSlotByName()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getWebsiteSlotByName</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getWebsiteSlotByName(name:String):<a href="../shell/model/vo/SlotVO.html">SlotVO</a></code><p>
+   Get website slot value object by name.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; Slot name
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../shell/model/vo/SlotVO.html">SlotVO</a></code> &mdash; 
+                        Returns slot value object with specified name; if the specified name doesn't exist, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="isAssetPreloaded()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">isAssetPreloaded</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function isAssetPreloaded(source:String):Boolean</code><p>
+   Checks if the resource was preloaded and cached on site loading.
+      </p><p>Resource loading and caching will not work if page caching is turned off
+   in the browser.</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">source</span>:String</code> &mdash; url Resource address
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; Returns true if the element is loaded and cached, else false is returned.
+   </td>
+</tr>
+</table>
+</div>
+<a name="registerLayoutModule()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">registerLayoutModule</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function registerLayoutModule(layoutID:uint, moduleID:uint, module:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</code><p>
+   Initializes layout module that is already on the stage. You need to
+   pass module ID and module instance to that method.
+      </p><p>Registration methods are used when you have some objects that
+   are not created dynamically and are already on the timeline, but need
+   to be controlled by user in the control panel. So, you usually lock these
+   objects and initialize them manually.</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">layoutID</span>:uint</code> &mdash; Layout ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">moduleID</span>:uint</code> &mdash; Module ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">module</span>:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a></code> &mdash; Module instance
+   </td>
+</tr>
+</table>
+</div>
+<a name="registerLayoutObject()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">registerLayoutObject</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function registerLayoutObject(layoutID:uint, objectID:uint, object:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</code><p>
+   Initializes layout object that is already on the stage. You need to
+   pass object ID and object instance to that method.
+      </p><p>Registration methods are used when you have some objects that
+   are not created dynamically and are already on the timeline, but need
+   to be controlled by user in the control panel. So, you usually lock these
+   objects and initialize them manually.</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">layoutID</span>:uint</code> &mdash; Layout ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">objectID</span>:uint</code> &mdash; Object ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">object</span>:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a></code> &mdash; Object instance
+   </td>
+</tr>
+</table>
+</div>
+<a name="registerLayoutSlot()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">registerLayoutSlot</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function registerLayoutSlot(layoutID:uint, slotID:uint, slot:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</code><p>
+   Initializes layout slot that is already on the stage. You need to
+   pass slot ID and slot instance to that method.
+      </p><p>Registration methods are used when you have some objects that
+   are not created dynamically and are already on the timeline, but need
+   to be controlled by user in the control panel. So, you usually lock these
+   objects and initialize them manually.</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">layoutID</span>:uint</code> &mdash; Layout ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">slotID</span>:uint</code> &mdash; Slot ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">slot</span>:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a></code> &mdash; Slot instance
+   </td>
+</tr>
+</table>
+</div>
+<a name="registerPageModule()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">registerPageModule</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function registerPageModule(pageID:uint, moduleID:uint, module:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</code><p>
+   Initializes page module that is already on the stage. You need to
+   pass module ID and module instance to that method.
+      </p><p>Registration methods are used when you have some objects that
+   are not created dynamically and are already on the timeline, but need
+   to be controlled by user in the control panel. So, you usually lock these
+   objects and initialize them manually.</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pageID</span>:uint</code> &mdash; Page ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">moduleID</span>:uint</code> &mdash; Module ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">module</span>:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a></code> &mdash; Module instance
+   </td>
+</tr>
+</table>
+</div>
+<a name="registerPageObject()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">registerPageObject</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function registerPageObject(pageID:uint, objectID:uint, object:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</code><p>
+   Initializes page object that is already on the stage. You need to
+   pass object ID and object instance to that method.
+      </p><p>Registration methods are used when you have some objects that
+   are not created dynamically and are already on the timeline, but need
+   to be controlled by user in the control panel. So, you usually lock these
+   objects and initialize them manually.</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pageID</span>:uint</code> &mdash; Layout ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">objectID</span>:uint</code> &mdash; Object ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">object</span>:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a></code> &mdash; Object instance
+   </td>
+</tr>
+</table>
+</div>
+<a name="registerPageSlot()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">registerPageSlot</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function registerPageSlot(pageID:uint, slotID:uint, slot:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</code><p>
+   Initializes page slot that is already on the stage. You need to
+   pass slot ID and slot instance to that method.
+      </p><p>Registration methods are used when you have some objects that
+   are not created dynamically and are already on the timeline, but need
+   to be controlled by user in the control panel. So, you usually lock these
+   objects and initialize them manually.</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pageID</span>:uint</code> &mdash; Page ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">slotID</span>:uint</code> &mdash; Slot ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">slot</span>:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a></code> &mdash; Slot instance
+   </td>
+</tr>
+</table>
+</div>
+<a name="registerPopupModule()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">registerPopupModule</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function registerPopupModule(popupID:uint, moduleID:uint, module:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</code><p>
+   Initializes popup module that is already on the stage. You need to
+   pass module ID and module instance to that method.
+      </p><p>Registration methods are used when you have some objects that
+   are not created dynamically and are already on the timeline, but need
+   to be controlled by user in the control panel. So, you usually lock these
+   objects and initialize them manually.</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">popupID</span>:uint</code> &mdash; Popup ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">moduleID</span>:uint</code> &mdash; Module ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">module</span>:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a></code> &mdash; Module instance
+   </td>
+</tr>
+</table>
+</div>
+<a name="registerPopupObject()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">registerPopupObject</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function registerPopupObject(popupID:uint, objectID:uint, object:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</code><p>
+   Initializes popup object that is already on the stage. You need to
+   pass object ID and object instance to that method.
+      </p><p>Registration methods are used when you have some objects that
+   are not created dynamically and are already on the timeline, but need
+   to be controlled by user in the control panel. So, you usually lock these
+   objects and initialize them manually.</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">popupID</span>:uint</code> &mdash; Popup ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">objectID</span>:uint</code> &mdash; Object ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">object</span>:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a></code> &mdash; Object instance
+   </td>
+</tr>
+</table>
+</div>
+<a name="registerPopupSlot()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">registerPopupSlot</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function registerPopupSlot(popupID:uint, slotID:uint, slot:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</code><p>
+   Initializes popup slot that is already on the stage. You need to
+   pass slot ID and slot instance to that method.
+      </p><p>Registration methods are used when you have some objects that
+   are not created dynamically and are already on the timeline, but need
+   to be controlled by user in the control panel. So, you usually lock these
+   objects and initialize them manually.</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">popupID</span>:uint</code> &mdash; Popup ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">slotID</span>:uint</code> &mdash; Slot ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">slot</span>:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a></code> &mdash; Slot instance
+   </td>
+</tr>
+</table>
+</div>
+<a name="registerWebsiteModule()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">registerWebsiteModule</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function registerWebsiteModule(moduleID:uint, module:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</code><p>
+   Initializes website module that is already on the stage. You need to
+   pass module ID and module instance to that method.
+      </p><p>Registration methods are used when you have some objects that
+   are not created dynamically and are already on the timeline, but need
+   to be controlled by user in the control panel. So, you usually lock these
+   objects and initialize them manually.</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">moduleID</span>:uint</code> &mdash; Module ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">module</span>:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a></code> &mdash; Module instance
+   </td>
+</tr>
+</table>
+</div>
+<a name="registerWebsiteObject()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">registerWebsiteObject</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function registerWebsiteObject(objectID:uint, object:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</code><p>
+   Initializes website object that is already on the stage. You need to
+   pass object ID and object instance to that method.
+      </p><p>Registration methods are used when you have some objects that
+   are not created dynamically and are already on the timeline, but need
+   to be controlled by user in the control panel. So, you usually lock these
+   objects and initialize them manually.</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">objectID</span>:uint</code> &mdash; Object ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">object</span>:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a></code> &mdash; Object instance
+   </td>
+</tr>
+</table>
+</div>
+<a name="registerWebsiteSlot()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">registerWebsiteSlot</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function registerWebsiteSlot(slotID:uint, slot:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a>):void</code><p>
+   Initializes website slot that is already on the stage. You need to
+   pass slot ID and slot instance to that method.
+      </p><p>Registration methods are used when you have some objects that
+   are not created dynamically and are already on the timeline, but need
+   to be controlled by user in the control panel. So, you usually lock these
+   objects and initialize them manually.</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">slotID</span>:uint</code> &mdash; Slot ID
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">slot</span>:<a href="../shell/view/components/IMotoObject.html">IMotoObject</a></code> &mdash; Slot instance
+   </td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

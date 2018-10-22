@@ -1,0 +1,1079 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print">
+<meta content="AdvancedScrollbar,com.moto.template.common.view.AdvancedScrollbar,additionalHolderSpace,autoScrollingAreaPercent,autoScrollingStep,buttonsScrollingStep,minTrackButtonSize,onPressScrollingDelay,ratio,roundedPositionValues,tweenTrackButtonWithEasing,tweenWithEasing,wheelScrollingStep,autoScrollOnRollOver,autoUpdate,backwardButton,contentHolder,fixedContentSize,forwardButton,horizontal,maskRectangle,mouseWheelEnabled,resizeTrackButtonDependingOnContent,scrollAmount,scrollOnPress,scrollOnRollOver,scrollbarHolder,stage,track,trackButton,trackGuide,remove,scrollContent,scrollIsNeeded,setControlButtons,setControls,showContentPart,update" name="keywords">
+<title>com.moto.template.common.view.AdvancedScrollbar</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'AdvancedScrollbar - Moto CMS API Documentation';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Moto CMS API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../index-list.html')" href="../../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../../index.html?com/moto/template/common/view/AdvancedScrollbar.html&amp;com/moto/template/common/view/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;AdvancedScrollbar</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class AdvancedScrollbar"); titleBar_setSubNav(false,true,false,false,true,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.moto.template.common.view</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class AdvancedScrollbar</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">AdvancedScrollbar <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../../images/inherit-arrow.gif"> flash.events.EventDispatcher</td>
+</tr>
+</table>
+<p></p>
+  <code>AdvancedScrollbar</code> Class - adds scrolling logic for the sprite using
+  different scrolling methods.
+    <p>The main features of the scrollbar class are:</p>
+  <ul>
+  <li>scrolling logic can be easily added without any scrollbar specific
+     controls and doesn't require any other objects than content holder
+     mask rectangle and stage reference</li>
+    <li>scrollbar doesn't create any mask for the holder clip and can be
+     created dynamically or at flash authoring environment using mask
+     layer</li>
+    <li>any display objects can be set as scrollbar controls - forward and
+     backward buttons - see <code>setControls</code>, <code>setControlButtons</code> method, track
+     button and track - see <code>setControls</code> method. All of them are optional
+     and scrollbar can work without them if mouse wheel or auto content
+     scrolling on roll over is enabled</li>
+    <li>if you need to scroll content when mouse rolls over control buttons
+     without clicking on them you can use <code>scrollOnButtonRollOver</code> property.
+     Just set it to <code>true</code>, cause it is <code>false</code> by default</li>
+    <li>if you have any pixel graphics or fonts in your content and need to
+     set only integer values you can use <code>roundedPositionValues</code> property
+     by setting it to <code>true</code></li>
+    <li>if your content holder clip dimensions were changed you should update
+     scrollbar to position it correctly. Use <code>update()</code> method to do that.
+     You can configure scrollbar to automatically update its properties by
+     setting <code>autoUpdate</code> property to true</li>
+    <li>when you need to remove your scrollbar you can use <code>remove()</code> method
+     to remove all event listeners created by the scrollbar. If you use
+     flash authoring tool and your movieclip is removed automatically in
+     animation you can listen for the <code>removedFromStage</code> display object
+     event and call <code>remove()</code> in the event handler</li>
+    <li>you can also extend advanced scrollbar class by overridding
+     <code>scrollContent()</code> and <code>scrollIsNeeded()</code> protected methods as any public
+     methods</li>
+  </ul>
+    <p></p>
+<br>
+<span class="label">Example</span>
+<br>Create advanced scrollbar instance. Pass contentHolder - movieclip
+  with content, mask rectangle and stage to the constructor.
+  <p>Optionally in constructor you can set:</p>
+  <ul>
+    <li>scrollbar direction (horizontal or vertical, it is vertica by default</li>
+    <li>enable wheel (true by default)</li>
+    <li>enable auto scrolling on content roll over (false by default)</li>
+    <li>enable scrollbar auto update (false by default)</li>
+  </ul>
+  <div class='listing'><pre>
+  import com.moto.template.common.view.AdvancedScrollbar;
+    var myScrollbar:AdvancedScrollbar = new AdvancedScrollbar(
+  contentHolder, mask.getRect(this), stage);
+    // Set scrollbar controls
+  // You need to pass track button and guide to add basic controls for
+  // your scroll. The only requirement - track button and guide anchor
+  // points should be set to the top left corner and they should be
+  // placed in the same clip. Optionally you can set track to add
+  // track click logic, control buttons and control holder which will be
+  // hidden when scrollbar is not needed.
+  myScrollbar.setControls(trackGuide, trackButton, track, bottomArrow, topArrow, controlsHolder);
+    // Set only control buttons and their holder - used when you don't
+  // need track and button, only arrows to control scrollbar.
+  myScrollbar.setControlButtons(bottomArrow, topArrow, controlsHolder);
+    // Scrolling speed ratio
+  myScrollbar.ratio = 0.4;
+    // Allow scrolling using mouse press
+  myScrollbar.scrollOnPress = true;
+    // Delay before recalling event of pressed button when it's jammed
+  myScrollbar.onPressScrollingDelay = 80;
+    // Auto update scroll if content dimensions were changed
+  myScrollbar.autoUpdate = true;
+    // Allow scrolling using mouse wheel
+  myScrollbar.mouseWheelEnabled = true;
+    // Enable auto scrolling on control buttons roll over
+  myScrollbar.scrollOnButtonRollOver = true;
+    // Enable auto scrolling on content roll over
+  myScrollbar.autoScrollOnRollOver = true;
+    // Holds all the scrollbar controls and controls graphics
+  myScrollbar.scrollbarHolder = controlsHolder;
+    // Round content x or y position if needed (when using pixel fonts)
+  myScrollbar.roundedPositionValues = true;
+    // Roll over area size when using auto scrolling option
+  myScrollbar.autoScrollingAreaPercent = 0.3;
+    // Use tweens with easing when moving or scrolling content
+  myScrollbar.tweenWithEasing = true;
+    // Use tweens with easing when moving track button
+  myScrollbar.tweenTrackButtonWithEasing = true;
+    // Set scrolling step when mouse wheel is used, multiplied by delta
+  myScrollbar.wheelScrollingStep = .03;
+    // Forward and backward buttons scrolling speed
+  myScrollbar.buttonsScrollingStep = 0.15;
+    // Auto scrolling (on roll over) speed
+  myScrollbar.autoScrollingStep = 0.15;
+    // Resize track button depending on content size
+  myScrollbar.resizeTrackButtonDependingOnContent = true;
+    // Manually updates scrollbar
+  myScrollbar.update();
+    // Memory clean up by removing unnecessary event listeners
+  myScrollbar.remove();
+  </pre></div>
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#additionalHolderSpace">additionalHolderSpace</a> : Number = 0<div class="summaryTableDescription">
+   Amount of pixels to add to the content holder dimensions
+   while scrolling
+   </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#autoScrollingAreaPercent">autoScrollingAreaPercent</a> : Number = .2<div class="summaryTableDescription">
+   Roll over area size when using auto scrolling option
+      </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#autoScrollingStep">autoScrollingStep</a> : Number = .02<div class="summaryTableDescription">
+   Auto scrolling (on roll over) speed
+      </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#autoScrollOnRollOver">autoScrollOnRollOver</a> : Boolean<div class="summaryTableDescription">
+   Automatic scrolling on roll over
+   </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#autoUpdate">autoUpdate</a> : Boolean<div class="summaryTableDescription">
+   Automatic update.</div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#backwardButton">backwardButton</a> : Sprite<div class="summaryTableDescription">[read-only]
+      </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#buttonsScrollingStep">buttonsScrollingStep</a> : Number = 50<div class="summaryTableDescription">
+   Forward and backward buttons scrolling speed
+      </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#contentHolder">contentHolder</a> : Sprite<div class="summaryTableDescription">[read-only]
+   Content holder
+   </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#fixedContentSize">fixedContentSize</a> : Number<div class="summaryTableDescription">
+   Fixed value of the content size.</div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#forwardButton">forwardButton</a> : Sprite<div class="summaryTableDescription">[read-only]
+      </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#horizontal">horizontal</a> : Boolean<div class="summaryTableDescription">[read-only]
+      </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#maskRectangle">maskRectangle</a> : Rectangle<div class="summaryTableDescription">[read-only]
+   Mask rectangle
+   </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#minTrackButtonSize">minTrackButtonSize</a> : Number = 10<div class="summaryTableDescription">
+   Minimal size of trackButton when the resizeTrackButtonDependingOnContent = true
+      </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#mouseWheelEnabled">mouseWheelEnabled</a> : Boolean<div class="summaryTableDescription">
+   Allow scrolling with mouse wheel
+   </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#onPressScrollingDelay">onPressScrollingDelay</a> : uint = 65<div class="summaryTableDescription">
+   Delay before iteration scrolling step when the scroll button is jammed
+   </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ratio">ratio</a> : Number = .4<div class="summaryTableDescription">
+   Scrolling speed ratio
+      </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#resizeTrackButtonDependingOnContent">resizeTrackButtonDependingOnContent</a> : Boolean<div class="summaryTableDescription">
+      </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#roundedPositionValues">roundedPositionValues</a> : Boolean = false<div class="summaryTableDescription">
+   Round content x or y position if needed (when using pixel fonts)
+      </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#scrollAmount">scrollAmount</a> : Number<div class="summaryTableDescription">
+   Percent factor of scrolled content.</div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#scrollbarHolder">scrollbarHolder</a> : Sprite<div class="summaryTableDescription">
+      </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#scrollOnPress">scrollOnPress</a> : Boolean<div class="summaryTableDescription">
+   Allow scrolling when one of scroll buttons is pressed.</div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#scrollOnRollOver">scrollOnRollOver</a> : Boolean<div class="summaryTableDescription">
+   Allow scrolling when the mouse is over one of the scroll buttons.</div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#stage">stage</a> : Stage<div class="summaryTableDescription">[read-only]
+   Stage
+   </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#track">track</a> : Sprite<div class="summaryTableDescription">[read-only]
+      </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#trackButton">trackButton</a> : Sprite<div class="summaryTableDescription">[read-only]
+      </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#trackGuide">trackGuide</a> : Sprite<div class="summaryTableDescription">[read-only]
+      </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#tweenTrackButtonWithEasing">tweenTrackButtonWithEasing</a> : Boolean = true<div class="summaryTableDescription">
+   Use tweens with easing when moving track button
+      </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#tweenWithEasing">tweenWithEasing</a> : Boolean = true<div class="summaryTableDescription">
+   Use tweens with easing when moving or scrolling content
+      </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#wheelScrollingStep">wheelScrollingStep</a> : Number = 30<div class="summaryTableDescription">
+   Mouse wheel scrolling speed, multiplied by <code>event.delta</code>
+      </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#AdvancedScrollbar()">AdvancedScrollbar</a>(contentHolder:Sprite, maskRectangle:Rectangle, stage:Stage, horizontal:Boolean = false, wheelEnabled:Boolean = true, autoScroll:Boolean = false, autoUpdateScrollbar:Boolean = false)</div>
+<div class="summaryTableDescription">
+   AdvancedScrollbar Constructor
+      </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#remove()">remove</a>():void</div>
+<div class="summaryTableDescription">
+   Removes all scrollbar event listeners to clean up memory if scrollbar
+   needs to be removed.</div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setControlButtons()">setControlButtons</a>(forwardButton:Sprite, backwardButton:Sprite, scrollbarControlsHolder:Sprite = null):void</div>
+<div class="summaryTableDescription">
+   Sets forward and backward control buttons
+      </div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setControls()">setControls</a>(trackGuide:Sprite, trackButton:Sprite, track:Sprite = null, forwardButton:Sprite = null, backwardButton:Sprite = null, scrollbarControlsHolder:Sprite = null):void</div>
+<div class="summaryTableDescription">
+   Set scrollbar controls - track, control buttons and controls clip.</div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#showContentPart()">showContentPart</a>(startPosition:Number, endPosition:Number, center:Boolean = false):void</div>
+<div class="summaryTableDescription">
+   Move part of the content to the visible area.</div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#update()">update</a>(newMaskRectangle:Rectangle = null):void</div>
+<div class="summaryTableDescription">
+   Updates scrollbar.</div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+</table>
+</div>
+<a name="protectedMethodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Methods</div>
+<table id="summaryTableProtectedMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#scrollContent()">scrollContent</a>(event:Event = null):void</div>
+<div class="summaryTableDescription">
+   Scrolls content using <code>scrollAmount</code> value and defining new content
+   position from its start position, dimensions and mask rectangle.</div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#scrollIsNeeded()">scrollIsNeeded</a>():Boolean</div>
+<div class="summaryTableDescription">
+   Checks if scrollbar is needed.</div>
+</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<table id="summaryTableEvent" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th>Summary</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:change">change</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when scrolling.</td><td class="summaryTableOwnerCol">AdvancedScrollbar</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="additionalHolderSpace"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">additionalHolderSpace</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var additionalHolderSpace:Number = 0</code><p>
+   Amount of pixels to add to the content holder dimensions
+   while scrolling
+   </p></div>
+<a name="autoScrollingAreaPercent"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">autoScrollingAreaPercent</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var autoScrollingAreaPercent:Number = .2</code><p>
+   Roll over area size when using auto scrolling option
+      </p><p>The default value is <code>0.2</code>.</p>
+</div>
+<a name="autoScrollingStep"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">autoScrollingStep</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var autoScrollingStep:Number = .02</code><p>
+   Auto scrolling (on roll over) speed
+      </p><p>The default value is <code>0.02</code>.</p>
+</div>
+<a name="autoScrollOnRollOver"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">autoScrollOnRollOver</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>autoScrollOnRollOver:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+   Automatic scrolling on roll over
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get autoScrollOnRollOver():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set autoScrollOnRollOver(value:Boolean):void</code>
+<br>
+</div>
+<a name="autoUpdate"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">autoUpdate</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>autoUpdate:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+   Automatic update.
+      </p><p>The default value is <code>false</code>.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get autoUpdate():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set autoUpdate(value:Boolean):void</code>
+<br>
+</div>
+<a name="backwardButton"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">backwardButton</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>backwardButton:Sprite</code>&nbsp;&nbsp;[read-only]<p>
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get backwardButton():Sprite</code>
+<br>
+</div>
+<a name="buttonsScrollingStep"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">buttonsScrollingStep</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var buttonsScrollingStep:Number = 50</code><p>
+   Forward and backward buttons scrolling speed
+      </p><p>The default value is <code>50</code>.</p>
+</div>
+<a name="contentHolder"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">contentHolder</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>contentHolder:Sprite</code>&nbsp;&nbsp;[read-only]<p>
+   Content holder
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get contentHolder():Sprite</code>
+<br>
+</div>
+<a name="fixedContentSize"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">fixedContentSize</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>fixedContentSize:Number</code>&nbsp;&nbsp;[read-write]<p>
+   Fixed value of the content size. If set to value greater than 0, the holder size will be ignored.
+      </p><p>The default value is <code>0</code>.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get fixedContentSize():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set fixedContentSize(value:Number):void</code>
+<br>
+</div>
+<a name="forwardButton"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">forwardButton</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>forwardButton:Sprite</code>&nbsp;&nbsp;[read-only]<p>
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get forwardButton():Sprite</code>
+<br>
+</div>
+<a name="horizontal"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">horizontal</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>horizontal:Boolean</code>&nbsp;&nbsp;[read-only]<p>
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get horizontal():Boolean</code>
+<br>
+</div>
+<a name="maskRectangle"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">maskRectangle</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>maskRectangle:Rectangle</code>&nbsp;&nbsp;[read-only]<p>
+   Mask rectangle
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get maskRectangle():Rectangle</code>
+<br>
+</div>
+<a name="minTrackButtonSize"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">minTrackButtonSize</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var minTrackButtonSize:Number = 10</code><p>
+   Minimal size of trackButton when the resizeTrackButtonDependingOnContent = true
+      </p><p>The default value is <code>= 10</code>.</p>
+</div>
+<a name="mouseWheelEnabled"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">mouseWheelEnabled</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>mouseWheelEnabled:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+   Allow scrolling with mouse wheel
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get mouseWheelEnabled():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set mouseWheelEnabled(value:Boolean):void</code>
+<br>
+</div>
+<a name="onPressScrollingDelay"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">onPressScrollingDelay</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var onPressScrollingDelay:uint = 65</code><p>
+   Delay before iteration scrolling step when the scroll button is jammed
+   </p></div>
+<a name="ratio"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ratio</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var ratio:Number = .4</code><p>
+   Scrolling speed ratio
+      </p><p>The default value is <code>0.4</code>.</p>
+</div>
+<a name="resizeTrackButtonDependingOnContent"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">resizeTrackButtonDependingOnContent</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>resizeTrackButtonDependingOnContent:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get resizeTrackButtonDependingOnContent():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set resizeTrackButtonDependingOnContent(value:Boolean):void</code>
+<br>
+</div>
+<a name="roundedPositionValues"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">roundedPositionValues</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var roundedPositionValues:Boolean = false</code><p>
+   Round content x or y position if needed (when using pixel fonts)
+      </p><p>The default value is <code>false</code>.</p>
+</div>
+<a name="scrollAmount"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">scrollAmount</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>scrollAmount:Number</code>&nbsp;&nbsp;[read-write]<p>
+   Percent factor of scrolled content.
+      </p><p>The default value is <code>0</code>.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get scrollAmount():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set scrollAmount(value:Number):void</code>
+<br>
+</div>
+<a name="scrollbarHolder"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">scrollbarHolder</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>scrollbarHolder:Sprite</code>&nbsp;&nbsp;[read-write]<p>
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get scrollbarHolder():Sprite</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set scrollbarHolder(value:Sprite):void</code>
+<br>
+</div>
+<a name="scrollOnPress"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">scrollOnPress</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>scrollOnPress:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+   Allow scrolling when one of scroll buttons is pressed.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get scrollOnPress():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set scrollOnPress(value:Boolean):void</code>
+<br>
+</div>
+<a name="scrollOnRollOver"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">scrollOnRollOver</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>scrollOnRollOver:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+   Allow scrolling when the mouse is over one of the scroll buttons.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get scrollOnRollOver():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set scrollOnRollOver(value:Boolean):void</code>
+<br>
+</div>
+<a name="stage"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">stage</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>stage:Stage</code>&nbsp;&nbsp;[read-only]<p>
+   Stage
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get stage():Stage</code>
+<br>
+</div>
+<a name="track"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">track</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>track:Sprite</code>&nbsp;&nbsp;[read-only]<p>
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get track():Sprite</code>
+<br>
+</div>
+<a name="trackButton"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">trackButton</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>trackButton:Sprite</code>&nbsp;&nbsp;[read-only]<p>
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get trackButton():Sprite</code>
+<br>
+</div>
+<a name="trackGuide"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">trackGuide</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>trackGuide:Sprite</code>&nbsp;&nbsp;[read-only]<p>
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get trackGuide():Sprite</code>
+<br>
+</div>
+<a name="tweenTrackButtonWithEasing"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">tweenTrackButtonWithEasing</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var tweenTrackButtonWithEasing:Boolean = true</code><p>
+   Use tweens with easing when moving track button
+      </p><p>The default value is <code>true</code>.</p>
+</div>
+<a name="tweenWithEasing"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">tweenWithEasing</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var tweenWithEasing:Boolean = true</code><p>
+   Use tweens with easing when moving or scrolling content
+      </p><p>The default value is <code>true</code>.</p>
+</div>
+<a name="wheelScrollingStep"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">wheelScrollingStep</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var wheelScrollingStep:Number = 30</code><p>
+   Mouse wheel scrolling speed, multiplied by <code>event.delta</code>
+      </p><p>The default value is <code>0.3</code>.</p>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="AdvancedScrollbar()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">AdvancedScrollbar</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function AdvancedScrollbar(contentHolder:Sprite, maskRectangle:Rectangle, stage:Stage, horizontal:Boolean = false, wheelEnabled:Boolean = true, autoScroll:Boolean = false, autoUpdateScrollbar:Boolean = false)</code><p>
+   AdvancedScrollbar Constructor
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">contentHolder</span>:Sprite</code> &mdash; MovieClip that holds all the scrollbar content
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">maskRectangle</span>:Rectangle</code> &mdash; Rectangle that defines content mask
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">stage</span>:Stage</code> &mdash; Stage clip
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">horizontal</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Scrollbar direction
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">wheelEnabled</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; Allow content scrolling using mouse wheel
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">autoScroll</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Allow content auto scrolling on roll over
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">autoUpdateScrollbar</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Monitor content holder dimensions and
+      update scrollbar automatically
+   </td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="remove()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">remove</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function remove():void</code><p>
+   Removes all scrollbar event listeners to clean up memory if scrollbar
+   needs to be removed.
+   </p></div>
+<a name="scrollContent()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">scrollContent</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function scrollContent(event:Event = null):void</code><p>
+   Scrolls content using <code>scrollAmount</code> value and defining new content
+   position from its start position, dimensions and mask rectangle.
+   Uses tweener methods for moving content with easing if
+   <code>tweenWithEasing</code> flag is set to true.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:Event</code> (default = <code>null</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<a name="scrollIsNeeded()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">scrollIsNeeded</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function scrollIsNeeded():Boolean</code><p>
+   Checks if scrollbar is needed.
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; Returns true if holder is bigger than mask and scrollbar is
+      needed to see all content and false otherwise.
+   </td>
+</tr>
+</table>
+</div>
+<a name="setControlButtons()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setControlButtons</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setControlButtons(forwardButton:Sprite, backwardButton:Sprite, scrollbarControlsHolder:Sprite = null):void</code><p>
+   Sets forward and backward control buttons
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">forwardButton</span>:Sprite</code> &mdash; Forward button clip
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">backwardButton</span>:Sprite</code> &mdash; backwardButton Backward button clip
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">scrollbarControlsHolder</span>:Sprite</code> (default = <code>null</code>)<code></code> &mdash; Controls holder clip
+   </td>
+</tr>
+</table>
+</div>
+<a name="setControls()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setControls</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setControls(trackGuide:Sprite, trackButton:Sprite, track:Sprite = null, forwardButton:Sprite = null, backwardButton:Sprite = null, scrollbarControlsHolder:Sprite = null):void</code><p>
+   Set scrollbar controls - track, control buttons and controls clip.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">trackGuide</span>:Sprite</code> &mdash; Guide clip for the track button
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">trackButton</span>:Sprite</code> &mdash; Track button clip
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">track</span>:Sprite</code> (default = <code>null</code>)<code></code> &mdash; Track clip
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">forwardButton</span>:Sprite</code> (default = <code>null</code>)<code></code> &mdash; Forward button clip
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">backwardButton</span>:Sprite</code> (default = <code>null</code>)<code></code> &mdash; backwardButton Backward button clip
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">scrollbarControlsHolder</span>:Sprite</code> (default = <code>null</code>)<code></code> &mdash; Controls holder clip
+   </td>
+</tr>
+</table>
+</div>
+<a name="showContentPart()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">showContentPart</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function showContentPart(startPosition:Number, endPosition:Number, center:Boolean = false):void</code><p>
+   Move part of the content to the visible area.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">startPosition</span>:Number</code> &mdash; Range start coordinate.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">endPosition</span>:Number</code> &mdash; Range end coordinate.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">center</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Whether the selected area should be centered or not.
+   </td>
+</tr>
+</table>
+</div>
+<a name="update()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">update</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function update(newMaskRectangle:Rectangle = null):void</code><p>
+   Updates scrollbar. Used when auto updating logic is disabled.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">newMaskRectangle</span>:Rectangle</code> (default = <code>null</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<div class="detailSectionHeader">Event detail</div>
+<a name="event:change"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">change</td><td class="detailHeaderType">event&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href=""><code>flash.events.Event</code></a>
+<br>
+<p></p><p>
+  Dispatched when scrolling.
+    </p></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

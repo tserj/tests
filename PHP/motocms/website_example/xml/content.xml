@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<motoContent>
+	<website><objects><object id="1" holder="2" x="0" y="0" width="400" height="16" type="htmlText" autoSize="left" selectable="false" embedFonts="true" antiAliasType="advanced"><data><![CDATA[<P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#777777">CERTEX © 2011 | <A HREF="event:openPopup;id=1" TARGET="">PRIVACY POLICY</A></FONT></P>]]></data></object><object id="2" holder="4" x="175" y="36" width="315" height="32" type="htmlText" autoSize="left" selectable="false" embedFonts="true" antiAliasType="advanced"><data><![CDATA[<P ALIGN="LEFT"><FONT FACE="Xirod" SIZE="24" COLOR="#FFFFFF"><A HREF="event:switchPage;page=2" TARGET="">PROF-traffic</A></FONT></P>]]></data></object></objects><slots/><modules><module id="3" holder="3" x="-97" y="0" width="197" height="16" moduleType="4"><name><![CDATA[Music Player]]></name><data>
+					<playlist>xml/modules/playlist.xml</playlist>
+				</data><properties><item propertyType="1" embedFonts="true"><![CDATA[<font color="#777777" size="8" face="standard 07_55">SOUND <font color="#ffffff">[ </font>ON<font color="#ffffff"> ]</font></font>]]></item><item propertyType="2" embedFonts="true"><![CDATA[<font color="#777777" size="8" face="standard 07_55">SOUND <font color="#ffffff">[ </font>OFF<font color="#ffffff"> ]</font></font>]]></item></properties></module></modules><properties><item propertyType="1"><![CDATA[true]]></item></properties><elements><loginForm><properties><item propertyType="1" embedFonts="false"><![CDATA[<font face="Tahoma" size="11" color="#000000">Password:</font>]]></item><item propertyType="2" embedFonts="false"><![CDATA[<font face="Tahoma" size="11" color="#B11B1B">Wrong password.</font>]]></item><item propertyType="3" embedFonts="false"><![CDATA[<font face="Tahoma" size="11" color="#FFFFFF">Enter</font>]]></item><item propertyType="4"><![CDATA[19]]></item><item propertyType="5"><![CDATA[10]]></item><item propertyType="6"><![CDATA[300]]></item><item propertyType="7"><![CDATA[0x838383]]></item><item propertyType="8"><![CDATA[0x5A5A5A]]></item><item propertyType="9"><![CDATA[0x000000]]></item><item propertyType="10"><![CDATA[0x4E4E4E]]></item><item propertyType="11" embedFonts="false"><![CDATA[<font face="Tahoma" size="11" color="#242424">******</font>]]></item><item propertyType="12"><![CDATA[0xFFFFFF]]></item><item propertyType="13"><![CDATA[0xa9a9a9]]></item><item propertyType="14"><![CDATA[true]]></item><item propertyType="15"><![CDATA[0xd6d5d3]]></item><item propertyType="16"><![CDATA[0xA5A4A3]]></item><item propertyType="17"><![CDATA[0x000000]]></item><item propertyType="18"><![CDATA[80]]></item><item propertyType="19"><![CDATA[5]]></item><item propertyType="20"><![CDATA[5]]></item></properties></loginForm></elements></website>
+	<layouts>
+		<layout layoutType="1"><objects><object id="164" holder="6" x="615" y="18" width="94" height="65" type="htmlText" embedFonts="false"><data><![CDATA[<P ALIGN="LEFT"><FONT FACE="Verdana" SIZE="16" COLOR="#FFFFFF"><A HREF="event:switchPage;page=2" TARGET="">Логин:</A></FONT></P><P ALIGN="LEFT"><FONT FACE="Verdana" SIZE="16" COLOR="#FFFFFF"><A HREF="event:switchPage;page=2" TARGET=""></A></FONT></P><P ALIGN="LEFT"><FONT FACE="Verdana" SIZE="16" COLOR="#FFFFFF"><A HREF="event:switchPage;page=2" TARGET="">Пароль:</A></FONT></P>]]></data></object></objects><slots><slot id="4" holder="5" x="0" y="0" width="777" height="60" locked="true" click="switchPage;page=2" slotType="1"><properties><item propertyType="1" embedFonts="true"><![CDATA[<font face="standard 07_55" color="#FFFFFF" size="16">ENTER</font>]]></item><item propertyType="2"><![CDATA[0xFFA100]]></item></properties></slot></slots><modules><module id="165" holder="6" x="260" y="114" width="590" height="129" depth="1" moduleType="6"><name><![CDATA[Contact form]]></name><data>
+						<formConfiguration isDataProvider="true"/>
+						<formStructure isDataProvider="true"/>
+						<submitButtonRenderer>SimpleButtonSlot</submitButtonRenderer>
+						<resetButtonRenderer>SimpleButtonSlot</resetButtonRenderer>
+						<textItemRenderer>ContactFormItem</textItemRenderer>
+					<attachItemRenderer>MotoExternalContactFormAttachItem</attachItemRenderer><radioButtonItemRenderer>MotoExternalContactFormRadioButtonItem</radioButtonItemRenderer></data><properties><item propertyType="1"><![CDATA[0x015267]]></item><item propertyType="2"><![CDATA[0x81d0e9]]></item><item propertyType="3"><![CDATA[0xFFFFFF]]></item><item propertyType="4" embedFonts="true"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0">FORM FIELD TEXT</FONT></P></TEXTFORMAT>]]></item><item propertyType="5" embedFonts="true"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#F8FB17" LETTERSPACING="0" KERNING="0">FORM FIELD TEXT</FONT></P></TEXTFORMAT>]]></item><item propertyType="6" embedFonts="true"><![CDATA[<font color="#f8fb17" size="8" face="standard 07_55">SEND</font>]]></item><item propertyType="7" embedFonts="true"><![CDATA[<font color="#f8fb17" size="8" face="standard 07_55">CLEAR</font>]]></item></properties></module></modules></layout>
+		<layout layoutType="2">
+			<objects/>
+			<slots/>
+			<modules>
+				
+			<module id="5" holder="7" x="0" y="0" width="0" height="0" locked="true" moduleType="1"><name><![CDATA[Main menu]]></name><data>
+						<menu>1</menu>
+						<dropDown>true</dropDown>
+						<maxDepth>1</maxDepth>
+						<maxRootItems>5</maxRootItems>
+						<dropDownOnRollOver>true</dropDownOnRollOver>
+						<dropDownMenuType>10</dropDownMenuType>
+						<dropDownItemRenderer>MainSubMenuItemRenderer</dropDownItemRenderer>
+					</data><properties/></module></modules>
+		</layout>
+		<layout layoutType="3"><objects/><slots><slot id="6" holder="10" x="737" y="139" width="0" height="0" locked="true" buttonMode="true" click="switchPage;page=2" slotType="3"><name><![CDATA[Back Button]]></name><properties/></slot></slots><modules><module id="7" holder="9" x="0" y="0" width="0" height="0" locked="true" moduleType="2"><name><![CDATA[Right menu]]></name><data>
+						<menu>1</menu>
+						<dropDown>true</dropDown>
+						<maxDepth>1</maxDepth>
+						<maxRootItems>5</maxRootItems>
+						<dropDownOnRollOver>true</dropDownOnRollOver>
+						<dropDownMenuType>11</dropDownMenuType>
+						<dropDownItemRenderer>RightSubMenuItemRenderer</dropDownItemRenderer>
+					</data><properties/></module></modules></layout>
+	</layouts>
+	<pages>
+		<page id="1" parent="0" order="1" linkable="false" removable="false" pageType="1" height="700"><objects/><slots/><modules/><properties/><name><![CDATA[Главная]]></name><title><![CDATA[Главная]]></title><url><![CDATA[traffic-stock]]></url></page>
+		<page id="2" parent="0" linkable="true" removable="false" pageType="2" order="2">
+			<objects/>
+			<slots/>
+			<modules/>
+			<name><![CDATA[Купить]]></name>
+			<title><![CDATA[Купить]]></title>
+			<url><![CDATA[home]]></url>
+			<description><![CDATA[]]></description>
+			<keywords><![CDATA[]]></keywords>
+		<properties/></page>
+		
+		
+		
+		
+		<page id="7" parent="0" order="3" linkable="true" pageType="3"><objects><object id="54" holder="12" x="0" y="0" width="300" height="0" depth="6" type="htmlText" selectable="true" embedFonts="true" autoSize="left"><data><![CDATA[<font color="#FFFFFF" size="16" face="standard 07_55">CONTACT INFORMATION</font>]]></data></object><object id="55" holder="12" x="202" y="40" width="380" height="0" depth="5" type="htmlText" selectable="true" embedFonts="true" autoSize="left"><data><![CDATA[<font color="#d0eaf6" size="8" face="standard 07_55"><font color="#f8fb17">PRAESENT JUSTO DOLOR, LOBORTIS QUIS, LOBORTIS DIGNISSIM, PULVINAR AC, LOREM. VESTIBULUM SED ANTE. DONEC SAGITTIS EUISMOD PURUS.</font><br><br>LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA.</font>]]></data></object><object id="56" holder="12" x="-23" y="160" width="647" height="1" alpha="0.2" depth="4" type="shape" colors="0x000000" shape="line"><data><![CDATA[]]></data></object><object id="57" holder="12" x="0" y="178" width="300" height="0" depth="3" type="htmlText" selectable="true" embedFonts="true" autoSize="left"><data><![CDATA[<font color="#FFFFFF" size="16" face="standard 07_55">CONTACT FORM</font>]]></data></object><object id="58" holder="12" x="0" y="220" width="580" height="0" depth="2" type="htmlText" selectable="true" embedFonts="true" autoSize="left"><data><![CDATA[<font color="#d0eaf6" size="8" face="standard 07_55">LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NON-<br>UMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MAL ESUADA ODIO. MORBI NUNC ODIO, GRAVIDA</font>]]></data></object></objects><slots><slot id="59" holder="12" x="0" y="39" width="192" height="93" depth="1" buttonMode="true" slotType="4"><properties><item propertyType="1"><![CDATA[images/pic13.jpg]]></item><item propertyType="2"><![CDATA[0xFFFFFF]]></item></properties></slot><slot id="60" holder="14" x="108" y="136" width="646" height="467" locked="true" slotType="6"><name><![CDATA[Page Background]]></name><properties><item propertyType="1"><![CDATA[0x2B82AF]]></item></properties></slot></slots><modules><module id="61" holder="12" x="0" y="290" width="590" height="129" moduleType="6"><name><![CDATA[Contact form]]></name><data>
+						<formConfiguration isDataProvider="true">xml/modules/form_configuration.xml</formConfiguration>
+						<formStructure isDataProvider="true">xml/modules/form_structure.xml</formStructure>
+						<submitButtonRenderer>SimpleButtonSlot</submitButtonRenderer>
+						<resetButtonRenderer>SimpleButtonSlot</resetButtonRenderer>
+						<textItemRenderer>ContactFormItem</textItemRenderer>
+					<attachItemRenderer>MotoExternalContactFormAttachItem</attachItemRenderer><radioButtonItemRenderer>MotoExternalContactFormRadioButtonItem</radioButtonItemRenderer></data><properties><item propertyType="1"><![CDATA[0x015267]]></item><item propertyType="2"><![CDATA[0x81d0e9]]></item><item propertyType="3"><![CDATA[0xFFFFFF]]></item><item propertyType="4" embedFonts="true"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0">FORM FIELD TEXT</FONT></P></TEXTFORMAT>]]></item><item propertyType="5" embedFonts="true"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#F8FB17" LETTERSPACING="0" KERNING="0">FORM FIELD TEXT</FONT></P></TEXTFORMAT>]]></item><item propertyType="6" embedFonts="true"><![CDATA[<font color="#f8fb17" size="8" face="standard 07_55">SEND</font>]]></item><item propertyType="7" embedFonts="true"><![CDATA[<font color="#f8fb17" size="8" face="standard 07_55">CLEAR</font>]]></item></properties></module></modules><name><![CDATA[Контакты]]></name><title><![CDATA[Контакты]]></title><url><![CDATA[contacts]]></url><properties/></page>
+		
+		
+		
+		
+		
+		
+		
+		
+	<page id="8" parent="0" order="0" linkable="true" pageType="3" height="700"><objects><object id="156" holder="12" x="0" y="0" width="300" height="0" type="htmlText" embedFonts="true" autoSize="left" selectable="true"><data><![CDATA[<P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="16" COLOR="#FFFFFF">PAGE TITLE</FONT></P>]]></data></object><object id="157" holder="12" x="1" y="47" width="608" height="112" depth="2" type="htmlText" embedFonts="true" autoSize="left" selectable="true"><data><![CDATA[<P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFBA00">LOREM IPSUM DOLOR SIT AMET<FONT COLOR="#FFFFFF"></FONT></FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF"></FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF">CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA ODIO. MORBI NUNC ODIO, GRAVIDA AT, CURSUS NEC</FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF"></FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF">CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA ODIO. MORBI NUNC ODIO, GRAVIDA AT, CURSUS NEC</FONT></P>]]></data></object><object id="158" holder="12" x="-23" y="180" width="647" height="1" alpha="0.2" depth="3" type="shape" shape="line" colors="0x000000"><data><![CDATA[]]></data></object><object id="159" holder="12" x="0" y="203" width="377" height="64" depth="4" type="htmlText" embedFonts="true" autoSize="left" selectable="true"><data><![CDATA[<P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFBA00">NULLA DUI. FUSCE FEUGIAT MALESUADA PRAESENT VES</FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF"></FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF">CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA ODIO. MORBI NUNC ODIO, GRAVIDA AT, CURSUS NEC</FONT></P>]]></data></object><object id="160" holder="12" x="1" y="325" width="377" height="112" depth="5" type="htmlText" embedFonts="true" autoSize="left" selectable="true"><data><![CDATA[<P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFBA00">CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES</FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF"></FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF">CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA ODIO. MORBI NUNC ODIO, GRAVIDA AT, CURSUS NEC</FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF"></FONT></P>]]></data></object></objects><slots><slot id="161" holder="14" x="108" y="136" width="646" height="467" locked="true" slotType="6"><name><![CDATA[Page Background]]></name><properties><item propertyType="1"><![CDATA[0x494949]]></item></properties></slot><slot id="162" holder="12" x="398" y="206" width="192" height="93" depth="1" click="switchPage;page=2" slotType="4"><properties><item propertyType="1"><![CDATA[images/pic14.jpg]]></item><item propertyType="2"><![CDATA[0xFFFFFF]]></item></properties></slot><slot id="163" holder="12" x="398" y="326" width="192" height="93" depth="6" click="switchPage;page=2" slotType="4"><properties><item propertyType="1"><![CDATA[images/pic15.jpg]]></item><item propertyType="2"><![CDATA[0xFFFFFF]]></item></properties></slot></slots><modules/><properties/><name><![CDATA[Продать]]></name><title><![CDATA[Продать]]></title><url><![CDATA[page-8]]></url></page></pages>
+	<popups>
+		
+		
+		
+		
+		
+		
+		
+	<folders/></popups>
+</motoContent>

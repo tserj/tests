@@ -1,0 +1,100 @@
+2012-01-10T20:27:13+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/10p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/11p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/12p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/1p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/2p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/3p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/4p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/5p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/6p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/7p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/8p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:27:13+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/9p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/10p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/11p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/12p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/1p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/2p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/3p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/4p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/5p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/6p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/7p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/8p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T20:56:37+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/gallery/_preview/9p.jpg' for writing: No such file or directory
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T21:05:42+04:00 ERR (3): [2] imagepng() [<a href='function.imagepng'>function.imagepng</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/_preview/raster_4f0c6fe6bf26f.png' for writing: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0
+2012-01-10T21:13:16+04:00 ERR (3): [2] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open '/home/localhost/www/motocms/website_example/images/_preview/raster_4f0c71acd5bb0.jpg' for writing: Permission denied
+	in file /home/localhost/www/motocms/website_example/admin/libs/Moto/MotoImgUtil.php:0

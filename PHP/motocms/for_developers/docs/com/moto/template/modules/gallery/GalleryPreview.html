@@ -1,0 +1,599 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print">
+<meta content="GalleryPreview,com.moto.template.modules.gallery.GalleryPreview,_imageLoader,animationIsPlaying,data,imageIsLoaded,imageLoaderInfo,pathPrefix,change,getDimensions,getInstance,getLoadedBitmap,init,loadImage,setLoadedBitmap,setLoadedImage,setSize" name="keywords">
+<title>com.moto.template.modules.gallery.GalleryPreview</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'GalleryPreview - Moto CMS API Documentation';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Moto CMS API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../index-list.html')" href="../../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../../index.html?com/moto/template/modules/gallery/GalleryPreview.html&amp;com/moto/template/modules/gallery/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;GalleryPreview</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class GalleryPreview"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.moto.template.modules.gallery</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class GalleryPreview</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">GalleryPreview <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../../images/inherit-arrow.gif"> flash.display.MovieClip</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Implements</td><td><a href="../../shell/view/components/IHasPathPrefix.html">IHasPathPrefix</a>, <a href="../../shell/view/components/ITransformable.html">ITransformable</a></td>
+</tr>
+</table>
+<p></p>
+  Base class that implements the display of gallery items.
+    <p></p>
+<br>
+<span class="label">Example</span>
+<br>    <div class='listing'><pre>
+  package modules
+  {
+   import com.moto.template.common.view.AnimatedProgressBar;
+   import com.moto.template.modules.gallery.GalleryPreview;
+   import com.moto.template.common.view.components.loaders.ImageLoader;
+   import com.moto.template.common.view.components.loaders.MediaLoader;
+   import com.moto.template.shell.model.vo.ModuleItemVO;
+   import flash.display.LoaderInfo;
+   import flash.display.MovieClip;
+   import flash.events.Event;
+     import caurina.transitions.Tweener;
+     public class GalleryPreviewImage extends GalleryPreview
+   {
+    private var _mask:MovieClip;
+    private var _mask2:MovieClip;
+    private var _image:ImageLoader;
+    private var _image2:ImageLoader;
+    private var _bg:MovieClip;
+    private var _preloader:AnimatedProgressBar;
+    private var _loaderInfo:LoaderInfo;
+    private var _initialized:Boolean = false;
+      public function GalleryPreviewImage()
+    {
+     // Get slot elements
+     _mask = getChildByName("imageMask") as MovieClip;
+     _mask2 = getChildByName("imageMask2") as MovieClip;
+     var holder:MovieClip = getChildByName("imageHolder") as MovieClip;
+     var holder2:MovieClip = getChildByName("imageHolder2") as MovieClip;
+     _image = holder.getChildByName("image") as ImageLoader;
+     _image2 = holder2.getChildByName("image") as ImageLoader;
+     _bg = getChildByName("bg") as MovieClip;
+     _preloader = preloaderHolder.getChildByName("preloader") as AnimatedProgressBar;
+       // Set mask
+     holder.mask = _mask;
+     holder2.mask = _mask2;
+    }
+      override public function init(data:ModuleItemVO):void
+    {
+     super.init(data);
+       _loadImage(pathPrefix + data.getPropertyValueByID(1));
+    }
+      override public function change(data:ModuleItemVO):void
+    {
+     super.change(data);
+     _preloader.show();
+     Tweener.addTween(_preloader, { alpha:1 } );
+       _loadImage(pathPrefix + data.getPropertyValueByID(1));
+    }
+      private function _loadImage(url:String):void
+    {
+     if (_loaderInfo)
+      _loaderInfo.removeEventListener(Event.COMPLETE, imageCompleteHandler);
+     _loaderInfo = loadImage(url);
+     _loaderInfo.addEventListener(Event.COMPLETE, imageCompleteHandler);
+    }
+    override public function setSize(newWidth:Number, newHeight:Number):void
+    {
+     _bg.width = newWidth;
+     _bg.height = newHeight;
+       _mask.width = newWidth-2;
+     _mask.height = newHeight - 2;
+       _image.width = newWidth-2;
+     _image.height = newHeight - 2;
+       _mask2.width = newWidth-2;
+     _mask2.height = newHeight - 2;
+       _image2.width = newWidth-2;
+     _image2.height = newHeight - 2;
+       _preloader.x = (_bg.width - _preloader.width) / 2;
+     _preloader.y = (_bg.height - _preloader.height) / 2;
+    }
+      private function imageCompleteHandler(event:Event):void
+    {
+     event.target.removeEventListener(Event.COMPLETE, imageCompleteHandler)
+     if (!_initialized)
+     {
+      _initialized = true;
+      setLoadedBitmap(_image);
+      gotoAndPlay("show");
+     } else {
+      setLoadedBitmap(_image2);
+      gotoAndPlay("change");
+     }
+     Tweener.addTween(_preloader, {alpha:0, onComplete:function():void { _preloader.hide() }});
+    }
+     }
+  }
+  </pre></div>
+    <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../common/view/components/loaders/ImageLoader.html" target="">com.moto.template.common.view.components.loaders.ImageLoader</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#animationIsPlaying">animationIsPlaying</a> : Boolean<div class="summaryTableDescription">[read-only]
+   Flag of animation playing
+   </div>
+</td><td class="summaryTableOwnerCol">GalleryPreview</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#data">data</a> : <a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a>
+<div class="summaryTableDescription">[read-only]
+   Displayed item data.</div>
+</td><td class="summaryTableOwnerCol">GalleryPreview</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#imageIsLoaded">imageIsLoaded</a> : Boolean<div class="summaryTableDescription">[read-only]
+      </div>
+</td><td class="summaryTableOwnerCol">GalleryPreview</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#imageLoaderInfo">imageLoaderInfo</a> : LoaderInfo<div class="summaryTableDescription">[read-only]
+   Loaded picture in the BitmapData format.</div>
+</td><td class="summaryTableOwnerCol">GalleryPreview</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#pathPrefix">pathPrefix</a> : String<div class="summaryTableDescription">
+   
+   Prefix of the external assets path.</div>
+</td><td class="summaryTableOwnerCol">GalleryPreview</td>
+</tr>
+</table>
+</div>
+<a name="protectedPropertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Properties</div>
+<table id="summaryTableProtectedProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_imageLoader">_imageLoader</a> : Loader<div class="summaryTableDescription">
+   Image loader.</div>
+</td><td class="summaryTableOwnerCol">GalleryPreview</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#GalleryPreview()">GalleryPreview</a>()</div>
+<div class="summaryTableDescription">
+   GalleryPreview Constructor.</div>
+</td><td class="summaryTableOwnerCol">GalleryPreview</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#change()">change</a>(data:<a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a>):void</div>
+<div class="summaryTableDescription">
+   Change preview with module item value object.</div>
+</td><td class="summaryTableOwnerCol">GalleryPreview</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getDimensions()">getDimensions</a>():Rectangle</div>
+<div class="summaryTableDescription">
+   
+   Returns object dimensions.</div>
+</td><td class="summaryTableOwnerCol">GalleryPreview</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getInstance()">getInstance</a>():DisplayObject</div>
+<div class="summaryTableDescription">
+   
+   Returns display object instance.</div>
+</td><td class="summaryTableOwnerCol">GalleryPreview</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getLoadedBitmap()">getLoadedBitmap</a>(pixelSnapping:String = "auto", smoothing:Boolean = true):Bitmap</div>
+<div class="summaryTableDescription">
+   Returns a loaded picture instance in the visual Bitmap object.</div>
+</td><td class="summaryTableOwnerCol">GalleryPreview</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#init()">init</a>(data:<a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a>):void</div>
+<div class="summaryTableDescription">
+   Initializes preview with module item value object.</div>
+</td><td class="summaryTableOwnerCol">GalleryPreview</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setLoadedBitmap()">setLoadedBitmap</a>(target:<a href="../../common/view/components/loaders/ImageLoader.html">ImageLoader</a>):void</div>
+<div class="summaryTableDescription">
+   Set an instance of loaded picture to a holder of <code>ImageLoader</code> type.</div>
+</td><td class="summaryTableOwnerCol">GalleryPreview</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setLoadedImage()">setLoadedImage</a>(target:Sprite):void</div>
+<div class="summaryTableDescription">
+   Add an instance of loaded picture to the specified holder; all the holder content is deleted.</div>
+</td><td class="summaryTableOwnerCol">GalleryPreview</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setSize()">setSize</a>(newWidth:Number, newHeight:Number):void</div>
+<div class="summaryTableDescription">
+   
+   Resizes object.</div>
+</td><td class="summaryTableOwnerCol">GalleryPreview</td>
+</tr>
+</table>
+</div>
+<a name="protectedMethodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Methods</div>
+<table id="summaryTableProtectedMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#loadImage()">loadImage</a>(url:String):LoaderInfo</div>
+<div class="summaryTableDescription">
+   Loads a picture; if it's loaded successfully the method transforms it into BitmapData and caches it.</div>
+</td><td class="summaryTableOwnerCol">GalleryPreview</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="animationIsPlaying"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">animationIsPlaying</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>animationIsPlaying:Boolean</code>&nbsp;&nbsp;[read-only]<p>
+   Flag of animation playing
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get animationIsPlaying():Boolean</code>
+<br>
+</div>
+<a name="data"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">data</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>data:<a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a></code>&nbsp;&nbsp;[read-only]<p>
+   Displayed item data.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get data():<a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a></code>
+<br>
+</div>
+<a name="imageIsLoaded"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">imageIsLoaded</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>imageIsLoaded:Boolean</code>&nbsp;&nbsp;[read-only]<p>
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get imageIsLoaded():Boolean</code>
+<br>
+</div>
+<a name="_imageLoader"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_imageLoader</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _imageLoader:Loader</code><p>
+   Image loader.
+   </p></div>
+<a name="imageLoaderInfo"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">imageLoaderInfo</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>imageLoaderInfo:LoaderInfo</code>&nbsp;&nbsp;[read-only]<p>
+   Loaded picture in the BitmapData format.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get imageLoaderInfo():LoaderInfo</code>
+<br>
+</div>
+<a name="pathPrefix"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">pathPrefix</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>pathPrefix:String</code>&nbsp;&nbsp;[read-write]<p>
+   
+   Prefix of the external assets path.
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get pathPrefix():String</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set pathPrefix(value:String):void</code>
+<br>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="GalleryPreview()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">GalleryPreview</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function GalleryPreview()</code><p>
+   GalleryPreview Constructor.
+   </p></div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="change()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">change</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function change(data:<a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a>):void</code><p>
+   Change preview with module item value object.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">data</span>:<a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a></code></td>
+</tr>
+</table>
+</div>
+<a name="getDimensions()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getDimensions</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getDimensions():Rectangle</code><p>
+   
+   Returns object dimensions.
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Rectangle</code> &mdash; Dimensions rectangle.
+   </td>
+</tr>
+</table>
+</div>
+<a name="getInstance()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getInstance</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getInstance():DisplayObject</code><p>
+   
+   Returns display object instance.
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>DisplayObject</code></td>
+</tr>
+</table>
+</div>
+<a name="getLoadedBitmap()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getLoadedBitmap</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getLoadedBitmap(pixelSnapping:String = "auto", smoothing:Boolean = true):Bitmap</code><p>
+   Returns a loaded picture instance in the visual Bitmap object.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pixelSnapping</span>:String</code> (default = "<code>auto</code>")<code></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">smoothing</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Bitmap</code> &mdash; Bitmap
+   </td>
+</tr>
+</table>
+</div>
+<a name="init()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">init</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function init(data:<a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a>):void</code><p>
+   Initializes preview with module item value object.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">data</span>:<a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a></code></td>
+</tr>
+</table>
+</div>
+<a name="loadImage()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">loadImage</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function loadImage(url:String):LoaderInfo</code><p>
+   Loads a picture; if it's loaded successfully the method transforms it into BitmapData and caches it.
+   Using this loading method you can easily get instances of pictures without loading them repeatedly.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">url</span>:String</code> &mdash; URL address
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>LoaderInfo</code> &mdash; LoaderInfo The LoaderInfo class provides information about a loaded image file (JPEG, GIF, or PNG).
+   </td>
+</tr>
+</table>
+</div>
+<a name="setLoadedBitmap()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setLoadedBitmap</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setLoadedBitmap(target:<a href="../../common/view/components/loaders/ImageLoader.html">ImageLoader</a>):void</code><p>
+   Set an instance of loaded picture to a holder of <code>ImageLoader</code> type.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">target</span>:<a href="../../common/view/components/loaders/ImageLoader.html">ImageLoader</a></code> &mdash; ImageLoader
+   </td>
+</tr>
+</table>
+</div>
+<a name="setLoadedImage()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setLoadedImage</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setLoadedImage(target:Sprite):void</code><p>
+   Add an instance of loaded picture to the specified holder; all the holder content is deleted.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">target</span>:Sprite</code> &mdash; Holder for a picture instance.
+   </td>
+</tr>
+</table>
+</div>
+<a name="setSize()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setSize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setSize(newWidth:Number, newHeight:Number):void</code><p>
+   
+   Resizes object.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">newWidth</span>:Number</code> &mdash; New object width.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">newHeight</span>:Number</code> &mdash; New object height.
+   </td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

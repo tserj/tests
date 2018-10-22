@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infomodule>
+	<configuration>
+		<option id="titleID">
+			<value>2</value>
+		</option>
+	</configuration>
+	<structure>
+		<properties>
+			<property id="1" type="image">
+				<name>Icon</name>
+			</property>
+			<property id="2" type="htmlText">
+				<name>Text</name>
+			</property>
+			<property id="3" type="link">
+				<name>Link</name>
+			</property>
+		</properties>
+		<template id="0" order="0" click="">
+				<properties>
+					<item propertyType="1"><![CDATA[]]></item>
+					<item propertyType="2" embedFonts="true"><![CDATA[<TEXTFORMAT><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFBA00" LETTERSPACING="0" KERNING="0">MAY 4, 2008 <FONT COLOR="#F3D1DC"></FONT></FONT></P></TEXTFORMAT><TEXTFORMAT><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#F3D1DC" LETTERSPACING="0" KERNING="0"></FONT></P></TEXTFORMAT><TEXTFORMAT><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#F3D1DC" LETTERSPACING="0" KERNING="0">LOREM IPSUM</FONT></P></TEXTFORMAT>]]></item>
+					<item propertyType="3"><![CDATA[]]></item>
+				</properties>
+		</template>
+	</structure>
+	<data/>
+</infomodule>

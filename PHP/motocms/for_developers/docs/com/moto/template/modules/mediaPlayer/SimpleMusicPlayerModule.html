@@ -1,0 +1,1309 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print">
+<meta content="SimpleMusicPlayerModule,com.moto.template.modules.mediaPlayer.SimpleMusicPlayerModule,DEFAULT_BUFFER_TIME,STEP_REWIND,_muteSound,_soundChannel,autoLoadAndPlay,currentTrack,defaultVolume,isBuffering,isPlaying,lengthTrack,playlistDataProvider,positionTrack,soundPaused,volume,backwardTrack,createItemVO,forwardTrack,getCurrentTrackData,getCurrentTrackURL,init,initConfiguration,initListControls,loadDataProvider,nextTrack,pauseTrack,playTrack,playerStatusChangedHandler,previousTrack,soundChannelCompleteHandler,soundCompleteHandler,soundErrorHandler,soundProgressHandler,startPlayingSound,stopTrack,switchTrack,switchVolume" name="keywords">
+<title>com.moto.template.modules.mediaPlayer.SimpleMusicPlayerModule</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'SimpleMusicPlayerModule - Moto CMS API Documentation';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Moto CMS API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../index-list.html')" href="../../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../../index.html?com/moto/template/modules/mediaPlayer/SimpleMusicPlayerModule.html&amp;com/moto/template/modules/mediaPlayer/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;SimpleMusicPlayerModule</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a>&nbsp;| <a href="#constantSummary">Constants</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class SimpleMusicPlayerModule"); titleBar_setSubNav(true,true,false,false,true,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.moto.template.modules.mediaPlayer</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class SimpleMusicPlayerModule</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">SimpleMusicPlayerModule <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../../images/inherit-arrow.gif"> <a href="../AbstractInfoModule.html">AbstractInfoModule</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../../images/inherit-arrow.gif"> <a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../../images/inherit-arrow.gif"> <a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../../images/inherit-arrow.gif"> flash.display.MovieClip</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Implements</td><td><a href="../IMotoModule.html">IMotoModule</a></td>
+</tr>
+</table>
+<p></p>
+  Base class that implements the simple music player.
+    <p></p>
+<br>
+<span class="label">Example</span>
+<br>    <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractInfoModule.html#autoInitListControls">autoInitListControls</a> : Boolean = true<div class="summaryTableDescription">
+   Automatic initialization of the list controllers after content loading.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#autoLoadAndPlay">autoLoadAndPlay</a> : Boolean<div class="summaryTableDescription">[read-only]
+   Autoload and play
+   </div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#currentTrack">currentTrack</a> : uint<div class="summaryTableDescription">[read-only]
+   Current track index.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#data">data</a> : XML<div class="summaryTableDescription">
+   Module data XML.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractInfoModule.html#dataProvider">dataProvider</a> : Array<div class="summaryTableDescription">
+   Module data provider.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#defaultApplicationDomain">defaultApplicationDomain</a> : ApplicationDomain<div class="summaryTableDescription">
+   Default application domain for moto object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#defaultVolume">defaultVolume</a> : Number<div class="summaryTableDescription">[read-only]
+   Default volume
+   </div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractInfoModule.html#enableLoadDataProvider">enableLoadDataProvider</a> : Boolean = true<div class="summaryTableDescription">
+   Allow loading of dataProvider.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#extra">extra</a> : <a href="../../common/view/MotoExtraObject.html">MotoExtraObject</a>
+<div class="summaryTableDescription">
+   Extra data, dynamic object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#height">height</a> : Number<div class="summaryTableDescription">
+   Indicates the height of the display object, in pixels.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractInfoModule.html#initialized">initialized</a> : Boolean<div class="summaryTableDescription">
+   The module content is loaded, parsed and the module is initialized.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#isBuffering">isBuffering</a> : Boolean<div class="summaryTableDescription">[read-only]
+   Returns the buffering state of external MP3 files.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#isPlaying">isPlaying</a> : Boolean<div class="summaryTableDescription">[read-only]
+   Track is playing.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#lengthTrack">lengthTrack</a> : Number<div class="summaryTableDescription">[read-only]
+   The length of the current trak in milliseconds.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#limitedMode">limitedMode</a> : Boolean<div class="summaryTableDescription">
+   
+   Object limited mode;  true if the limited mode is enabled, else false.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#locked">locked</a> : Boolean<div class="summaryTableDescription">
+   Specifies if object is locked.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#maxHeight">maxHeight</a> : Number<div class="summaryTableDescription">
+   
+   Maximal object height.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#maxWidth">maxWidth</a> : Number<div class="summaryTableDescription">
+   
+   Maximal object width.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#minHeight">minHeight</a> : Number<div class="summaryTableDescription">
+   
+   Minimal object height.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#minWidth">minWidth</a> : Number<div class="summaryTableDescription">
+   
+   Minimal object width.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#moduleVO">moduleVO</a> : <a href="../../shell/model/vo/ModuleVO.html">ModuleVO</a>
+<div class="summaryTableDescription">
+   Module value object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#pathPrefix">pathPrefix</a> : String<div class="summaryTableDescription">
+   
+   Prefix of the external assets path.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#playlistDataProvider">playlistDataProvider</a> : Array<div class="summaryTableDescription">[read-only]
+   Reference to <code>dataProvider</code>.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#positionTrack">positionTrack</a> : Number<div class="summaryTableDescription">
+   When the sound is playing, the position property indicates the current point that is being played in the sound file.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#preloaderLinkageName">preloaderLinkageName</a> : String<div class="summaryTableDescription">
+   
+   Preloader linkage name.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#properties">properties</a> : Array<div class="summaryTableDescription">
+   Module properties collection.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#soundPaused">soundPaused</a> : Boolean<div class="summaryTableDescription">[read-only]
+   Sound is paused.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#vo">vo</a> : <a href="../../shell/model/vo/MotoObjectVO.html">MotoObjectVO</a>
+<div class="summaryTableDescription">
+   Moto object VO.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#volume">volume</a> : Number<div class="summaryTableDescription">
+   The volume, ranging from 0 (silent) to 1 (full volume).</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#width">width</a> : Number<div class="summaryTableDescription">
+   Indicates the width of the display object, in pixels.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractInfoModule.html#xmlData">xmlData</a> : XML<div class="summaryTableDescription">
+   Module data XML.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+</table>
+</div>
+<a name="protectedPropertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProtectedProperty" id="hideInheritedProtectedProperty">
+<a onclick="javascript:setInheritedVisible(false,'ProtectedProperty');" href="#protectedPropertySummary" class="showHideLink"><img src="../../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Protected Properties</a>
+</div>
+<div class="showInheritedProtectedProperty" id="showInheritedProtectedProperty">
+<a onclick="javascript:setInheritedVisible(true,'ProtectedProperty');" href="#protectedPropertySummary" class="showHideLink"><img src="../../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Properties</a>
+</div>
+</div>
+<table id="summaryTableProtectedProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractInfoModule.html#dataProviderPath">dataProviderPath</a> : String = ""<div class="summaryTableDescription">
+   Module data XML path.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#moto">moto</a> : <a href="../../common/IMoto.html">IMoto</a>
+<div class="summaryTableDescription">
+   Singleton Moto instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_muteSound">_muteSound</a> : Boolean = false<div class="summaryTableDescription">
+   Sound is off.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_soundChannel">_soundChannel</a> : SoundChannel<div class="summaryTableDescription">
+   Reference to the current <code>SoundChannel</code>.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractInfoModule.html#structure">structure</a> : Array<div class="summaryTableDescription">
+   Module structure.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#SimpleMusicPlayerModule()">SimpleMusicPlayerModule</a>()</div>
+<div class="summaryTableDescription">
+   Constructor.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#backwardTrack()">backwardTrack</a>():void</div>
+<div class="summaryTableDescription">
+   Rewind.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#clearBorder()">clearBorder</a>():void</div>
+<div class="summaryTableDescription">
+   
+   Removes the transformation frame.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#dispose()">dispose</a>():void</div>
+<div class="summaryTableDescription">
+   Disposes moto object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#drawBorder()">drawBorder</a>():void</div>
+<div class="summaryTableDescription">
+   
+   Draws the transformation frame.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#forwardTrack()">forwardTrack</a>():void</div>
+<div class="summaryTableDescription">
+   Fast-forward track.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractInfoModule.html#getConfigOptionValueByID()">getConfigOptionValueByID</a>(id:String):String</div>
+<div class="summaryTableDescription">
+   Returns configuration option by ID.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getCurrentTrackData()">getCurrentTrackData</a>():<a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a>
+</div>
+<div class="summaryTableDescription">
+   Returns the current track data.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#getDimensions()">getDimensions</a>():Rectangle</div>
+<div class="summaryTableDescription">
+   
+   Returns object dimensions.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#getInstance()">getInstance</a>():DisplayObject</div>
+<div class="summaryTableDescription">
+   
+   Returns display object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#getRasterized()">getRasterized</a>():DisplayObject</div>
+<div class="summaryTableDescription">
+   
+   Returns display object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#hide()">hide</a>():void</div>
+<div class="summaryTableDescription">
+   
+   Hides moto object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#init()">init</a>(vo:<a href="../../shell/model/vo/MotoObjectVO.html">MotoObjectVO</a>):void</div>
+<div class="summaryTableDescription">
+   
+   Initializes moto object with moto object VO.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#nextTrack()">nextTrack</a>():void</div>
+<div class="summaryTableDescription">
+   Play next track.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#pauseTrack()">pauseTrack</a>(autoPaused:Boolean = false):void</div>
+<div class="summaryTableDescription">
+   Pause track playback.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#playTrack()">playTrack</a>():void</div>
+<div class="summaryTableDescription">
+   Play track.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#previousTrack()">previousTrack</a>():void</div>
+<div class="summaryTableDescription">
+   Play previous track.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#setSize()">setSize</a>(newWidth:Number, newHeight:Number):void</div>
+<div class="summaryTableDescription">
+   
+   Resizes object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#show()">show</a>():void</div>
+<div class="summaryTableDescription">
+   
+   Shows moto object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#stopTrack()">stopTrack</a>():void</div>
+<div class="summaryTableDescription">
+   Stop playback.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#switchTrack()">switchTrack</a>(trackID:uint):Boolean</div>
+<div class="summaryTableDescription">
+   Play track with the index specified in the <code>trackID</code> variable.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#switchVolume()">switchVolume</a>():void</div>
+<div class="summaryTableDescription">
+   Change the mute status.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#updateProperty()">updateProperty</a>(propertyVO:<a href="../../shell/model/vo/PropertyVO.html">PropertyVO</a>):void</div>
+<div class="summaryTableDescription">
+   
+   Updates object property.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+</table>
+</div>
+<a name="protectedMethodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Methods</div>
+<div class="showHideLinks">
+<div class="hideInheritedProtectedMethod" id="hideInheritedProtectedMethod">
+<a onclick="javascript:setInheritedVisible(false,'ProtectedMethod');" href="#protectedMethodSummary" class="showHideLink"><img src="../../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Protected Methods</a>
+</div>
+<div class="showInheritedProtectedMethod" id="showInheritedProtectedMethod">
+<a onclick="javascript:setInheritedVisible(true,'ProtectedMethod');" href="#protectedMethodSummary" class="showHideLink"><img src="../../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Methods</a>
+</div>
+</div>
+<table id="summaryTableProtectedMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createItemVO()">createItemVO</a>(value:XML, target:<a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a> = null):<a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a>
+</div>
+<div class="summaryTableDescription">
+   
+   Create <code>ModuleItemVO</code> from XML branch.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#createTextFieldLinkListener()">createTextFieldLinkListener</a>(targetTextField:TextField):void</div>
+<div class="summaryTableDescription">
+   Creates textfield LINK event listener for the target textfield
+   and adds textFieldLinkHandler as event handler method.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#deselect()">deselect</a>():void</div>
+<div class="summaryTableDescription">
+   Resets the selection of item in the control panel.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getCurrentTrackURL()">getCurrentTrackURL</a>():String</div>
+<div class="summaryTableDescription">
+   Returns the current track URL address.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractInfoModule.html#getStructure()">getStructure</a>(data:XMLList):Array</div>
+<div class="summaryTableDescription">
+   Returns the structure elements list.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#initConfiguration()">initConfiguration</a>():void</div>
+<div class="summaryTableDescription">
+   
+   Initialize configuration.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#initListControls()">initListControls</a>(dataProvider:Array):void</div>
+<div class="summaryTableDescription">
+   
+   Initialize list controllers.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#loadDataProvider()">loadDataProvider</a>():void</div>
+<div class="summaryTableDescription">
+   
+   Load content of <code>dataProvider</code> from the url value of the <code>dataProviderPath</code> variable.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractInfoModule.html#loadingCompleteHandler()">loadingCompleteHandler</a>(event:Event):void</div>
+<div class="summaryTableDescription">
+         </div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractInfoModule.html#loadingErrorHandler()">loadingErrorHandler</a>(event:Event = null):void</div>
+<div class="summaryTableDescription">
+   The loading error handler.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractInfoModule.html#loadingProgressHandler()">loadingProgressHandler</a>(event:ProgressEvent):void</div>
+<div class="summaryTableDescription">
+   The loading progress handler.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#playerStatusChangedHandler()">playerStatusChangedHandler</a>(event:<a href="../../common/events/SimplePlayerEvent.html">SimplePlayerEvent</a>):void</div>
+<div class="summaryTableDescription">
+   Hanlder of the playback status change.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#soundChannelCompleteHandler()">soundChannelCompleteHandler</a>(event:Event = null):void</div>
+<div class="summaryTableDescription">
+   Handler of track playing end.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#soundCompleteHandler()">soundCompleteHandler</a>(event:Event):void</div>
+<div class="summaryTableDescription">
+   Track loading completion.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#soundErrorHandler()">soundErrorHandler</a>(event:ErrorEvent):void</div>
+<div class="summaryTableDescription">
+   Handler of track loading error.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#soundProgressHandler()">soundProgressHandler</a>(event:ProgressEvent):void</div>
+<div class="summaryTableDescription">
+   Track loading progress handler.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#startPlayingSound()">startPlayingSound</a>():void</div>
+<div class="summaryTableDescription">
+   Start playing sound.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#textFieldLinkHandler()">textFieldLinkHandler</a>(event:TextEvent):void</div>
+<div class="summaryTableDescription">
+   Handles textfields LINK events and generates MotoEvent with the
+   event text as parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#updateDimensions()">updateDimensions</a>():void</div>
+<div class="summaryTableDescription">
+   Reports the environment that the object dimensions were changed.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<div class="showHideLinks">
+<div class="hideInheritedEvent" id="hideInheritedEvent">
+<a onclick="javascript:setInheritedVisible(false,'Event');" href="#eventSummary" class="showHideLink"><img src="../../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Events</a>
+</div>
+<div class="showInheritedEvent" id="showInheritedEvent">
+<a onclick="javascript:setInheritedVisible(true,'Event');" href="#eventSummary" class="showHideLink"><img src="../../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Events</a>
+</div>
+</div>
+<table id="summaryTableEvent" class="summaryTable hideInheritedEvent" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th>Summary</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#event:initializationComplete">initializationComplete</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when module is initialized.</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#event:initializationError">initializationError</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when module initialization failed due to an error.</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#event:initializationProgress">initializationProgress</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched while module initializing progresses.</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+</table>
+</div>
+<a name="constantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Constants</div>
+<div class="showHideLinks">
+<div class="hideInheritedConstant" id="hideInheritedConstant">
+<a onclick="javascript:setInheritedVisible(false,'Constant');" href="#constantSummary" class="showHideLink"><img src="../../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Constants</a>
+</div>
+<div class="showInheritedConstant" id="showInheritedConstant">
+<a onclick="javascript:setInheritedVisible(true,'Constant');" href="#constantSummary" class="showHideLink"><img src="../../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Constants</a>
+</div>
+</div>
+<table id="summaryTableConstant" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#DEFAULT_BUFFER_TIME">DEFAULT_BUFFER_TIME</a> : Number = 1000<div class="summaryTableDescription">[static]
+   Default loading buffer length, in milliseconds.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#INITIALIZATION_COMPLETE">INITIALIZATION_COMPLETE</a> : String = "initializationComplete"<div class="summaryTableDescription">[static]
+   The AbstractMotoModule.INITIALIZATION_COMPLETE constant defines the value
+   of the type property of an moto module initialization complete event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#INITIALIZATION_ERROR">INITIALIZATION_ERROR</a> : String = "initializationError"<div class="summaryTableDescription">[static]
+   The AbstractMotoModule.INITIALIZATION_ERROR constant defines the value
+   of the type property of an moto module error event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#INITIALIZATION_PROGRESS">INITIALIZATION_PROGRESS</a> : String = "initializationProgress"<div class="summaryTableDescription">[static]
+   The AbstractMotoModule.INITIALIZATION_ERROR constant defines the value
+   of the type property of an moto module progress event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#STEP_REWIND">STEP_REWIND</a> : Number = 2000<div class="summaryTableDescription">[static]
+   Track rewind step, in milliseconds.</div>
+</td><td class="summaryTableOwnerCol">SimpleMusicPlayerModule</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="autoLoadAndPlay"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">autoLoadAndPlay</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>autoLoadAndPlay:Boolean</code>&nbsp;&nbsp;[read-only]<p>
+   Autoload and play
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get autoLoadAndPlay():Boolean</code>
+<br>
+</div>
+<a name="currentTrack"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">currentTrack</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>currentTrack:uint</code>&nbsp;&nbsp;[read-only]<p>
+   Current track index.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get currentTrack():uint</code>
+<br>
+</div>
+<a name="defaultVolume"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">defaultVolume</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>defaultVolume:Number</code>&nbsp;&nbsp;[read-only]<p>
+   Default volume
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get defaultVolume():Number</code>
+<br>
+</div>
+<a name="isBuffering"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">isBuffering</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>isBuffering:Boolean</code>&nbsp;&nbsp;[read-only]<p>
+   Returns the buffering state of external MP3 files.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isBuffering():Boolean</code>
+<br>
+</div>
+<a name="isPlaying"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">isPlaying</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>isPlaying:Boolean</code>&nbsp;&nbsp;[read-only]<p>
+   Track is playing.
+   </p><p>The default value is <code>false</code>.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isPlaying():Boolean</code>
+<br>
+</div>
+<a name="lengthTrack"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">lengthTrack</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>lengthTrack:Number</code>&nbsp;&nbsp;[read-only]<p>
+   The length of the current trak in milliseconds.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get lengthTrack():Number</code>
+<br>
+</div>
+<a name="_muteSound"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_muteSound</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _muteSound:Boolean = false</code><p>
+   Sound is off.
+   </p></div>
+<a name="playlistDataProvider"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">playlistDataProvider</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>playlistDataProvider:Array</code>&nbsp;&nbsp;[read-only]<p>
+   Reference to <code>dataProvider</code>.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get playlistDataProvider():Array</code>
+<br>
+</div>
+<a name="positionTrack"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">positionTrack</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>positionTrack:Number</code>&nbsp;&nbsp;[read-write]<p>
+   When the sound is playing, the position property indicates the current point that is being played in the sound file.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get positionTrack():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set positionTrack(value:Number):void</code>
+<br>
+</div>
+<a name="_soundChannel"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_soundChannel</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _soundChannel:SoundChannel</code><p>
+   Reference to the current <code>SoundChannel</code>.
+   </p></div>
+<a name="soundPaused"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">soundPaused</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>soundPaused:Boolean</code>&nbsp;&nbsp;[read-only]<p>
+   Sound is paused.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get soundPaused():Boolean</code>
+<br>
+</div>
+<a name="volume"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">volume</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>volume:Number</code>&nbsp;&nbsp;[read-write]<p>
+   The volume, ranging from 0 (silent) to 1 (full volume).
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get volume():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set volume(value:Number):void</code>
+<br>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="SimpleMusicPlayerModule()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">SimpleMusicPlayerModule</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function SimpleMusicPlayerModule()</code><p>
+   Constructor.
+   </p></div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="backwardTrack()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">backwardTrack</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function backwardTrack():void</code><p>
+   Rewind.
+   </p></div>
+<a name="createItemVO()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createItemVO</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected override function createItemVO(value:XML, target:<a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a> = null):<a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a></code><p>
+   
+   Create <code>ModuleItemVO</code> from XML branch.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">value</span>:XML</code> &mdash; XML node
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">target</span>:<a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a></code> (default = <code>null</code>)<code></code> &mdash; Instance of <code>ModuleItemVO</code> which XML data will be written to; if not set, it will be created automatically.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a></code> &mdash; 
+                        ModuleItemVO Returns target; if target was not set, the new <code>ModuleItemVO</code> with filled variables is returned.
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="forwardTrack()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">forwardTrack</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function forwardTrack():void</code><p>
+   Fast-forward track.
+   </p></div>
+<a name="getCurrentTrackData()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getCurrentTrackData</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getCurrentTrackData():<a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a></code><p>
+   Returns the current track data.
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a></code> &mdash; 
+                        Value object of current track
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getCurrentTrackURL()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getCurrentTrackURL</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function getCurrentTrackURL():String</code><p>
+   Returns the current track URL address.
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code> &mdash; url Address
+   </td>
+</tr>
+</table>
+</div>
+<a name="init()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">init</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function init(vo:<a href="../../shell/model/vo/MotoObjectVO.html">MotoObjectVO</a>):void</code><p>
+   
+   Initializes moto object with moto object VO.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">vo</span>:<a href="../../shell/model/vo/MotoObjectVO.html">MotoObjectVO</a></code> &mdash; Moto object VO.
+   </td>
+</tr>
+</table>
+</div>
+<a name="initConfiguration()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">initConfiguration</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected override function initConfiguration():void</code><p>
+   
+   Initialize configuration.
+   </p></div>
+<a name="initListControls()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">initListControls</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected override function initListControls(dataProvider:Array):void</code><p>
+   
+   Initialize list controllers.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">dataProvider</span>:Array</code></td>
+</tr>
+</table>
+</div>
+<a name="loadDataProvider()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">loadDataProvider</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected override function loadDataProvider():void</code><p>
+   
+   Load content of <code>dataProvider</code> from the url value of the <code>dataProviderPath</code> variable.
+   </p></div>
+<a name="nextTrack()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">nextTrack</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function nextTrack():void</code><p>
+   Play next track.
+   </p></div>
+<a name="pauseTrack()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">pauseTrack</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function pauseTrack(autoPaused:Boolean = false):void</code><p>
+   Pause track playback.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">autoPaused</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Sets the auto pause mode (is used for several players); if true and the player is set as primary, it starts to play automatically after other players are stopped.
+   </td>
+</tr>
+</table>
+</div>
+<a name="playerStatusChangedHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">playerStatusChangedHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function playerStatusChangedHandler(event:<a href="../../common/events/SimplePlayerEvent.html">SimplePlayerEvent</a>):void</code><p>
+   Hanlder of the playback status change.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:<a href="../../common/events/SimplePlayerEvent.html">SimplePlayerEvent</a></code></td>
+</tr>
+</table>
+</div>
+<a name="playTrack()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">playTrack</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function playTrack():void</code><p>
+   Play track.
+   </p></div>
+<a name="previousTrack()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">previousTrack</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function previousTrack():void</code><p>
+   Play previous track.
+   </p></div>
+<a name="soundChannelCompleteHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">soundChannelCompleteHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function soundChannelCompleteHandler(event:Event = null):void</code><p>
+   Handler of track playing end.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:Event</code> (default = <code>null</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<a name="soundCompleteHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">soundCompleteHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function soundCompleteHandler(event:Event):void</code><p>
+   Track loading completion.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:Event</code></td>
+</tr>
+</table>
+</div>
+<a name="soundErrorHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">soundErrorHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function soundErrorHandler(event:ErrorEvent):void</code><p>
+   Handler of track loading error.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:ErrorEvent</code></td>
+</tr>
+</table>
+</div>
+<a name="soundProgressHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">soundProgressHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function soundProgressHandler(event:ProgressEvent):void</code><p>
+   Track loading progress handler.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:ProgressEvent</code></td>
+</tr>
+</table>
+</div>
+<a name="startPlayingSound()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">startPlayingSound</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function startPlayingSound():void</code><p>
+   Start playing sound.
+   </p></div>
+<a name="stopTrack()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">stopTrack</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function stopTrack():void</code><p>
+   Stop playback.
+   </p></div>
+<a name="switchTrack()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">switchTrack</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function switchTrack(trackID:uint):Boolean</code><p>
+   Play track with the index specified in the <code>trackID</code> variable.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">trackID</span>:uint</code> &mdash; Track index
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; Returns true if the track with this index exists; else returns false.
+   </td>
+</tr>
+</table>
+</div>
+<a name="switchVolume()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">switchVolume</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function switchVolume():void</code><p>
+   Change the mute status.
+   </p></div>
+<a name="constantDetail"></a>
+<div class="detailSectionHeader">Constant detail</div>
+<a name="DEFAULT_BUFFER_TIME"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">DEFAULT_BUFFER_TIME</td><td class="detailHeaderType">constant</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const DEFAULT_BUFFER_TIME:Number = 1000</code><p>
+   Default loading buffer length, in milliseconds.
+   </p></div>
+<a name="STEP_REWIND"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">STEP_REWIND</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const STEP_REWIND:Number = 2000</code><p>
+   Track rewind step, in milliseconds.
+   </p></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

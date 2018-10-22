@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<motoFonts>
+  <font>
+    <name><![CDATA[Times New Roman]]></name>
+    <file>TimesNewRoman.swf</file>
+    <characters>default</characters>
+    <enabled>true</enabled>
+    <regular>false</regular>
+    <italic>false</italic>
+    <bold>false</bold>
+    <boldItalic>false</boldItalic>
+    <regularRange><![CDATA[]]></regularRange>
+    <italicRange><![CDATA[]]></italicRange>
+    <boldRange><![CDATA[]]></boldRange>
+    <boldItalicRange><![CDATA[]]></boldItalicRange>
+  </font>
+  <font>
+    <name><![CDATA[standard 07_53]]></name>
+    <file>standard07_53.swf</file>
+    <characters>default</characters>
+    <enabled>true</enabled>
+    <regular>false</regular>
+    <italic>false</italic>
+    <bold>false</bold>
+    <boldItalic>false</boldItalic>
+    <regularRange><![CDATA[]]></regularRange>
+    <italicRange><![CDATA[]]></italicRange>
+    <boldRange><![CDATA[]]></boldRange>
+    <boldItalicRange><![CDATA[]]></boldItalicRange>
+  </font>
+  <font>
+    <name><![CDATA[standard 07_55]]></name>
+    <file>standard07_55.swf</file>
+    <characters>default</characters>
+    <enabled>true</enabled>
+    <regular>false</regular>
+    <italic>false</italic>
+    <bold>false</bold>
+    <boldItalic>false</boldItalic>
+    <regularRange><![CDATA[]]></regularRange>
+    <italicRange><![CDATA[]]></italicRange>
+    <boldRange><![CDATA[]]></boldRange>
+    <boldItalicRange><![CDATA[]]></boldItalicRange>
+  </font>
+  <font>
+    <name><![CDATA[standard 07_65]]></name>
+    <file>standard07_65.swf</file>
+    <characters>default</characters>
+    <enabled>true</enabled>
+    <regular>false</regular>
+    <italic>false</italic>
+    <bold>false</bold>
+    <boldItalic>false</boldItalic>
+    <regularRange><![CDATA[]]></regularRange>
+    <italicRange><![CDATA[]]></italicRange>
+    <boldRange><![CDATA[]]></boldRange>
+    <boldItalicRange><![CDATA[]]></boldItalicRange>
+  </font>
+  <font>
+    <name><![CDATA[Xirod]]></name>
+    <file>Xirod.swf</file>
+    <characters>default</characters>
+    <enabled>true</enabled>
+    <regular>false</regular>
+    <italic>false</italic>
+    <bold>false</bold>
+    <boldItalic>false</boldItalic>
+    <regularRange><![CDATA[]]></regularRange>
+    <italicRange><![CDATA[]]></italicRange>
+    <boldRange><![CDATA[]]></boldRange>
+    <boldItalicRange><![CDATA[]]></boldItalicRange>
+  </font>
+</motoFonts>

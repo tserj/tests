@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<motoConfig>
+	<configuration>
+		<option name="startPage"><![CDATA[1]]></option>
+		<option name="websiteTitlePrefix" description=""><![CDATA[test]]></option>
+		<option name="showWarnings"><![CDATA[true]]></option>
+		
+		<option name="googleAnalyticsEnabled"><![CDATA[false]]></option>
+		<option name="googleAnalyticsSWFTrackerEnabled"><![CDATA[false]]></option>
+		<option name="googleAnalyticsAccount"><![CDATA[]]></option>
+		<option name="googleWebmasterToolsEnabled"><![CDATA[false]]></option>
+		<option name="googleWebmasterToolsMetaTag"><![CDATA[]]></option>
+		<option name="googleWebmasterToolsFileName"><![CDATA[]]></option>
+	<option name="websiteIcon"><![CDATA[]]></option><option name="underConstruction"><![CDATA[false]]></option><option name="underConstructionTheme"><![CDATA[]]></option><option name="underConstructionMessage"><![CDATA[]]></option><option name="loadEncodedData"><![CDATA[false]]></option><option name="enableCompatibilityMode"><![CDATA[false]]></option><option name="websiteProtectionSessionExpireTime"><![CDATA[3600]]></option><option name="websiteProtectionEnabled"><![CDATA[false]]></option><option name="websiteProtectionKey"><![CDATA[]]></option></configuration>
+</motoConfig>

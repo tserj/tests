@@ -1,0 +1,11 @@
+[09-Jan-2012 18:05:37] PHP Fatal error:  Unable to read 2765 bytes in /home/localhost/www/motocms/website_example/admin/libs/Moto/services/vo/PropertyTypeVO.php on line 0
+[09-Jan-2012 18:05:57] PHP Fatal error:  Unable to read 2765 bytes in /home/localhost/www/motocms/website_example/admin/libs/Moto/services/vo/PropertyTypeVO.php on line 0
+[09-Jan-2012 18:06:42] PHP Fatal error:  Unable to read 2765 bytes in /home/localhost/www/motocms/website_example/admin/libs/Moto/services/vo/PropertyTypeVO.php on line 0
+[09-Jan-2012 18:08:40] PHP Fatal error:  Unable to read 2765 bytes in /home/localhost/www/motocms/website_example/admin/libs/Moto/services/vo/PropertyTypeVO.php on line 0
+[09-Jan-2012 18:09:59] PHP Fatal error:  Unable to read 2765 bytes in /home/localhost/www/motocms/website_example/admin/libs/Moto/services/vo/PropertyTypeVO.php on line 0
+[10-Jan-2012 10:51:36] PHP Fatal error:  Unable to read 2765 bytes in /home/localhost/www/motocms/website_example/admin/libs/Moto/services/vo/PropertyTypeVO.php on line 0
+[10-Jan-2012 10:53:29] PHP Fatal error:  Unable to read 2765 bytes in /home/localhost/www/motocms/website_example/admin/libs/Moto/services/vo/PropertyTypeVO.php on line 0
+[10-Jan-2012 10:57:09] PHP Fatal error:  Unable to read 2765 bytes in /home/localhost/www/motocms/website_example/admin/libs/Moto/services/vo/PropertyTypeVO.php on line 0
+[10-Jan-2012 21:03:25] PHP Fatal error:  Unable to read 4937 bytes in /home/localhost/www/motocms/website_example/admin/modules/contactFormModule/services/vo/FormTextItemVO.php on line 0
+[10-Jan-2012 21:03:36] PHP Fatal error:  Unable to read 4937 bytes in /home/localhost/www/motocms/website_example/admin/modules/contactFormModule/services/vo/FormTextItemVO.php on line 0
+[10-Jan-2012 21:04:01] PHP Fatal error:  Unable to read 4937 bytes in /home/localhost/www/motocms/website_example/admin/modules/contactFormModule/services/vo/FormTextItemVO.php on line 0

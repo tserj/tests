@@ -1,0 +1,128 @@
+Update Instructions
+
+Instructions on how to update your website to a newer version if you've made changes to the source files of the previous version. If not, just use new source files.
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+How to update to 1.2 from 1.0 and 1.1
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+1.	Install moto.xmp and insert new components and previews to moto.fla and website.fla replacing the old ones; 
+the new name of “Forms Module Preview” is “Form Module Preview”. 
+
+2.	Put the new external component Media Player to the modules folder.
+
+3.	Rename FlashMoto folders to Moto in website.fla.
+
+4.	Update *.as files with the help of template_src_replace.php (copy template_src_replace.php and template_src_replace.replace to the template root folder and run).
+ 
+5.	For all ImageLoader slots set FILL by default in the component parameters (Scaling Mode - fill) or in the script:
+import com.moto.template.common.view.ScaleModeEnum;
+ScaleModeEnum.FILL;
+
+6.	Add to all templates after imports or Moto.getInstance().animationIsPlaying = true; (probably layer "actions" -> Frame 2): 
+Moto.getInstance().websiteSoundsEnabled = MotoUtils.convertToBoolean(Moto.getInstance().getWebsitePropertyValueByID(1), true);
+
+7.	In website.fla change:
+this.addEventListener(MotoEvent.SWITCH_PAGE, switchPagesHandler); 
+to: Moto.getInstance().eventDispatcher.addEventListener(MotoEvent.SWITCH_PAGE, switchPagesHandler);
+
+And in the script change:
+Moto.getInstance().website.addEventListener(MotoEvent.SWITCH_PAGE, switchPagesHandler); 
+to:
+Moto.getInstance().eventDispatcher.addEventListener(MotoEvent.SWITCH_PAGE, switchPagesHandler);
+
+8.	Replace all the sounds on timeline with the script:
+MotoUtils.playLibrarySound("sound class name", volume level from 0 to 1);
+
+9. Compile, fix errors if there are any. 
+
+10.	Remove scroll from ContactFormModule if needed.
+
+11.	In ContactFormModule in the end of init override and INITIALIZATION_COMPLETE event handler put:
+dispatchEvent(new UpdateMotoObjectEvent(UpdateMotoObjectEvent.MOTO_OBJECT_SIZE_UPDATED));
+
+Add to imports if needed:
+import com.moto.template.common.events.UpdateMotoObjectEvent;
+
+12.	If setSize method is overridden in modules it is desirable to call super.setSize in this override (for ContactFormModule it is required). 
+
+13.	Check if there are no limitedMode checks in slot constructors and modules; if such check is found move it to init. 
+
+14.	In modules like TemplateRichContentModule the INITIALIZATION_COMPLETE event must be handled (probably handler already exists). In handler must be called:
+if (_scrollbar)
+    _scrollbar.update();
+
+15.	In modules which use AdvancedScrollbar (NewsModule, TemplateRichContentModule...) the dispose() method must be overwritten; if there is an AdvancedScrollbar class instance in it (probably _scroller variable) call remove() from it. 
+
+override public function dispose():void 
+{
+       super.dispose();
+       if (_scrollbar)
+           _scrollbar.remove();
+}
+
+16.	Add menu_icon.png to the images/modules folder.
+
+17.	Add (or change if already exists) to NewsModule (InfoModule extenstion):
+override protected function itemClickHandler(event:ItemRendererEvent):void
+
+          {
+            super.itemClickHandler(event);
+            
+            if (event.itemRenderer && event.data)
+            {
+                var itemVO:ModuleItemVO = ModuleItemVO(event.data);
+                
+                var link:String = String(itemVO.getPropertyValueByID(3));
+                // Dispatch moto click event
+                if (link != "")
+                    dispatchEvent(new MotoEvent(MotoEvent.MOTO_CLICK,
+                        String(link), true));
+            }
+        }
+
+18.	In GalleryPreviewImage.as change:
+//----------------------------------------------------------------------------------------
+         override public function change(data:Object):void
+        {
+            super.init(data);
+            Tweener.addTween(_preloader, { alpha:1 } );
+            _image1.source = pathPrefix + String(getItemPropertyByID(1));
+        }
+//----------------------------------------------------------------------------------------
+to:
+//----------------------------------------------------------------------------------------
+import com.moto.template.shell.model.vo.ModuleItemVO;
+
+         override public function change(data:ModuleItemVO):void
+        {
+            super.init(data);
+            Tweener.addTween(_preloader, { alpha:1 } );
+            _image1.source = pathPrefix + data.getPropertyValueByID(1);
+        }
+//----------------------------------------------------------------------------------------
+19.	In MP3PlayerModule.as change:
+//----------------------------------------------------------------------------------------
+         override protected function getCurrentTrackURL():String
+        {
+            if (getCurrentTrackData())
+                return pathPrefix + getItemPropertyValue(getCurrentTrackData(), 1);
+            else
+                return "";
+        }
+//----------------------------------------------------------------------------------------
+to:
+//----------------------------------------------------------------------------------------
+import com.moto.template.shell.model.vo.ModuleItemVO;
+         override protected function getCurrentTrackURL():String
+        {
+            var propertyVO:ModuleItemVO = getCurrentTrackData();
+            if (propertyVO)
+                return pathPrefix + propertyVO.getPropertyValueByID(1);
+            else
+                return "";
+        }
+//----------------------------------------------------------------------------------------
+
+20.	If menu is not displayed add to constructor of MainMenu.as:
+itemsArranger.resizeItems = false;

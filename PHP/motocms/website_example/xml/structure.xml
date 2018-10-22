@@ -1,0 +1,2427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<motoStructure>
+
+	<website backgroundImage="images/previews/websiteBackground.jpg" defaultPreloaderLinkageName="WebsitePreloader">
+		<contentHolders>
+			<holder id="1" type="website" x="105" y="71" width="770" height="100" locked="true" depth="50">
+				<name><![CDATA[Company Name Holder]]></name>
+			</holder>
+			<holder id="2" type="website" x="105" y="665" width="100" height="19" locked="true" depth="55">
+				<name><![CDATA[Bottom Left Holder]]></name>
+			</holder>
+			<holder id="3" type="website" x="875" y="665" width="100" height="19" locked="true" depth="60">
+				<name><![CDATA[Bottom Right Holder]]></name>
+			</holder>
+			<holder id="4" type="website" x="0" y="0" width="980" height="700" depth="10">
+				<name><![CDATA[On The Entire Website]]></name>
+			</holder>
+		</contentHolders>
+		<properties>
+			<property id="1" type="checkBox">
+				<name><![CDATA[Enable sound effects]]></name>
+			</property>
+		</properties>
+	<elements>
+
+				
+
+				
+
+				
+<loginForm librarySymbolLinkage="LoginForm" external="true" url="assets/loginForm/loginForm1.swf">
+	<properties>
+		<property id="1" type="htmlText">
+			<name><![CDATA[Form title]]></name>
+		</property>
+		<property id="2" type="htmlText">
+			<name><![CDATA[Wrong password message]]></name>
+		</property>
+		<property id="3" type="htmlText">
+			<name><![CDATA[Button label]]></name>
+		</property>
+		<property id="4" type="stepper">
+			<name><![CDATA[Form horizontal padding]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>1000</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="5" type="stepper">
+			<name><![CDATA[Form vertical padding]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>1000</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="6" type="stepper">
+			<name><![CDATA[Form width]]></name>
+			<parameters>
+				<minimum>100</minimum>
+				<maximum>1000</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="7" type="color">
+			<name><![CDATA[Top button color]]></name>
+		</property>
+		<property id="8" type="color">
+			<name><![CDATA[Bottom button color]]></name>
+		</property>
+		<property id="9" type="color">
+			<name><![CDATA[Close icon color]]></name>
+		</property>
+		<property id="10" type="color">
+			<name><![CDATA[Button over color]]></name>
+		</property>
+		<property id="11" type="textFormat">
+			<name><![CDATA[Password text format]]></name>
+		</property>
+
+		<property id="12" type="color">
+			<name><![CDATA[Password field color]]></name>
+		</property>
+		<property id="13" type="color">
+			<name><![CDATA[Password field border]]></name>
+		</property>
+		<property id="14" type="checkBox">
+			<name><![CDATA[Enable password field shadow]]></name>
+		</property>
+
+		<property id="15" type="color">
+			<name><![CDATA[Top form color]]></name>
+		</property>
+		<property id="16" type="color">
+			<name><![CDATA[Bottom form color]]></name>
+		</property>
+		<property id="17" type="color">
+			<name><![CDATA[Form background color]]></name>
+		</property>
+		<property id="18" type="slider">
+			<name><![CDATA[Form background alpha]]></name>
+			<parameters>
+				<postfix>%</postfix>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<snapInterval>1</snapInterval>
+			</parameters>
+		</property>
+		<property id="19" type="stepper">
+			<name><![CDATA[Password field padding left]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>200</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="20" type="stepper">
+			<name><![CDATA[Password field padding right]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>200</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+	</properties>
+	<template/>
+</loginForm>
+				</elements></website>
+
+	<layouts>
+		<layout id="1">
+			<name><![CDATA[Splash Layout]]></name>
+			<contentHolders>
+				<holder id="5" type="layout" x="107" y="306" width="777" height="60" locked="true" depth="15">
+					<name><![CDATA[Enter Button Holder]]></name>
+				</holder>
+				<holder id="6" type="layout" x="0" y="0" width="980" height="700" depth="13">
+					<name><![CDATA[On Splash Layout]]></name>
+				</holder>
+			</contentHolders>
+		</layout>
+		<layout id="2">
+			<name><![CDATA[Menu Layout]]></name>
+			<contentHolders>
+				<holder id="7" type="layout" x="107" y="306" width="777" height="60" locked="true" depth="18">
+					<name><![CDATA[Menu Holder]]></name>
+				</holder>
+				<holder id="8" type="layout" x="0" y="0" width="980" height="700" depth="16">
+					<name><![CDATA[On Menu Layout]]></name>
+				</holder>
+			</contentHolders>
+		</layout>
+		<layout id="3">
+			<name><![CDATA[Pages Layout]]></name>
+			<contentHolders>
+				<holder id="9" type="layout" x="755" y="306" width="129" height="60" locked="true" depth="22">
+					<name><![CDATA[Right Menu Holder]]></name>
+				</holder>
+				<holder id="10" type="layout" x="0" y="0" width="980" height="700" depth="40" locked="true">
+					<name><![CDATA[Back Button Holder]]></name>
+				</holder>
+				<holder id="13" type="layout" x="0" y="0" width="980" height="700" depth="30">
+					<name><![CDATA[On All Pages]]></name>
+				</holder>
+			</contentHolders>
+		</layout>
+	</layouts>
+
+	<pages>
+		<page id="1" layoutType="1" >
+			<name><![CDATA[Splash Page]]></name>
+			<contentHolders/>
+		</page>
+		<page id="2" layoutType="2" >
+			<name><![CDATA[Main Menu Page]]></name>
+			<contentHolders/>
+		</page>
+		<page id="3" layoutType="3" preview="images/previews/pageTemplatePreview.jpg">
+			<name><![CDATA[Content Page]]></name>
+			<contentHolders>
+				<holder id="11" type="page" x="0" y="0" width="980" height="700" depth="35">
+					<name><![CDATA[On Page, Outside the cube]]></name>
+				</holder>
+				<holder id="12" type="page" x="130" y="155" width="600" height="430" depth="38">
+					<name><![CDATA[On Page, In the cube]]></name>
+				</holder>	
+				<holder id="14" type="page" x="0" y="0" width="980" height="700" depth="36" locked="true">
+					<name><![CDATA[Cube Holder]]></name>
+				</holder>
+			</contentHolders>
+			<template>
+				<objects>
+					<object holder="12" x="0" y="0" width="300" height="0" rotation="0" alpha="1" blendMode="" scaleX="1" scaleY="1" depth="0" locked="false" lockEffects="false" type="htmlText" buttonMode="false" lockActions="false" click="" autoSize="left" selectable="true" embedFonts="true">
+						<data><![CDATA[<P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="16" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0">PAGE TITLE</FONT></P>]]></data>
+					</object>
+					<object holder="12" x="1" y="47" width="608" height="112" rotation="0" alpha="1" blendMode="" scaleX="1" scaleY="1" depth="2" locked="false" lockEffects="false" type="htmlText" buttonMode="false" lockActions="false" click="" autoSize="left" selectable="true" embedFonts="true">
+						<data><![CDATA[<P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFBA00" LETTERSPACING="0" KERNING="0">LOREM IPSUM DOLOR SIT AMET<FONT COLOR="#FFFFFF"></FONT></FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"></FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0">CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA ODIO. MORBI NUNC ODIO, GRAVIDA AT, CURSUS NEC</FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"></FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0">CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA ODIO. MORBI NUNC ODIO, GRAVIDA AT, CURSUS NEC</FONT></P>]]></data>
+					</object>
+					<object holder="12" x="-23" y="180" width="647" height="1" rotation="0" alpha="0.2" blendMode="" scaleX="1" scaleY="1" depth="3" locked="false" lockEffects="false" type="shape" buttonMode="false" lockActions="false" click="" shape="line" colors="0x000000">
+						<data><![CDATA[]]></data>
+					</object>
+					<object holder="12" x="0" y="203" width="377" height="64" rotation="0" alpha="1" blendMode="" scaleX="1" scaleY="1" depth="4" locked="false" lockEffects="false" type="htmlText" buttonMode="false" lockActions="false" click="" autoSize="left" selectable="true" embedFonts="true">
+						<data><![CDATA[<P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFBA00" LETTERSPACING="0" KERNING="0">NULLA DUI. FUSCE FEUGIAT MALESUADA PRAESENT VES</FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"></FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0">CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA ODIO. MORBI NUNC ODIO, GRAVIDA AT, CURSUS NEC</FONT></P>]]></data>
+					</object>
+					<object holder="12" x="1" y="325" width="377" height="112" rotation="0" alpha="1" blendMode="" scaleX="1" scaleY="1" depth="5" locked="false" lockEffects="false" type="htmlText" buttonMode="false" lockActions="false" click="" autoSize="left" selectable="true" embedFonts="true">
+						<data><![CDATA[<P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFBA00" LETTERSPACING="0" KERNING="0">CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES</FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"></FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0">CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA ODIO. MORBI NUNC ODIO, GRAVIDA AT, CURSUS NEC</FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"></FONT></P>]]></data>
+					</object>
+				</objects>
+				<slots>
+					<slot holder="14" x="108" y="136" width="646" height="467" rotation="0" alpha="1" blendMode="" scaleX="1" scaleY="1" depth="0" locked="true" lockEffects="false" buttonMode="false" lockActions="false" click="" slotType="6">
+						<name><![CDATA[Page Background]]></name>
+						<properties>
+							<item propertyType="1"><![CDATA[0x494949]]></item>
+						</properties>
+					</slot>
+					<slot holder="12" x="398" y="206" width="192" height="93" rotation="0" alpha="1" blendMode="" scaleX="1" scaleY="1" depth="1" locked="false" lockEffects="false" buttonMode="false" lockActions="false" click="switchPage;page=2" slotType="4">
+						<properties>
+							<item propertyType="1"><![CDATA[images/pic14.jpg]]></item>
+							<item propertyType="2"><![CDATA[0xFFFFFF]]></item>
+						</properties>
+					</slot>
+					<slot holder="12" x="398" y="326" width="192" height="93" rotation="0" alpha="1" blendMode="" scaleX="1" scaleY="1" depth="6" locked="false" lockEffects="false" buttonMode="false" lockActions="false" click="switchPage;page=2" slotType="4">
+						<properties>
+							<item propertyType="1"><![CDATA[images/pic15.jpg]]></item>
+							<item propertyType="2"><![CDATA[0xFFFFFF]]></item>
+						</properties>
+					</slot>
+				</slots>
+				<modules/>
+			</template>
+		</page>
+	</pages>
+	
+	<slots>
+		<slot id="1" librarySymbolLinkage="EnterButtonSlot" animated="true" resizable="false" mainPropertyID="1">
+			<name><![CDATA[Enter Button]]></name>
+			<properties>
+				<property id="1" type="htmlText">
+					<name><![CDATA[Label]]></name>
+				</property>
+				<property id="2" type="color">
+					<name><![CDATA[Color]]></name>
+				</property>
+			</properties>
+			<template alpha="1" buttonMode="false" click="" linkable="true" locked="false">
+				<properties>
+					<item propertyType="1" embedFonts="true"><![CDATA[<font face="standard 07_55" color="#FFFFFF" size="16">BUTTON LABEL</font>]]></item>
+					<item propertyType="2">0xFFA100</item>
+				</properties>
+			</template>
+		</slot>
+		<slot id="3" librarySymbolLinkage="BackButtonSlot" animated="true" resizable="false" mainPropertyID="0">
+			<name><![CDATA[Close Button]]></name>
+			<properties/>
+			<template alpha="1" buttonMode="false" click="" linkable="true" locked="false">
+				<properties/>
+			</template>
+		</slot>
+		<slot id="4" librarySymbolLinkage="PageImageSlot" animated="true" resizable="true" mainPropertyID="1" minHeight="100" minWidth="100">
+			<name><![CDATA[Page Image]]></name>
+			<properties>
+				<property id="1" type="image">
+					<name><![CDATA[Image]]></name>
+				</property>
+				<property id="2" type="color">
+					<name><![CDATA[Border Color]]></name>
+				</property>
+			</properties>
+			<template alpha="1" buttonMode="false" click="" width="200" height="100" linkable="true" locked="false">
+				<properties>
+					<item propertyType="1"/>
+					<item propertyType="2">0xFFFFFF</item>
+				</properties>
+			</template>
+		</slot>
+		<slot id="5" librarySymbolLinkage="PageImageSlot2" animated="true" resizable="true" mainPropertyID="1" minHeight="100" minWidth="100">
+			<name><![CDATA[Page Image With Border]]></name>
+			<properties>
+				<property id="1" type="image">
+					<name><![CDATA[Image]]></name>
+				</property>
+			</properties>
+			<template alpha="1" buttonMode="false" width="200" height="100" click="" linkable="true" locked="false">
+				<properties>
+					<item propertyType="1"/>
+				</properties>
+			</template>
+		</slot>
+		<slot id="6" librarySymbolLinkage="PageBackgroundSlot" animated="false" resizable="true" locked="true" mainPropertyID="1">
+			<name><![CDATA[pageBackground]]></name>
+			<properties>
+				<property id="1" type="color">
+					<name><![CDATA[Color]]></name>
+				</property>
+			</properties>
+		</slot>
+	<slot id="7" librarySymbolLinkage="LightBoxSlot" external="true" url="slots/lightBoxSlot.swf" applicationDomain="externalGallery" animated="false" resizable="false" locked="false" mainPropertyID="1" category="galleries" icon="images/modules/lightbox_icon.png">
+			<name><![CDATA[Media Gallery Lightbox]]></name>
+			<properties><property id="1" type="plainText">
+					<name><![CDATA[Widget Connection ID]]></name>
+					<parameters>
+						<tooltip><![CDATA[Widgets with the same ID will be connected.]]></tooltip>
+					</parameters>
+				</property>				<property id="2" type="checkBox">
+					<name><![CDATA[Enabled Slideshow]]></name>
+				</property>				<property id="3" type="stepper">
+					<name><![CDATA[Slideshow Delay]]></name>
+					<parameters>
+						<minimum>1</minimum>
+						<maximum>30</maximum>
+						<stepSize>0.1</stepSize>
+					</parameters>
+				</property>
+				<property id="4" type="checkBox">
+					<name><![CDATA[Enable Key Navigation]]></name>
+				</property><property id="5" type="checkBox">
+					<name><![CDATA[Enable Mouse Wheel]]></name>
+				</property>
+				<property id="101" type="group">
+					<name><![CDATA[Colors]]></name>
+					<dependencyValue>true</dependencyValue>
+				</property>
+			<property id="6" type="color" groupId="101">
+					<name><![CDATA[Background Color]]></name>
+				</property><property id="7" type="slider" groupId="101">
+					<name><![CDATA[Background Alpha]]></name>
+					<parameters>
+						<postfix>%</postfix>
+						<minimum>0</minimum>
+						<maximum>100</maximum>
+						<snapInterval>1</snapInterval>
+					</parameters>
+				</property><property id="8" type="color" groupId="101">
+					<name><![CDATA[Button Color]]></name>
+				</property><property id="9" type="slider" groupId="101">
+					<name><![CDATA[Button Alpha]]></name>
+					<parameters>
+						<postfix>%</postfix>
+						<minimum>0</minimum>
+						<maximum>100</maximum>
+						<snapInterval>1</snapInterval>
+					</parameters>
+				</property>				<property id="10" type="color" groupId="101">
+					<name><![CDATA[Button background Color]]></name>
+				</property>				<property id="11" type="slider" groupId="101">
+					<name><![CDATA[Button background Alpha]]></name>
+					<parameters>
+						<postfix>%</postfix>
+						<minimum>0</minimum>
+						<maximum>100</maximum>
+						<snapInterval>1</snapInterval>
+					</parameters>
+				</property>
+				<property id="19" type="checkBox">
+					<name><![CDATA[Auto load & play]]></name>
+				</property>
+				<property id="20" type="slider">
+					<name><![CDATA[Sound volume]]></name>
+					<parameters>
+						<postfix>%</postfix>
+						<minimum>0</minimum>
+						<maximum>100</maximum>
+						<snapInterval>1</snapInterval>
+					</parameters>
+				</property>
+				<property id="21" type="checkBox">
+					<name><![CDATA[Media controls]]></name>
+				</property>
+				
+				<property id="102" type="group" dependencyId="21">
+					<name><![CDATA[Mediaplayer skin]]></name>
+					<dependencyValue>true</dependencyValue>
+				</property>
+				<property id="22" type="color" groupId="102">
+					<name><![CDATA[Background color]]></name>
+				</property>
+				<property id="23" type="slider" groupId="102">
+					<name><![CDATA[Background alpha]]></name>
+					<parameters>
+						<postfix>%</postfix>
+						<minimum>0</minimum>
+						<maximum>100</maximum>
+						<snapInterval>1</snapInterval>
+					</parameters>
+				</property>
+				<property id="24" type="color" groupId="102">
+					<name><![CDATA[Elements color]]></name>
+				</property>
+				<property id="25" type="slider" groupId="102">
+					<name><![CDATA[Elements alpha]]></name>
+					<parameters>
+						<postfix>%</postfix>
+						<minimum>0</minimum>
+						<maximum>100</maximum>
+						<snapInterval>1</snapInterval>
+					</parameters>
+				</property>
+				<property id="26" type="color" groupId="102">
+					<name><![CDATA[Active color]]></name>
+				</property>
+				<property id="27" type="textFormat" groupId="102">
+					<name><![CDATA[Font]]></name>
+				</property>
+			</properties>
+			<template alpha="1" width="100" height="100" buttonMode="false" lockEffects="true" lockActions="true" click="">
+				<properties><item propertyType="1"/><item propertyType="2">true</item><item propertyType="3">5</item><item propertyType="4">true</item><item propertyType="5">true</item><item propertyType="6">0x000000</item><item propertyType="7">50</item><item propertyType="8">0xFFFFFF</item><item propertyType="9">70</item><item propertyType="10">0x000000</item><item propertyType="11">15</item>
+					<item propertyType="19">true</item>
+					<item propertyType="20">80</item>
+					<item propertyType="21">true</item>
+					<item propertyType="22">0x000000</item>
+					<item propertyType="23">65</item>
+					<item propertyType="24">0xffffff</item>
+					<item propertyType="25">30</item>
+					<item propertyType="26">0x00b4ff</item>
+					<item propertyType="27" embedFonts="false"><![CDATA[<font face="Verdana" size="11"><b>Label</b></font>]]></item>
+			</properties>
+			</template>
+		</slot><slot id="8" external="true" url="slots/RssReader/RSSReaderSlot.swf" librarySymbolLinkage="RSSReaderSlot" resizable="true" locked="false" minWidth="100" minHeight="100" category="news" icon="images/modules/rss_icon.png">
+	<name><![CDATA[RSS Reader Widget]]></name>
+	<properties>
+		<property id="1" type="plainText">
+			<name><![CDATA[RSS Feed URI]]></name>
+			<parameters>
+				<tooltip>Press "Enter" to submit.</tooltip>
+				<submitOnEnter>true</submitOnEnter>
+			</parameters>
+		</property>
+		<property id="2" type="select">
+			<name><![CDATA[Orientation]]></name>
+			<dataProvider>
+				<item data="rows">Horizontal</item>
+				<item data="columns">Vertical</item>
+			</dataProvider>
+		</property>
+		<property id="3" type="stepper">
+			<name><![CDATA[Number of Visible Blocks]]></name>
+			<parameters>
+				<minimum>1</minimum>
+				<maximum>20</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="4" type="checkBox" groupId="27">
+			<name><![CDATA[Show Channel Title]]></name>
+		</property>
+		<property id="5" type="textFormat" groupId="27">
+			<name><![CDATA[Channel Title Format]]></name>
+		</property>
+		<property id="6" type="select" groupId="27">
+			<name><![CDATA[Show Content]]></name>
+			<dataProvider>
+				<item data="all">All</item>
+				<item data="title">Titles Only</item>
+				<item data="descr">Descriptions Only</item>
+			</dataProvider>
+		</property>
+		<property id="7" type="textFormat" groupId="27">
+			<name><![CDATA[Title Format]]></name>
+		</property>
+		<property id="8" type="textFormat" groupId="27">
+			<name><![CDATA[Text Format]]></name>
+		</property>
+		<property id="9" type="checkBox" groupId="27">
+			<name><![CDATA[Show Date]]></name>
+		</property>
+		<property id="10" type="textFormat" groupId="27">
+			<name><![CDATA[Date Format]]></name>
+		</property>
+		<property id="11" type="select" groupId="27">
+			<name><![CDATA[Clickable Area]]></name>
+			<dataProvider>
+				<item data="all">Whole Text</item>
+				<item data="title">Titles Only</item>
+			</dataProvider>
+		</property>
+		<property id="12" type="checkBox" groupId="27">
+			<name><![CDATA[Crop Image Tag]]></name>
+		</property>
+		<property id="13" type="checkBox" groupId="28">
+			<name><![CDATA[Slideshow Enabled]]></name>
+		</property>
+		<property id="14" type="stepper" groupId="28">
+			<name><![CDATA[Slideshow Interval (sec.)]]></name>
+			<parameters>
+				<minimum>3</minimum>
+				<maximum>20</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="15" type="stepper" groupId="27">
+			<name><![CDATA[Horizontal News Gap]]></name>
+			<parameters>
+				<minimum>1</minimum>
+				<maximum>30</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="16" type="stepper" groupId="27">
+			<name><![CDATA[News Elements Gap]]></name>
+			<parameters>
+				<minimum>1</minimum>
+				<maximum>20</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="17" type="select">
+			<name><![CDATA[Animation]]></name>
+			<dataProvider>
+				<item data="RSSReaderItem1">Fade</item>
+				<item data="RSSReaderItem2">Brightness</item>
+				<item data="RSSReaderItem3">Blur</item>
+				<item data="RSSReaderItem4">Horizontal Mask</item>
+				<item data="RSSReaderItem5">Vertical Mask</item>
+				<item data="RSSReaderItem6">Circle Mask</item>
+				<item data="RSSReaderItem7">Horizontal Lines Mask</item>
+				<item data="RSSReaderItem8">Vertical Lines Mask</item>
+				<item data="RSSReaderItem9">Animation</item>
+			</dataProvider>
+		</property>
+		<property id="18" type="stepper" groupId="29">
+			<name><![CDATA[Arrows Width]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="19" type="stepper" groupId="29">
+			<name><![CDATA[Arrows Height]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="20" type="color" groupId="29">
+			<name><![CDATA[Arrows Background Color]]></name>
+		</property>
+		<property id="21" type="slider" groupId="29">
+			<name><![CDATA[Arrows Background Alpha]]></name>
+			<parameters>
+				<postfix>%</postfix>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<snapInterval>1</snapInterval>
+			</parameters>
+		</property>
+		<property id="22" type="color" groupId="29">
+			<name><![CDATA[Arrows Color]]></name>
+		</property>
+		<property id="23" type="slider" groupId="29">
+			<name><![CDATA[Arrows Alpha]]></name>
+			<parameters>
+				<postfix>%</postfix>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<snapInterval>1</snapInterval>
+			</parameters>
+		</property>
+		<property id="24" type="stepper" groupId="29">
+			<name><![CDATA[Arrows Corner Radius]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>9999</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="25" type="slider" groupId="29">
+			<name><![CDATA[Arrows Icon Size]]></name>
+			<parameters>
+				<postfix> ratio</postfix>
+				<minimum>-10</minimum>
+				<maximum>10</maximum>
+				<snapInterval>1</snapInterval>
+			</parameters>
+		</property>
+		<property id="26" type="stepper">
+			<name><![CDATA[Cache control (min.)]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>9999</maximum>
+				<stepSize>1</stepSize>
+				<tooltip>Caching  avoids a roundtrip to the origin web server each time a resource is requested and instead retrieves the file from a cache.</tooltip>
+			</parameters>
+		</property>
+		<property id="27" type="group">
+			<name><![CDATA[Channel Settings]]></name>
+		</property>
+		<property id="28" type="group">
+			<name><![CDATA[Slideshow Settings]]></name>
+		</property>
+		<property id="29" type="group">
+			<name><![CDATA[Arrows Settings]]></name>
+		</property>
+	<property id="30" type="checkBox" groupId="27">&gt;
+           		<name><![CDATA[Show full content]]></name>
+			</property></properties>
+	<template alpha="1" width="300" height="200">
+		<properties>
+			<item propertyType="1"><![CDATA[]]></item>
+			<item propertyType="2"><![CDATA[columns]]></item>
+			<item propertyType="3"><![CDATA[3]]></item>
+			<item propertyType="4"><![CDATA[true]]></item>
+			<item propertyType="5" embedFonts="false"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="CENTER"><FONT FACE="Tahoma" SIZE="14" COLOR="#CFCFCF"><B>CHANNEL TITLE</B></FONT></P></TEXTFORMAT>]]></item>
+			<item propertyType="6"><![CDATA[all]]></item>
+			<item propertyType="7" embedFonts="false"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Tahoma" SIZE="11" COLOR="#CB5E5E"><B>NEWS TITLE</B></FONT></P></TEXTFORMAT>]]></item>
+			<item propertyType="8" embedFonts="false"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Tahoma" SIZE="11" COLOR="#DFDFDF">NEWS DESCRIPTION</FONT></P></TEXTFORMAT>]]></item>
+			<item propertyType="9"><![CDATA[true]]></item>
+			<item propertyType="10" embedFonts="false"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Tahoma" SIZE="9" COLOR="#878787">NEWS DATE</FONT></P></TEXTFORMAT>]]></item>
+			<item propertyType="11"><![CDATA[title]]></item>
+			<item propertyType="12"><![CDATA[true]]></item>
+			<item propertyType="13"><![CDATA[false]]></item>
+			<item propertyType="14"><![CDATA[3]]></item>
+			<item propertyType="15"><![CDATA[10]]></item>
+			<item propertyType="16"><![CDATA[5]]></item>
+			<item propertyType="17"><![CDATA[RSSReaderItem1]]></item>
+			<item propertyType="18"><![CDATA[36]]></item>
+			<item propertyType="19"><![CDATA[36]]></item>
+			<item propertyType="20"><![CDATA[0xDEDEDE]]></item>
+			<item propertyType="21"><![CDATA[20]]></item>
+			<item propertyType="22"><![CDATA[0xA4A4A4]]></item>
+			<item propertyType="23"><![CDATA[70]]></item>
+			<item propertyType="24"><![CDATA[12]]></item>
+			<item propertyType="25"><![CDATA[-7]]></item>
+			<item propertyType="26"><![CDATA[10]]></item>
+		<item propertyType="30"><![CDATA[false]]></item></properties>
+	</template>
+</slot><slot id="9" animated="true" external="true" url="slots/ShareButtonSlot.swf" librarySymbolLinkage="ShareButtonSlot" resizable="true" locked="false" category="general" icon="images/modules/share_button_icon.png">
+	<name><![CDATA[Share Button]]></name>
+	<properties>
+		<property id="1" type="image">
+			<name><![CDATA[Image]]></name>
+		</property>
+		<property id="2" type="select">
+			<name><![CDATA[Social Network]]></name>
+			<dataProvider>
+				<item data="facebook">Facebook</item>
+				<item data="twitter">Twitter</item>
+				<item data="linkedin">LinkedIn</item>
+				<item data="myspace">MySpace</item>
+				<item data="stumbleupon">Stumble</item>
+				<item data="vk">VKontakte</item>
+			</dataProvider>
+		</property>
+	</properties>
+	<template alpha="1" buttonMode="false" click="" linkable="true" locked="false" lockActions="true" width="50" height="50">
+		<properties>
+			<item propertyType="1"><![CDATA[]]></item>
+			<item propertyType="2"><![CDATA[facebook]]></item>
+		</properties>
+	</template>
+</slot><slot id="10" librarySymbolLinkage="SearchFieldSlot" external="true" url="slots/searchSlots.swf" resizable="true" animated="false" locked="false" category="general" icon="images/modules/search_field_icon.png">
+	<name><![CDATA[Search Field]]></name>
+	<properties>
+		<property id="1" type="link">
+			<name><![CDATA[Search Results Location]]></name>
+			<parameters>
+				<tooltip><![CDATA[In order to use the Search Widget you will first need to create dedicated page or popup with the Search Results Widget placed in the Rich Content Widget for scrolling.]]></tooltip>
+				<showUrl>false</showUrl>
+				<showFile>false</showFile>
+				<showMail>false</showMail>
+			</parameters>
+		</property>
+		<property id="2" type="stepper" groupId="102">
+			<name><![CDATA[Max Chars]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>255</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="3" type="textFormat" groupId="102">
+			<name><![CDATA[Input Format]]></name>
+		</property>
+		<property id="4" type="htmlText" groupId="102">
+			<name><![CDATA[Text to Show]]></name>
+		</property>
+		<property id="5" type="htmlText" groupId="102">
+			<name><![CDATA[Button Label]]></name>
+		</property>
+		<property id="6" type="stepper" groupId="102">
+			<name><![CDATA[Horizontal Gap]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>20</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="7" type="stepper" groupId="102">
+			<name><![CDATA[Minimum field width]]></name>
+			<parameters>
+				<minimum>10</minimum>
+				<maximum>9999</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="8" type="stepper" groupId="102">
+			<name><![CDATA[Field Padding]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>9999</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="9" type="stepper" groupId="102">
+			<name><![CDATA[Button label padding]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>9999</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="20" type="color" groupId="103">
+			<name><![CDATA[Field top color]]></name>
+		</property>
+		<property id="21" type="color" groupId="103">
+			<name><![CDATA[Field bottom color]]></name>
+		</property>
+		<property id="22" type="slider" groupId="103">
+			<name><![CDATA[Field Alpha]]></name>
+			<parameters>
+				<postfix>%</postfix>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<snapInterval>1</snapInterval>
+			</parameters>
+		</property>
+		<property id="23" type="stepper" groupId="103">
+			<name><![CDATA[Corner Radius]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>9999</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="24" type="stepper" groupId="103">
+			<name><![CDATA[Stroke Thickness]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>10</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="25" type="color" groupId="103">
+			<name><![CDATA[Stroke Color]]></name>
+		</property>
+		<property id="30" type="color" groupId="104">
+			<name><![CDATA[Button top color]]></name>
+		</property>
+		<property id="31" type="color" groupId="104">
+			<name><![CDATA[Button bottom color]]></name>
+		</property>
+		<property id="32" type="slider" groupId="104">
+			<name><![CDATA[Button Alpha]]></name>
+			<parameters>
+				<postfix>%</postfix>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<snapInterval>1</snapInterval>
+			</parameters>
+		</property>
+		<property id="33" type="stepper" groupId="104">
+			<name><![CDATA[Corner Radius]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>9999</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="34" type="stepper" groupId="104">
+			<name><![CDATA[Stroke Thickness]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>10</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="35" type="color" groupId="104">
+			<name><![CDATA[Stroke Color]]></name>
+		</property>
+		<property id="36" type="color" groupId="104">
+			<name><![CDATA[Over top color]]></name>
+		</property>
+		<property id="37" type="color" groupId="104">
+			<name><![CDATA[Over bottom color]]></name>
+		</property>
+
+		<property id="102" type="group">
+			<name><![CDATA[Text Settings]]></name>
+		</property>
+		<property id="103" type="group">
+			<name><![CDATA[Search Field Settings]]></name>
+		</property>
+		<property id="104" type="group">
+			<name><![CDATA[Search Button Settings]]></name>
+		</property>
+	</properties>
+	<template width="330" height="35" lockActions="true">
+		<properties>
+			<item propertyType="1"><![CDATA[]]></item>
+			<item propertyType="2"><![CDATA[32]]></item>
+			<item propertyType="3" embedFonts="false"><![CDATA[<FONT FACE="Tahoma" SIZE="11" COLOR="#1B1B1B">sample text</FONT>]]></item>
+			<item propertyType="4" embedFonts="false"><![CDATA[<FONT FACE="Tahoma" SIZE="11" COLOR="#000000">Enter text here</FONT>]]></item>
+			<item propertyType="5" embedFonts="false"><![CDATA[<FONT FACE="Tahoma" SIZE="11" COLOR="#FFFFFF">Search</FONT>]]></item>
+			<item propertyType="6"><![CDATA[10]]></item>
+			<item propertyType="7"><![CDATA[50]]></item>
+			<item propertyType="8"><![CDATA[10]]></item>
+			<item propertyType="9"><![CDATA[10]]></item>
+			<item propertyType="20"><![CDATA[0xefefef]]></item>
+			<item propertyType="21"><![CDATA[0xefefef]]></item>
+			<item propertyType="22"><![CDATA[100]]></item>
+			<item propertyType="23"><![CDATA[0]]></item>
+			<item propertyType="24"><![CDATA[0]]></item>
+			<item propertyType="25"><![CDATA[0xbdbdbd]]></item>
+			<item propertyType="30"><![CDATA[0x6B6B6B]]></item>
+			<item propertyType="31"><![CDATA[0x434343]]></item>
+			<item propertyType="32"><![CDATA[100]]></item>
+			<item propertyType="33"><![CDATA[0]]></item>
+			<item propertyType="34"><![CDATA[0]]></item>
+			<item propertyType="35"><![CDATA[0xbdbdbd]]></item>
+			<item propertyType="36"><![CDATA[0x494949]]></item>
+			<item propertyType="37"><![CDATA[0x494949]]></item>
+		</properties>
+	</template>
+</slot><slot id="11" librarySymbolLinkage="SearchResultSlot" external="true" url="slots/searchSlots.swf" resizable="true" animated="false" locked="false" category="general" icon="images/modules/search_result_icon.png">
+	<name><![CDATA[Search Results List]]></name>
+	<properties>
+		<property id="1" type="htmlText">
+			<name><![CDATA[Empty results message]]></name>
+		</property>
+		<property id="2" type="stepper">
+			<name><![CDATA[Results vertical padding]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>30</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="3" type="stepper">
+			<name><![CDATA[Title Padding]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>30</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="4" type="checkBox">
+			<name><![CDATA[Highlight All]]></name>
+		</property>
+		<property id="5" type="color">
+			<name><![CDATA[Highlight Color]]></name>
+		</property>
+		<property id="6" type="textFormat">
+			<name><![CDATA[Title Format]]></name>
+		</property>
+		<property id="7" type="textFormat">
+			<name><![CDATA[Result Format]]></name>
+		</property>
+	</properties>
+	<template width="565" height="402" lockActions="true">
+		<properties>
+			<item propertyType="1"><![CDATA[<P ALIGN="CENTER"><FONT FACE="Tahoma" SIZE="13" COLOR="#000000">No results found</FONT></P>]]></item>
+			<item propertyType="2"><![CDATA[5]]></item>
+			<item propertyType="3"><![CDATA[3]]></item>
+			<item propertyType="4"><![CDATA[true]]></item>
+			<item propertyType="5"><![CDATA[0xFFFF00]]></item>
+			<item propertyType="6" embedFonts="false"><![CDATA[<FONT FACE="Tahoma" SIZE="13" COLOR="#0000FF">Title</FONT>]]></item>
+			<item propertyType="7" embedFonts="false"><![CDATA[<FONT FACE="Tahoma" SIZE="11" COLOR="#101010">Result text</FONT>]]></item>
+		</properties>
+	</template>
+</slot><slot id="12" librarySymbolLinkage="BackgroundImageSlot" external="true" url="slots/backgroundImageSlot.swf" resizable="true" animated="false" locked="false" lockActions="true" icon="images/modules/background_icon.png" category="general">
+	<name><![CDATA[Background Widget]]></name>
+	<properties>
+		<property id="1" type="media">
+			<name><![CDATA[Select Image]]></name>
+			<parameters>
+				<image>true</image>
+			</parameters>
+		</property>
+		<property id="2" type="select">
+			<name><![CDATA[Image Scaling Mode]]></name>
+			<dataProvider>
+				<item data="fit">Fit</item>
+				<item data="fitWidth">Fit width</item>
+				<item data="fitHeight">Fit height</item>
+				<item data="fill">Fill</item>
+				<item data="crop">Crop</item>
+				<item data="resize">Resize</item>
+				<item data="none">No scale</item>
+				<item data="pattern">Pattern</item>
+			</dataProvider>
+		</property>
+		<property id="3" type="checkBox">
+			<name><![CDATA[Zoom Image]]></name>
+		</property>
+		<property id="4" type="checkBox">
+			<name><![CDATA[Fit stage width]]></name>
+		</property>
+		<property id="5" type="checkBox">
+			<name><![CDATA[Fit stage height]]></name>
+		</property>
+		<property id="6" type="color">
+			<name><![CDATA[Background Color]]></name>
+		</property>
+		<property id="7" type="slider">
+			<name><![CDATA[Background Alpha]]></name>
+			<parameters>
+				<postfix>%</postfix>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<snapInterval>1</snapInterval>
+			</parameters>
+		</property>
+		<property id="8" type="plainText">
+			<name><![CDATA[Widget Connection ID]]></name>
+			<parameters>
+				<tooltip><![CDATA[Widgets with the same ID will be connected.]]></tooltip>
+			</parameters>
+		</property>
+	</properties>
+	<template width="100" height="100">
+		<properties>
+			<item propertyType="1"><![CDATA[]]></item>
+			<item propertyType="2"><![CDATA[fit]]></item>
+			<item propertyType="3"><![CDATA[true]]></item>
+			<item propertyType="4"><![CDATA[false]]></item>
+			<item propertyType="5"><![CDATA[false]]></item>
+			<item propertyType="6"><![CDATA[0x000000]]></item>
+			<item propertyType="7"><![CDATA[100]]></item>
+			<item propertyType="8"><![CDATA[]]></item>
+		</properties>
+	</template>
+</slot><slot id="13" librarySymbolLinkage="BuyButtonSlot" url="slots/storeBuyButton.swf" external="true" animated="true" resizable="true" locked="false" mainPropertyID="1" category="ecommerce" icon="images/modules/buy_button_icon.png">
+	<name><![CDATA[Buy Button Widget]]></name>
+	<properties>
+		<property id="1" type="htmlText" groupId="105">
+			<name><![CDATA[Button Label]]></name>
+		</property>
+		<property id="3" type="checkBox" groupId="105">
+			<name><![CDATA[Show Icon]]></name>
+		</property>
+		<property id="10" type="image" dependencyId="3" groupId="105">
+			<name><![CDATA[Button Icon]]></name>
+			<dependencyValue>true</dependencyValue>
+		</property>
+		<property id="11" type="select" dependencyId="3" groupId="105">
+			<name><![CDATA[Icon Placement]]></name>
+			<dataProvider>
+				<item data="left">Left</item>
+				<item data="right">Right</item>
+			</dataProvider>
+			<dependencyValue>true</dependencyValue>
+		</property>
+		<property id="12" type="stepper" dependencyId="3" groupId="105">
+			<name><![CDATA[Icon Padding]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>999</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+			<dependencyValue>true</dependencyValue>
+		</property>
+		<property id="13" type="checkBox" groupId="105">
+			<name><![CDATA[Drop Shadow]]></name>
+		</property>
+		<property id="2" type="select" groupId="105">
+			<name><![CDATA[Background Style]]></name>
+			<dataProvider>
+				<item data="image">Image</item>
+				<item data="color">Color</item>
+			</dataProvider>
+		</property>
+		<property id="4" type="color" dependencyId="2" groupId="105">
+			<name><![CDATA[Button Top Color]]></name>
+			<dependencyValue>color</dependencyValue>
+		</property>
+		<property id="5" type="color" dependencyId="2" groupId="105">
+			<name><![CDATA[Button Bottom Color]]></name>
+			<dependencyValue>color</dependencyValue>
+		</property>
+		<property id="6" type="slider" dependencyId="2" groupId="105">
+			<name><![CDATA[Button Alpha]]></name>
+			<parameters>
+				<postfix>%</postfix>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<snapInterval>1</snapInterval>
+			</parameters>
+			<dependencyValue>color</dependencyValue>
+		</property>
+		<property id="7" type="stepper" dependencyId="2" groupId="105">
+			<name><![CDATA[Button Corner Radius]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>9999</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+			<dependencyValue>color</dependencyValue>
+		</property>
+		<property id="8" type="stepper" dependencyId="2" groupId="105">
+			<name><![CDATA[Button Stroke Thickness]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>10</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+			<dependencyValue>color</dependencyValue>
+		</property>
+		<property id="9" type="color" dependencyId="2" groupId="105">
+			<name><![CDATA[Button Stroke Color]]></name>
+			<dependencyValue>color</dependencyValue>
+		</property>
+		<property id="14" type="image" dependencyId="2" groupId="105">
+			<name><![CDATA[Background Image]]></name>
+			<dependencyValue>image</dependencyValue>
+		</property>
+		<property id="15" type="color" dependencyId="2" groupId="105">
+			<name><![CDATA[Over Top Color]]></name>
+			<dependencyValue>color</dependencyValue>
+		</property>
+		<property id="16" type="color" dependencyId="2" groupId="105">
+			<name><![CDATA[Over Bottom Color]]></name>
+			<dependencyValue>color</dependencyValue>
+		</property>
+		<property id="17" type="image" dependencyId="2" groupId="105">
+			<name><![CDATA[Background Over Image]]></name>
+			<dependencyValue>image</dependencyValue>
+		</property>
+
+		<property id="21" type="select" groupId="103">
+			<name><![CDATA[Payment Method]]></name>
+			<parameters>
+				<tooltip><![CDATA[If "Using Email" selected order will be emailed to you for manual processing. Select Paypal, Google Checkout or Robox to use the website checkout to process the order.]]></tooltip>
+			</parameters>
+			<dataProvider>
+				<item data="0">PayPal</item>
+				<item data="1">Google Checkout</item>
+				<item data="2">Robox</item>
+				<item data="3">Using Email</item>
+			</dataProvider>
+		</property>
+		<property id="22" type="plainText" groupId="103" dependencyId="21">
+			<name><![CDATA[PayPal Email]]></name>
+			<dependencyValue>0</dependencyValue>
+		</property>
+		<property id="23" type="plainText" groupId="103" dependencyId="21">
+			<name><![CDATA[PayPal Currency ID]]></name>
+			<dependencyValue>0</dependencyValue>
+			<parameters>
+				<restrict><![CDATA[A-z]]></restrict>
+			</parameters>
+		</property>
+		<property id="24" type="plainText" groupId="103" dependencyId="21">
+			<name><![CDATA[Google Merchant]]></name>
+			<dependencyValue>1</dependencyValue>
+			<parameters>
+				<restrict><![CDATA[0-9]]></restrict>
+			</parameters>
+		</property>
+		<property id="25" type="checkBox" groupId="103" dependencyId="21">
+			<name><![CDATA[Google Demo Mode]]></name>
+			<dependencyValue>1</dependencyValue>
+		</property>
+		<property id="26" type="plainText" groupId="103" dependencyId="21">
+			<name><![CDATA[Robox Merchant]]></name>
+			<dependencyValue>2</dependencyValue>
+		</property>
+		<property id="27" type="plainText" groupId="103" dependencyId="21">
+			<name><![CDATA[Robox Merchant Pass 1]]></name>
+			<dependencyValue>2</dependencyValue>
+		</property>
+		<property id="28" type="plainText" groupId="103" dependencyId="21">
+			<name><![CDATA[Robox Currentcy ID]]></name>
+			<dependencyValue>2</dependencyValue>
+			<parameters>
+				<restrict><![CDATA[A-z0-9]]></restrict>
+			</parameters>
+		</property>
+		<property id="29" type="checkBox" groupId="103" dependencyId="21">
+			<name><![CDATA[Robox Demo Mode]]></name>
+			<dependencyValue>2</dependencyValue>
+		</property>
+		<property id="30" type="plainText" groupId="103" dependencyId="21">
+			<name><![CDATA[Currency]]></name>
+			<dependencyValue>3</dependencyValue>
+			<parameters>
+				<restrict><![CDATA[A-z0-9]]></restrict>
+				<tooltip><![CDATA[Enter your currency options so customers will know what you accept.]]></tooltip>
+			</parameters>
+		</property>
+		<property id="31" type="plainText" groupId="103" dependencyId="21">
+			<name><![CDATA[Form Template Name]]></name>
+			<dependencyValue>3</dependencyValue>
+			<parameters>
+				<restrict><![CDATA[A-z0-9]]></restrict>
+			</parameters>
+		</property>
+		<property id="32" type="link" groupId="103" dependencyId="21">
+			<name><![CDATA[Contact Form Location]]></name>
+			<dependencyValue>3</dependencyValue>
+			<parameters>
+				<tooltip><![CDATA[In order to use the Using Email method you will first need to create your Contact Form on either a dedicated page or popup. This is where you setup the email address that the checkout process will send the order too.]]></tooltip>
+				<showUrl>false</showUrl>
+				<showFile>false</showFile>
+				<showMail>false</showMail>
+			</parameters>
+		</property>
+
+		<property id="51" type="plainText" groupId="104">
+			<name><![CDATA[Product Code]]></name>
+			<parameters>
+				<restrict><![CDATA[A-Za-z0-9]]></restrict>
+			</parameters>
+		</property>
+		<property id="52" type="plainText" groupId="104">
+			<name><![CDATA[Price]]></name>
+			<parameters>
+				<restrict><![CDATA[0-9.]]></restrict>
+			</parameters>
+		</property>
+		<property id="53" type="plainText" groupId="104">
+			<name><![CDATA[Brand]]></name>
+		</property>
+		<property id="54" type="plainText" groupId="104">
+			<name><![CDATA[Model]]></name>
+		</property>
+		<property id="55" type="plainText" groupId="104">
+			<name><![CDATA[Short Description]]></name>
+		</property>
+		
+		<property id="104" type="group">
+			<name><![CDATA[Product Information]]></name>
+		</property>
+		<property id="103" type="group">
+			<name><![CDATA[Payment Settings]]></name>
+		</property>
+		<property id="105" type="group">
+			<name><![CDATA[Button Style]]></name>
+		</property>
+	</properties>
+	<template width="129" height="34" lockEffects="true" buttonMode="true" lockActions="true">
+		<properties>
+			<item propertyType="1" embedFonts="false"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="CENTER"><FONT FACE="Arial" SIZE="12" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"><B>Buy now</B></FONT></P></TEXTFORMAT>]]></item>
+			<item propertyType="2"><![CDATA[color]]></item>
+			<item propertyType="3"><![CDATA[false]]></item>
+			<item propertyType="4"><![CDATA[0x6B6B6B]]></item>
+			<item propertyType="5"><![CDATA[0x434343]]></item>
+			<item propertyType="6"><![CDATA[100]]></item>
+			<item propertyType="7"><![CDATA[0]]></item>
+			<item propertyType="8"><![CDATA[0]]></item>
+			<item propertyType="9"><![CDATA[0x000000]]></item>
+			<item propertyType="10"><![CDATA[]]></item>
+			<item propertyType="11"><![CDATA[left]]></item>
+			<item propertyType="12"><![CDATA[10]]></item>
+			<item propertyType="13"><![CDATA[false]]></item>
+			<item propertyType="14"><![CDATA[]]></item>
+			<item propertyType="15"><![CDATA[0x616161]]></item>
+			<item propertyType="16"><![CDATA[0x616161]]></item>
+			<item propertyType="17"><![CDATA[]]></item>
+			<item propertyType="21"><![CDATA[3]]></item>
+			<item propertyType="22"><![CDATA[test@youremail.com]]></item>
+			<item propertyType="23"><![CDATA[usd]]></item>
+			<item propertyType="24"><![CDATA[853989395876916]]></item>
+			<item propertyType="25"><![CDATA[true]]></item>
+			<item propertyType="26"><![CDATA[]]></item>
+			<item propertyType="27"><![CDATA[]]></item>
+			<item propertyType="28"><![CDATA[WMZM]]></item>
+			<item propertyType="29"><![CDATA[true]]></item>
+			<item propertyType="30"><![CDATA[USD]]></item>
+			<item propertyType="31"><![CDATA[checkoutitem]]></item>
+			<item propertyType="32"><![CDATA[]]></item>
+			<item propertyType="51"><![CDATA[0000]]></item>
+			<item propertyType="52"><![CDATA[0.00]]></item>
+			<item propertyType="53"><![CDATA[Brand name]]></item>
+			<item propertyType="54"><![CDATA[Model name]]></item>
+			<item propertyType="55"><![CDATA[]]></item>
+		</properties>
+	</template>
+</slot></slots>
+	
+	<modules>
+		<module id="1" type="staticMenu" librarySymbolLinkage="MainMenu" resizable="false" locked="true" icon="images/modules/menu_icon.png" category="menus">
+			<name><![CDATA[Main menu]]></name>
+			<template alpha="1">
+				<data>
+					<menu/>
+					<dropDown>true</dropDown>
+					<maxDepth>2</maxDepth>
+					<maxRootItems>5</maxRootItems>
+					<dropDownOnRollOver>true</dropDownOnRollOver>
+					<dropDownMenuType>10</dropDownMenuType>
+					<dropDownItemRenderer>MainSubMenuItemRenderer</dropDownItemRenderer>
+				</data>
+			</template>
+		</module>
+		<module id="2" type="staticMenu" librarySymbolLinkage="RightMenu" resizable="false" locked="true" icon="images/modules/menu_icon.png" category="menus">
+			<name><![CDATA[Right menu]]></name>
+			<template alpha="1">
+				<data>
+					<menu/>
+					<dropDown>true</dropDown>
+					<maxDepth>2</maxDepth>
+					<maxRootItems>5</maxRootItems>
+					<dropDownOnRollOver>true</dropDownOnRollOver>
+					<dropDownMenuType>11</dropDownMenuType>
+					<dropDownItemRenderer>RightSubMenuItemRenderer</dropDownItemRenderer>
+				</data>
+			</template>
+		</module>
+		<module id="3" type="infoModule" librarySymbolLinkage="NewsModule" resizable="true" icon="images/modules/news_icon.png" isContent="true" minHeight="100" minWidth="100" category="news">
+			<name><![CDATA[News Block]]></name>
+			<properties>
+				<property id="1" type="color">
+					<name><![CDATA[Scrollbar Track Color]]></name>
+				</property>
+				<property id="2" type="color">
+					<name><![CDATA[Scrollbar Thumb Color]]></name>
+				</property>
+			</properties>
+			<template alpha="1" width="602" height="204">
+				<properties>
+					<item propertyType="1">0x999999</item>
+					<item propertyType="2">0x333333</item>
+				</properties>
+				<data>
+					<dataProvider isDataProvider="true"/>
+					<itemRenderer>NewsModuleItem</itemRenderer>
+				</data>
+			</template>
+		</module>
+		<module id="4" type="mp3Player" librarySymbolLinkage="MP3PlayerModule" resizable="false" locked="false" icon="images/modules/musicplayer_icon.png" isContent="true" category="music_players">
+			<name><![CDATA[Music Player]]></name>
+			<properties>
+				<property id="1" type="htmlText">
+					<name><![CDATA[Music is On Label]]></name>
+				</property>
+				<property id="2" type="htmlText">
+					<name><![CDATA[Music is Off Label]]></name>
+				</property>
+			</properties>
+			<template alpha="1">
+				<properties>
+					<item propertyType="1" embedFonts="true"><![CDATA[<font color="#777777" size="8" face="standard 07_55">SOUND <font color="#ffffff">[ </font>ON<font color="#ffffff"> ]</font></font>]]></item>
+					<item propertyType="2" embedFonts="true"><![CDATA[<font color="#777777" size="8" face="standard 07_55">SOUND <font color="#ffffff">[ </font>OFF<font color="#ffffff"> ]</font></font>]]></item>
+				</properties>
+				<data>
+					<playlist/>
+					<autoLoadAndPlay>true</autoLoadAndPlay>
+					<repeat>true</repeat>
+					<defaultVolume>0.3</defaultVolume>
+				</data>
+			</template>
+		</module>
+		<module id="5" type="richContent" librarySymbolLinkage="TemplateRichContentModule" resizable="true" minHeight="100" minWidth="100" icon="images/modules/richcontent_icon.png" category="general">
+			<name><![CDATA[Rich Content Widget]]></name>
+			<properties>
+				<property id="1" type="color">
+					<name><![CDATA[Scrollbar Track Color]]></name>
+				</property>
+				<property id="2" type="color">
+					<name><![CDATA[Scrollbar Thumb Color]]></name>
+				</property>
+			</properties>
+			<template width="567" height="208" directionIsChangeable="false" direction="vertical"><name><![CDATA[Rich Content Block 178]]></name><data><objects><object holder="0" x="0" y="0" width="562" height="76" depth="9" type="htmlText" selectable="true" embedFonts="true" autoSize="left"><data><![CDATA[<P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#EC4913">PRAESENT JUSTO DOLOR, LOBORTIS QUIS, LOBORTIS DIGNISSIM, PULVINAR AC, LOREM.<FONT COLOR="#FFFFFF"></FONT></FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF"></FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF">LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NON-</FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF">UMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MAL ESUADA ODIO. MORBI NUNC ODIO, GRAVIDA</FONT></P>]]></data></object><object holder="0" x="202" y="85" width="352" height="100" depth="8" type="htmlText" selectable="true" embedFonts="true" autoSize="left"><data><![CDATA[<P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#EC4913">VESTIBULUM SED ANTDONEC SAGITTIS EUISMOD PURUS<FONT COLOR="#F7D8CC"></FONT></FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#F7D8CC"></FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#F7D8CC">LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA ODIO. MORBI NUNC ODIO</FONT></P>]]></data></object><object holder="0" x="0" y="194" width="562" height="76" depth="7" type="htmlText" selectable="true" embedFonts="true" autoSize="left"><data><![CDATA[<font color="#ffffff" size="8" face="standard 07_55"><font color="#ec4913">PRAESENT JUSTO DOLOR, LOBORTIS QUIS, LOBORTIS DIGNISSIM, PULVINAR AC, LOREM.</font><br><br>LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NON-<br>UMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MAL ESUADA ODIO. MORBI NUNC ODIO, GRAVIDA</font>]]></data></object><object holder="0" x="0" y="394" width="562" height="76" depth="6" type="htmlText" selectable="true" embedFonts="true" autoSize="left"><data><![CDATA[<font color="#ffffff" size="8" face="standard 07_55"><font color="#ec4913">PRAESENT JUSTO DOLOR, LOBORTIS QUIS, LOBORTIS DIGNISSIM, PULVINAR AC, LOREM.</font><br><br>LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NON-<br>UMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MAL ESUADA ODIO. MORBI NUNC ODIO, GRAVIDA</font>]]></data></object><object holder="0" x="202" y="287" width="352" height="100" depth="5" type="htmlText" selectable="true" embedFonts="true" autoSize="left"><data><![CDATA[<P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#EC4913">VESTIBULUM SED ANTDONEC SAGITTIS EUISMOD PURUS<FONT COLOR="#F7D8CC"></FONT></FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#F7D8CC"></FONT></P><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#F7D8CC">LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA ODIO. MORBI NUNC ODIO</FONT></P>]]></data></object><object holder="0" x="202" y="481" width="352" height="100" depth="4" type="htmlText" selectable="true" embedFonts="true" autoSize="left"><data><![CDATA[<font color="#f7d8cc" size="8" face="standard 07_55"><font color="#ec4913">VESTIBULUM SED ANTDONEC SAGITTIS EUISMOD PURUS</font><br><br>LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA ODIO. MORBI NUNC ODIO, GRAVIDA AT, CURSUS NEC<br></font>]]></data></object></objects><slots><slot holder="0" x="0" y="85" width="192" height="93" depth="3" buttonMode="true" slotType="4"><properties><item propertyType="1"><![CDATA[images/pic6.jpg]]></item><item propertyType="2"><![CDATA[0xFFFFFF]]></item></properties></slot><slot holder="0" x="0" y="285" width="192" height="93" depth="2" buttonMode="true" slotType="4"><properties><item propertyType="1"><![CDATA[images/pic7.jpg]]></item><item propertyType="2"><![CDATA[0xFFFFFF]]></item></properties></slot><slot holder="0" x="0" y="485" width="192" height="93" depth="1" buttonMode="true" slotType="4"><properties><item propertyType="1"><![CDATA[images/pic8.jpg]]></item><item propertyType="2"><![CDATA[0xFFFFFF]]></item></properties></slot></slots><modules/></data><properties><item propertyType="1"><![CDATA[0xABABAB]]></item><item propertyType="2"><![CDATA[0x434343]]></item></properties></template>
+		</module>
+		<module id="6" type="contactForm" librarySymbolLinkage="ContactFormModule" resizable="false" icon="images/modules/form_icon.png" isContent="true" minHeight="215" minWidth="240" category="contact_forms">
+			<name><![CDATA[Form Widget]]></name>
+			<properties>
+				<property id="1" type="color">
+					<name><![CDATA[Scrollbar Track Color]]></name>
+				</property>
+				<property id="2" type="color">
+					<name><![CDATA[Scrollbar Thumb Color]]></name>
+				</property>
+				<property id="3" type="color">
+					<name><![CDATA[Textfields Border Color]]></name>
+				</property>
+				<property id="4" type="textFormat">
+					<name><![CDATA[Input Text Format]]></name>
+				</property>
+				<property id="5" type="textFormat">
+					<name><![CDATA[Message Text Format]]></name>
+				</property>
+				<property id="6" type="htmlText">
+					<name><![CDATA[Submit Button Label]]></name>
+				</property>
+				<property id="7" type="htmlText">
+					<name><![CDATA[Reset Button Label]]></name>
+				</property>
+			</properties>
+			<template width="590" height="129"><name><![CDATA[Contact form]]></name><data>
+						<formConfiguration isDataProvider="true"/>
+						<formStructure isDataProvider="true"/>
+						<submitButtonRenderer>SimpleButtonSlot</submitButtonRenderer>
+						<resetButtonRenderer>SimpleButtonSlot</resetButtonRenderer>
+						<textItemRenderer>ContactFormItem</textItemRenderer>
+					<attachItemRenderer>MotoExternalContactFormAttachItem</attachItemRenderer><radioButtonItemRenderer>MotoExternalContactFormRadioButtonItem</radioButtonItemRenderer></data><properties><item propertyType="1"><![CDATA[0x015267]]></item><item propertyType="2"><![CDATA[0x81d0e9]]></item><item propertyType="3"><![CDATA[0xFFFFFF]]></item><item propertyType="4" embedFonts="true"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0">FORM FIELD TEXT</FONT></P></TEXTFORMAT>]]></item><item propertyType="5" embedFonts="true"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="8" COLOR="#F8FB17" LETTERSPACING="0" KERNING="0">FORM FIELD TEXT</FONT></P></TEXTFORMAT>]]></item><item propertyType="6" embedFonts="true"><![CDATA[<font color="#f8fb17" size="8" face="standard 07_55">SEND</font>]]></item><item propertyType="7" embedFonts="true"><![CDATA[<font color="#f8fb17" size="8" face="standard 07_55">CLEAR</font>]]></item></properties></template>
+		</module>
+		<module id="7" type="simpleGallery" librarySymbolLinkage="GalleryModule" resizable="true" icon="images/modules/gallery_icon.png" isContent="true" category="galleries">
+			<name><![CDATA[Gallery Widget]]></name>
+			<properties/>
+			<template alpha="1" width="400" height="300">
+				<properties/>
+				<data>
+					<galleryData isDataProvider="true"/>
+					<thumbnailItemRenderer>GalleryItem</thumbnailItemRenderer>
+				</data>
+			</template>
+		</module>
+		<module id="9" type="simpleMediaPlayer" librarySymbolLinkage="MediaPlayerWithControls" url="modules/MediaPlayer.swf" resizable="true" external="true" icon="images/modules/mediaplayer_icon.png" minHeight="100" minWidth="100" category="media_players">
+			<name><![CDATA[Media Player Widget]]></name>
+			<properties>
+				<property id="1" type="color">
+					<name><![CDATA[Controls face color]]></name>
+				</property>
+				<property id="2" type="color">
+					<name><![CDATA[Controls back color]]></name>
+				</property>
+				<property id="3" type="color">
+					<name><![CDATA[Progress bar color]]></name>
+				</property>
+				<property id="4" type="color">
+					<name><![CDATA[Loading bar color]]></name>
+				</property>
+				<property id="5" type="checkBox">
+					<name><![CDATA[Background enabled]]></name>
+				</property>
+				<property id="6" type="color">
+					<name><![CDATA[Background color]]></name>
+				</property>
+				<property id="7" type="slider">
+					<name><![CDATA[Background alpha]]></name>
+					<parameters>
+						<postfix>%</postfix>
+						<minimum>0</minimum>
+						<maximum>100</maximum>
+						<snapInterval>1</snapInterval>
+					</parameters>
+				</property>
+			</properties>
+			<template alpha="1" width="500" height="300">
+				<properties>
+					<item propertyType="1">0xFFFFFF</item>
+					<item propertyType="2">0x333333</item>
+					<item propertyType="3">0x990000</item>
+					<item propertyType="4">0xCCCCCC</item>
+					<item propertyType="5">true</item>
+					<item propertyType="6">0x000000</item>
+					<item propertyType="7">50</item>
+				</properties>				
+				<data>
+					<mediaType>flv</mediaType>
+					<source/>
+					<autoLoadAndPlay>false</autoLoadAndPlay>
+					<repeat>false</repeat>
+					<defaultVolume>1</defaultVolume>
+					<bufferTime>0</bufferTime>
+					<streamMusic>true</streamMusic>
+					<smoothing>true</smoothing>
+					<scalingMode>fit</scalingMode>
+					<horizontalAlign>center</horizontalAlign>
+					<verticalAlign>middle</verticalAlign>
+					<showControls>true</showControls>
+					<showScrubber>true</showScrubber>
+					<showTime>true</showTime>
+					<showVolume>true</showVolume>
+					<fullScreenMode>fullScreen</fullScreenMode>
+				<showQuality>true</showQuality><defaultYouTubeQuality/></data>
+			</template>
+		</module>
+		<module id="10" type="dynamicMenu" librarySymbolLinkage="MainSubMenu" resizable="false" locked="true" icon="images/modules/menu_icon.png" category="menus"/>
+		<module id="11" type="dynamicMenu" librarySymbolLinkage="RightSubMenu" resizable="false" locked="true" icon="images/modules/menu_icon.png" category="menus"/>
+	<module id="12" type="simpleGallery" librarySymbolLinkage="GalleryPreviewModule" external="true" url="modules/galleryModule.swf" applicationDomain="externalGallery" resizable="true" icon="images/modules/gallery_preview_icon.png" isContent="true" category="galleries">
+			<name><![CDATA[Media Gallery Preview]]></name>
+			<properties>
+				<property id="1" type="plainText">
+					<name><![CDATA[Widget Connection ID]]></name>
+					<parameters>
+						<tooltip><![CDATA[Widgets with the same ID will be connected.]]></tooltip>
+					</parameters>
+				</property>				<property id="2" type="checkBox">
+					<name><![CDATA[Enabled Slideshow]]></name>
+				</property>				<property id="3" type="stepper">
+					<name><![CDATA[Slideshow Delay]]></name>
+					<parameters>
+						<minimum>1</minimum>
+						<maximum>30</maximum>
+						<stepSize>0.1</stepSize>
+					</parameters>
+				</property>
+				<property id="4" type="stepper">
+					<name><![CDATA[Corner Radius]]></name>
+					<parameters>
+						<minimum>0</minimum>
+						<maximum>9999</maximum>
+						<stepSize>1</stepSize>
+					</parameters>
+				</property>
+				<property id="5" type="stepper">
+					<name><![CDATA[Border Width]]></name>
+					<parameters>
+						<minimum>0</minimum>
+						<maximum>20</maximum>
+						<stepSize>1</stepSize>
+					</parameters>
+				</property>
+				<property id="6" type="color">
+					<name><![CDATA[Border Color]]></name>
+				</property>
+				<property id="7" type="slider">
+					<name><![CDATA[Border Alpha]]></name>
+					<parameters>
+						<postfix>%</postfix>
+						<minimum>0</minimum>
+						<maximum>100</maximum>
+						<snapInterval>1</snapInterval>
+					</parameters>
+				</property>
+				
+				<property id="101" type="group">
+					<name><![CDATA[Arrows settings]]></name>
+				</property>
+			<property id="8" type="slider" groupId="101">
+					<name><![CDATA[Arrows BG Width]]></name>
+					<parameters>
+						<postfix>%</postfix>
+						<minimum>0</minimum>
+						<maximum>100</maximum>
+						<snapInterval>1</snapInterval>
+					</parameters>
+				</property>
+				<property id="9" type="color" groupId="101">
+					<name><![CDATA[Arrows BG Color]]></name>
+				</property>
+				<property id="10" type="slider" groupId="101">
+					<name><![CDATA[Arrows BG Alpha]]></name>
+					<parameters>
+						<postfix>%</postfix>
+						<minimum>0</minimum>
+						<maximum>100</maximum>
+						<snapInterval>1</snapInterval>
+					</parameters>
+				</property>
+				<property id="11" type="color" groupId="101">
+					<name><![CDATA[Arrows Color]]></name>
+				</property>
+				<property id="12" type="slider" groupId="101">
+					<name><![CDATA[Arrows Alpha]]></name>
+					<parameters>
+						<postfix>%</postfix>
+						<minimum>0</minimum>
+						<maximum>100</maximum>
+						<snapInterval>1</snapInterval>
+					</parameters>
+				</property>
+				<property id="19" type="checkBox">
+					<name><![CDATA[Auto load & play]]></name>
+				</property>
+				<property id="20" type="slider">
+					<name><![CDATA[Sound volume]]></name>
+					<parameters>
+						<postfix>%</postfix>
+						<minimum>0</minimum>
+						<maximum>100</maximum>
+						<snapInterval>1</snapInterval>
+					</parameters>
+				</property>
+				<property id="21" type="checkBox">
+					<name><![CDATA[Media controls]]></name>
+				</property>
+				
+				<property id="102" type="group" dependencyId="21">
+					<name><![CDATA[Mediaplayer skin]]></name>
+					<dependencyValue>true</dependencyValue>
+				</property>
+				<property id="22" type="color" groupId="102">
+					<name><![CDATA[Background color]]></name>
+				</property>
+				<property id="23" type="slider" groupId="102">
+					<name><![CDATA[Background alpha]]></name>
+					<parameters>
+						<postfix>%</postfix>
+						<minimum>0</minimum>
+						<maximum>100</maximum>
+						<snapInterval>1</snapInterval>
+					</parameters>
+				</property>
+				<property id="24" type="color" groupId="102">
+					<name><![CDATA[Elements color]]></name>
+				</property>
+				<property id="25" type="slider" groupId="102">
+					<name><![CDATA[Elements alpha]]></name>
+					<parameters>
+						<postfix>%</postfix>
+						<minimum>0</minimum>
+						<maximum>100</maximum>
+						<snapInterval>1</snapInterval>
+					</parameters>
+				</property>
+				<property id="26" type="color" groupId="102">
+					<name><![CDATA[Active color]]></name>
+				</property>
+				<property id="27" type="textFormat" groupId="102">
+					<name><![CDATA[Font]]></name>
+				</property>
+			</properties>
+			<template alpha="1" width="800" height="430">
+				<properties><item propertyType="1"/><item propertyType="2">true</item><item propertyType="3">5</item><item propertyType="4">0</item><item propertyType="5">10</item><item propertyType="6">0xd9d9d9</item><item propertyType="7">100</item><item propertyType="8">30</item><item propertyType="9">0x000000</item><item propertyType="10">15</item><item propertyType="11">0xFFFFFF</item><item propertyType="12">15</item>
+					<item propertyType="19">true</item>
+					<item propertyType="20">80</item>
+					<item propertyType="21">true</item>
+					<item propertyType="22">0x000000</item>
+					<item propertyType="23">65</item>
+					<item propertyType="24">0xffffff</item>
+					<item propertyType="25">30</item>
+					<item propertyType="26">0x00b4ff</item>
+					<item propertyType="27" embedFonts="false"><![CDATA[<font face="Verdana" size="11"><b>Label</b></font>]]></item>
+			</properties>
+				<data>
+					<galleryData isDataProvider="true"/>
+					<template>photo_gallery_template_preview.xml</template>
+				</data>
+			</template>
+		</module><module id="13" type="simpleGallery" librarySymbolLinkage="GalleryThumbnailsModule" external="true" url="modules/galleryModule.swf" applicationDomain="externalGallery" resizable="true" icon="images/modules/gallery_thumbnail_icon.png" isContent="true" category="galleries">
+			<name><![CDATA[Media Gallery Thumbnail List]]></name>
+			<properties>
+				<property id="1" type="plainText">
+					<name><![CDATA[Widget Connection ID]]></name>
+					<parameters>
+						<tooltip><![CDATA[Widgets with the same ID will be connected.]]></tooltip>
+					</parameters>
+				</property>
+				<property id="2" type="checkBox">
+					<name><![CDATA[Prevent Second Click]]></name>
+					<parameters>
+						<tooltip><![CDATA[Prevents second click on the same item. Usually enabled if used with a lightbox.]]></tooltip>
+					</parameters>
+				</property>
+				
+			<property id="3" type="stepper">
+				<name><![CDATA[Item to Start From]]></name>
+				<parameters>
+					<minimum>0</minimum>
+					<maximum>9999</maximum>
+					<stepSize>1</stepSize>
+				</parameters>
+			</property>
+
+				<property id="5" type="stepper" groupId="101">
+					<name><![CDATA[Item Creation Delay]]></name>
+					<parameters>
+						<minimum>0</minimum>
+						<maximum>5</maximum>
+						<stepSize>0.01</stepSize>
+					</parameters>
+					<parameters>
+						<tooltip><![CDATA[Item Creation Delay in seconds.]]></tooltip>
+					</parameters>
+				</property>
+				<property id="6" type="stepper" groupId="101">
+					<name><![CDATA[Item Corner Radius]]></name>
+					<parameters>
+						<minimum>0</minimum>
+						<maximum>9999</maximum>
+						<stepSize>1</stepSize>
+					</parameters>
+				</property>
+				<property id="7" type="stepper" groupId="101">
+					<name><![CDATA[Item Border Width]]></name>
+					<parameters>
+						<minimum>0</minimum>
+						<maximum>20</maximum>
+						<stepSize>1</stepSize>
+					</parameters>
+				</property>
+				<property id="8" type="color" groupId="101">
+					<name><![CDATA[Item Border Color]]></name>
+				</property>
+				<property id="9" type="slider" groupId="101">
+					<name><![CDATA[Item Border Alpha]]></name>
+					<parameters>
+						<postfix>%</postfix>
+						<minimum>0</minimum>
+						<maximum>100</maximum>
+						<snapInterval>1</snapInterval>
+					</parameters>
+				</property>
+				<property id="4" type="select">
+					<name><![CDATA[Orientation]]></name>
+					 <dataProvider>
+						<item data="columns">Horizontal</item>
+						<item data="rows">Vertical</item>
+					</dataProvider>
+				</property>
+				<property id="14" type="stepper" groupId="102">
+					<name><![CDATA[Rows]]></name>
+					<parameters>
+						<minimum>1</minimum>
+						<maximum>50</maximum>
+						<stepSize>1</stepSize>
+					</parameters>
+				</property>
+				<property id="10" type="stepper" groupId="102">
+					<name><![CDATA[Item Width]]></name>
+					<parameters>
+						<minimum>0</minimum>
+						<maximum>1000</maximum>
+						<stepSize>1</stepSize>
+					</parameters>
+				</property>
+				<property id="13" type="stepper" groupId="102">
+					<name><![CDATA[Vertical Spacing]]></name>
+					<parameters>
+						<minimum>0</minimum>
+						<maximum>1000</maximum>
+						<stepSize>1</stepSize>
+					</parameters>
+				</property>
+				<property id="15" type="stepper" groupId="103">
+					<name><![CDATA[Columns]]></name>
+					<parameters>
+						<minimum>1</minimum>
+						<maximum>50</maximum>
+						<stepSize>1</stepSize>
+					</parameters>
+				</property>
+				<property id="11" type="stepper" groupId="103">
+					<name><![CDATA[Item Height]]></name>
+					<parameters>
+						<minimum>0</minimum>
+						<maximum>1000</maximum>
+						<stepSize>1</stepSize>
+					</parameters>
+				</property>
+				<property id="12" type="stepper" groupId="103">
+					<name><![CDATA[Horizontal Spacing]]></name>
+					<parameters>
+						<minimum>0</minimum>
+						<maximum>1000</maximum>
+						<stepSize>1</stepSize>
+					</parameters>
+				</property>
+				<property id="16" type="stepper" groupId="104">
+					<name><![CDATA[Arrows Width]]></name>
+					<parameters>
+						<minimum>0</minimum>
+						<maximum>100</maximum>
+						<stepSize>1</stepSize>
+					</parameters>
+				</property>
+				<property id="17" type="color" groupId="104">
+					<name><![CDATA[Arrows BG Color]]></name>
+				</property>
+				<property id="18" type="slider" groupId="104">
+					<name><![CDATA[Arrows BG Alpha]]></name>
+					<parameters>
+						<postfix>%</postfix>
+						<minimum>0</minimum>
+						<maximum>100</maximum>
+						<snapInterval>1</snapInterval>
+					</parameters>
+				</property>
+				<property id="19" type="color" groupId="104">
+					<name><![CDATA[Arrows Color]]></name>
+				</property>
+				<property id="20" type="slider" groupId="104">
+					<name><![CDATA[Arrows Alpha]]></name>
+					<parameters>
+						<postfix>%</postfix>
+						<minimum>0</minimum>
+						<maximum>100</maximum>
+						<snapInterval>1</snapInterval>
+					</parameters>
+				</property>
+				<property id="21" type="stepper" groupId="104">
+					<name><![CDATA[Arrows Corner Radius]]></name>
+					<parameters>
+						<minimum>0</minimum>
+						<maximum>9999</maximum>
+						<stepSize>1</stepSize>
+					</parameters>
+				</property>
+			
+				<property id="101" type="group">
+					<name><![CDATA[Item settings]]></name>
+				</property>
+				<property id="102" type="group" dependencyId="4">
+					<name><![CDATA[Horizontal settings]]></name>
+					<dependencyValue>columns</dependencyValue>
+				</property>
+				<property id="103" type="group" dependencyId="4">
+					<name><![CDATA[Vertical settings]]></name>
+					<dependencyValue>rows</dependencyValue>
+				</property>
+				<property id="104" type="group">
+					<name><![CDATA[Arrow settings]]></name>
+				</property>
+			</properties>
+			<template alpha="1" width="120" height="545">
+				<properties>
+					<item propertyType="1"/>
+					<item propertyType="2">true</item>
+					<item propertyType="3">1</item>
+					<item propertyType="4">columns</item>
+					<item propertyType="5">0</item>
+					<item propertyType="6">0</item>
+					<item propertyType="7">10</item>
+					<item propertyType="8">0xDEDEDE</item>
+					<item propertyType="9">100</item>
+					<item propertyType="10">0</item>
+					<item propertyType="11">0</item>
+					<item propertyType="12">0</item>
+					<item propertyType="13">0</item>
+					<item propertyType="14">1</item>
+					<item propertyType="15">1</item>
+					<item propertyType="16">30</item>
+					<item propertyType="17">0xDEDEDE</item>
+					<item propertyType="18">100</item>
+					<item propertyType="19">0xFFFFFF</item>
+					<item propertyType="20">100</item>
+					<item propertyType="21">0</item>
+				</properties>
+				<data>
+					<galleryData isDataProvider="true"/>
+					<template>photo_gallery_template_thumbnails.xml</template>
+					<thumbnailItemRenderer>GalleryThumbnailItemRenderer</thumbnailItemRenderer>
+					<thumbnailCoverRenderer>GalleryThumbnailItemRendererCover</thumbnailCoverRenderer>
+				</data>
+			</template>
+		</module><module id="14" type="mapModule" librarySymbolLinkage="GmapModule" external="true" url="modules/gmapModule.swf" resizable="true" icon="images/modules/gmap_icon.png" isContent="true" category="maps">
+	<name><![CDATA[Google Maps Widget]]></name>
+	<properties>
+		<property id="1" type="select">
+			<name><![CDATA[Default Map Type]]></name>
+			<dataProvider>
+				<item data="normal">Normal</item>
+				<item data="satellite">Satellite</item>
+				<item data="hybrid">Hybrid</item>
+				<item data="physical">Physical</item>
+			</dataProvider>
+		</property>
+		<property id="2" type="select">
+			<name><![CDATA[Position of Map Focus]]></name>
+			<dataProvider>
+				<item data="first">First Point</item>
+				<item data="last">Last Point</item>
+				<item data="all">All Points</item>
+			</dataProvider>
+		</property>
+		<property id="3" type="stepper" groupId="15">
+			<name><![CDATA[Background Fill Alpha]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>1</maximum>
+				<stepSize>0.1</stepSize>
+				<tooltip><![CDATA[Reload the page to apply this parameter.]]></tooltip>
+			</parameters>
+		</property>
+		<property id="4" type="color" groupId="15">
+			<name><![CDATA[Background Fill Color]]></name>
+			<parameters>
+				<tooltip><![CDATA[Reload the page to apply this parameter.]]></tooltip>
+			</parameters>
+		</property>
+		<property id="5" type="stepper">
+			<name><![CDATA[Zoom]]></name>
+			<parameters>
+				<minimum>1</minimum>
+				<maximum>17</maximum>
+				<stepSize>1</stepSize>
+				<tooltip><![CDATA[Default Zoom Depth.]]></tooltip>
+			</parameters>
+		</property>
+		<property id="6" type="select" groupId="16">
+			<name><![CDATA[Location]]></name>
+			<dataProvider>
+				<item data="invisible">Invisible</item>
+				<item data="anchor_top_right">Top Right</item>
+				<item data="anchor_top_left">Top Left</item>
+				<item data="anchor_bottom_right">Bottom Right</item>
+				<item data="anchor_bottom_left">Bottom Left</item>
+			</dataProvider>
+		</property>
+		<property id="7" type="select" groupId="16">
+			<name><![CDATA[Zoom]]></name>
+			<dataProvider>
+				<item data="invisible">Invisible</item>
+				<item data="anchor_top_right">Top Right</item>
+				<item data="anchor_top_left">Top Left</item>
+				<item data="anchor_bottom_right">Bottom Right</item>
+				<item data="anchor_bottom_left">Bottom Left</item>
+			</dataProvider>
+		</property>
+		<property id="8" type="select" groupId="16">
+			<name><![CDATA[Scale]]></name>
+			<dataProvider>
+				<item data="invisible">Invisible</item>
+				<item data="anchor_top_right">Top Right</item>
+				<item data="anchor_top_left">Top Left</item>
+				<item data="anchor_bottom_right">Bottom Right</item>
+				<item data="anchor_bottom_left">Bottom Left</item>
+			</dataProvider>
+		</property>
+		<property id="9" type="select" groupId="16">
+			<name><![CDATA[Map Overview]]></name>
+			<dataProvider>
+				<item data="invisible">Invisible</item>
+				<item data="anchor_top_right">Top Right</item>
+				<item data="anchor_top_left">Top Left</item>
+				<item data="anchor_bottom_right">Bottom Right</item>
+				<item data="anchor_bottom_left">Bottom Left</item>
+			</dataProvider>
+		</property>
+		<property id="10" type="select" groupId="16">
+			<name><![CDATA[Map Type]]></name>
+			<dataProvider>
+				<item data="invisible">Invisible</item>
+				<item data="anchor_top_right">Top Right</item>
+				<item data="anchor_top_left">Top Left</item>
+				<item data="anchor_bottom_right">Bottom Right</item>
+				<item data="anchor_bottom_left">Bottom Left</item>
+			</dataProvider>
+		</property>
+		<property id="11" type="checkBox" groupId="17">
+			<name><![CDATA[Normal]]></name>
+		</property>
+		<property id="12" type="checkBox" groupId="17">
+			<name><![CDATA[Satellite]]></name>
+		</property>
+		<property id="13" type="checkBox" groupId="17">
+			<name><![CDATA[Hybrid]]></name>
+		</property>
+		<property id="14" type="checkBox" groupId="17">
+			<name><![CDATA[Physical]]></name>
+		</property>
+		<property id="15" type="group">
+			<name><![CDATA[Background Settings]]></name>
+		</property>
+		<property id="16" type="group">
+			<name><![CDATA[Controls Position]]></name>
+		</property>
+		<property id="17" type="group">
+			<name><![CDATA[Map Types]]></name>
+		</property>
+	<property id="18" type="stepper" groupId="15">
+	            <name><![CDATA[Corner Radius]]></name>
+	            <parameters>
+	                <minimum>0</minimum>
+	                <maximum>9999</maximum>
+	                <stepSize>1</stepSize>
+	            </parameters>
+	        </property></properties>
+	<template alpha="1" width="600" height="200">
+		<properties>
+			<item propertyType="1">normal</item>
+			<item propertyType="2">first</item>
+			<item propertyType="3">1</item>
+			<item propertyType="4">0x333333</item>
+			<item propertyType="5">5</item>
+			<item propertyType="6">invisible</item>
+			<item propertyType="7">invisible</item>
+			<item propertyType="8">invisible</item>
+			<item propertyType="9">invisible</item>
+			<item propertyType="10">invisible</item>
+			<item propertyType="11">true</item>
+			<item propertyType="12">true</item>
+			<item propertyType="13">true</item>
+			<item propertyType="14">true</item>
+		<item propertyType="18">0</item></properties>
+		<data>
+			<dataProvider isDataProvider="true"/>
+		</data>
+	</template>
+</module><module id="15" type="infoModule" librarySymbolLinkage="NewsModule" external="true" url="modules/newsModule.swf" resizable="true" locked="false" minWidth="100" minHeight="100" icon="images/modules/news_widget_icon.png" isContent="true" category="news">
+	<name><![CDATA[News Widget]]></name>
+	<properties>
+		<property id="1" type="select" groupId="26">
+			<name><![CDATA[Orientation]]></name>
+			<dataProvider>
+				<item data="rows">Horizontal</item>
+				<item data="columns">Vertical</item>
+			</dataProvider>
+		</property>
+		<property id="2" type="stepper" groupId="26">
+			<name><![CDATA[Number of Visible Blocks]]></name>
+			<parameters>
+				<minimum>1</minimum>
+				<maximum>20</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="3" type="select" groupId="26">
+			<name><![CDATA[Show Content]]></name>
+			<dataProvider>
+				<item data="all">All</item>
+				<item data="title">Titles Only</item>
+				<item data="descr">Descriptions Only</item>
+			</dataProvider>
+		</property>
+		<property id="4" type="textFormat" groupId="27">
+			<name><![CDATA[Title Format]]></name>
+		</property>
+		<property id="5" type="checkBox" groupId="27">
+			<name><![CDATA[Apply To All]]></name>
+		</property>
+		<property id="6" type="textFormat" groupId="27">
+			<name><![CDATA[Text Format]]></name>
+		</property>
+		<property id="7" type="checkBox" groupId="27">
+			<name><![CDATA[Apply To All]]></name>
+		</property>
+		<property id="8" type="checkBox" groupId="26">
+			<name><![CDATA[Show Date]]></name>
+		</property>
+		<property id="9" type="textFormat" groupId="27">
+			<name><![CDATA[Date Format]]></name>
+		</property>
+		<property id="10" type="stepper" groupId="27">
+			<name><![CDATA[Image Width]]></name>
+			<parameters>
+				<minimum>30</minimum>
+				<maximum>300</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="11" type="stepper" groupId="27">
+			<name><![CDATA[Image Height]]></name>
+			<parameters>
+				<minimum>30</minimum>
+				<maximum>300</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="12" type="select" groupId="26">
+			<name><![CDATA[Clickable Area]]></name>
+			<dataProvider>
+				<item data="all">Whole Text</item>
+				<item data="title">Titles Only</item>
+			</dataProvider>
+		</property>
+		<property id="13" type="checkBox" groupId="26">
+			<name><![CDATA[Slideshow Enabled]]></name>
+		</property>
+		<property id="14" type="stepper" groupId="26">
+			<name><![CDATA[Slideshow Interval (sec.)]]></name>
+			<parameters>
+				<minimum>3</minimum>
+				<maximum>20</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="15" type="stepper" groupId="27">
+			<name><![CDATA[Horizontal News Gap]]></name>
+			<parameters>
+				<minimum>1</minimum>
+				<maximum>30</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="16" type="stepper" groupId="27">
+			<name><![CDATA[News Elements Gap]]></name>
+			<parameters>
+				<minimum>1</minimum>
+				<maximum>20</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="17" type="select" groupId="26">
+			<name><![CDATA[Animation]]></name>
+			<dataProvider>
+				<item data="NewsItem1">Fade</item>
+				<item data="NewsItem2">Brightness</item>
+				<item data="NewsItem3">Blur</item>
+				<item data="NewsItem4">Horizontal Mask</item>
+				<item data="NewsItem5">Vertical Mask</item>
+				<item data="NewsItem6">Circle Mask</item>
+				<item data="NewsItem7">Horizontal Lines Mask</item>
+				<item data="NewsItem8">Vertical Lines Mask</item>
+				<item data="NewsItem9">Animation</item>
+			</dataProvider>
+		</property>
+		<property id="18" type="stepper" groupId="28">
+			<name><![CDATA[Arrows Width]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="19" type="stepper" groupId="28">
+			<name><![CDATA[Arrows Height]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="20" type="color" groupId="28">
+			<name><![CDATA[Arrows Background Color]]></name>
+		</property>
+		<property id="21" type="slider" groupId="28">
+			<name><![CDATA[Arrows Background Alpha]]></name>
+			<parameters>
+				<postfix>%</postfix>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<snapInterval>1</snapInterval>
+			</parameters>
+		</property>
+		<property id="22" type="color" groupId="28">
+			<name><![CDATA[Arrows Color]]></name>
+		</property>
+		<property id="23" type="slider" groupId="28">
+			<name><![CDATA[Arrows Alpha]]></name>
+			<parameters>
+				<postfix>%</postfix>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<snapInterval>1</snapInterval>
+			</parameters>
+		</property>
+		<property id="24" type="stepper" groupId="28">
+			<name><![CDATA[Arrows Corner Radius]]></name>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>9999</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="25" type="slider" groupId="28">
+			<name><![CDATA[Arrows Icon Size]]></name>
+			<parameters>
+				<postfix> ratio</postfix>
+				<minimum>-10</minimum>
+				<maximum>10</maximum>
+				<snapInterval>1</snapInterval>
+			</parameters>
+		</property>
+		<property id="26" type="group">
+			<name><![CDATA[Basic Settings]]></name>
+		</property>
+		<property id="27" type="group">
+			<name><![CDATA[Style Settings]]></name>
+		</property>
+		<property id="28" type="group">
+			<name><![CDATA[Arrows Settings]]></name>
+		</property>
+	</properties>
+	<template alpha="1" width="300" height="200">
+		<properties>
+			<item propertyType="1">rows</item>
+			<item propertyType="2"><![CDATA[3]]></item>
+			<item propertyType="3"><![CDATA[all]]></item>
+			<item propertyType="4" embedFonts="false"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Tahoma" SIZE="11" COLOR="#CB5E5E"><B>NEWS TITLE</B></FONT></P></TEXTFORMAT>]]></item>
+			<item propertyType="5"><![CDATA[false]]></item>
+			<item propertyType="6" embedFonts="false"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Tahoma" SIZE="11" COLOR="#DFDFDF">NEWS DESCRIPTION</FONT></P></TEXTFORMAT>]]></item>
+			<item propertyType="7"><![CDATA[false]]></item>
+			<item propertyType="8"><![CDATA[true]]></item>
+			<item propertyType="9" embedFonts="false"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Tahoma" SIZE="9" COLOR="#878787">NEWS DATE</FONT></P></TEXTFORMAT>]]></item>
+			<item propertyType="10"><![CDATA[50]]></item>
+			<item propertyType="11"><![CDATA[50]]></item>
+			<item propertyType="12"><![CDATA[title]]></item>
+			<item propertyType="13"><![CDATA[false]]></item>
+			<item propertyType="14"><![CDATA[3]]></item>
+			<item propertyType="15"><![CDATA[10]]></item>
+			<item propertyType="16"><![CDATA[5]]></item>
+			<item propertyType="17"><![CDATA[NewsItem1]]></item>
+			<item propertyType="18"><![CDATA[36]]></item>
+			<item propertyType="19"><![CDATA[36]]></item>
+			<item propertyType="20"><![CDATA[0xDEDEDE]]></item>
+			<item propertyType="21"><![CDATA[20]]></item>
+			<item propertyType="22"><![CDATA[0xA4A4A4]]></item>
+			<item propertyType="23"><![CDATA[70]]></item>
+			<item propertyType="24"><![CDATA[12]]></item>
+			<item propertyType="25"><![CDATA[-7]]></item>
+		</properties>
+		<data>
+			<dataProvider isDataProvider="true"/>
+			<template>ext_template.xml</template>
+		</data>
+	</template>
+</module><module id="16" type="contactForm" librarySymbolLinkage="MotoExternalContactFormModule" external="true" applicationDomain="MotoExternalContactForm" url="modules/externalContactFormWidget.swf" resizable="false" icon="images/modules/advanced_form_icon.png" isContent="true" minHeight="100" minWidth="100" category="contact_forms">
+	<name><![CDATA[Advanced Contact Form]]></name>
+	<properties>
+
+		<property id="4" type="textFormat">
+			<name><![CDATA[Input Text Format]]></name>
+		</property>
+		<property id="5" type="textFormat">
+			<name><![CDATA[Message Text Format]]></name>
+		</property>
+
+		<property id="48" type="htmlText">
+			<name><![CDATA[Submit Button Label]]></name>
+		</property>
+		<property id="49" type="htmlText">
+			<name><![CDATA[Reset Button Label]]></name>
+		</property>
+		
+		<property id="10" type="slider" groupId="90">
+			<name><![CDATA[Line Thickness]]></name>
+			<parameters>
+				<postfix/>
+				<minimum>1</minimum>
+				<maximum>100</maximum>
+				<snapInterval>1</snapInterval>
+			</parameters>
+		</property>
+		<property id="11" type="color" groupId="90">
+			<name><![CDATA[Line Color]]></name>
+		</property>
+		<property id="12" type="slider" groupId="90">
+			<name><![CDATA[Line Alpha]]></name>
+			<parameters>
+				<postfix>%</postfix>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<snapInterval>1</snapInterval>
+			</parameters>
+		</property>
+		<property id="13" type="slider" groupId="90">
+			<name><![CDATA[Line Corner Radius]]></name>
+			<parameters>
+				<postfix/>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<snapInterval>1</snapInterval>
+			</parameters>
+		</property>
+		<property id="14" type="color" groupId="90">
+			<name><![CDATA[Top Fill Color]]></name>
+		</property>
+		<property id="15" type="color" groupId="90">
+			<name><![CDATA[Bottom Fill Color]]></name>
+		</property>
+		<property id="16" type="slider" groupId="90">
+			<name><![CDATA[Fill Alpha]]></name>
+			<parameters>
+				<postfix>%</postfix>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<snapInterval>1</snapInterval>
+			</parameters>
+		</property>
+		<property id="17" type="checkBox" groupId="90">
+			<name><![CDATA[Add Shadow]]></name>
+		</property>
+		<property id="18" type="checkBox" groupId="90" dependencyId="17">
+			<name><![CDATA[Inner Shadow]]></name>
+			<dependencyValue>true</dependencyValue>
+		</property>
+		<property id="19" type="color" groupId="90" dependencyId="17">
+			<dependencyValue>true</dependencyValue>
+			<name><![CDATA[Shadow Color]]></name>
+		</property>
+		<property id="20" type="slider" groupId="90" dependencyId="17">
+			<name><![CDATA[Shadow Alpha]]></name>
+			<dependencyValue>true</dependencyValue>
+			<parameters>
+				<postfix>%</postfix>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<snapInterval>1</snapInterval>
+			</parameters>
+		</property>
+		<property id="21" type="stepper" groupId="90" dependencyId="17">
+			<name><![CDATA[Shadow Distance]]></name>
+			<dependencyValue>true</dependencyValue>
+			<parameters>
+				<minimum>-100</minimum>
+				<maximum>100</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="22" type="stepper" groupId="90" dependencyId="17">
+			<name><![CDATA[Shadow Blur]]></name>
+			<dependencyValue>true</dependencyValue>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="23" type="stepper" groupId="90" dependencyId="17">
+			<name><![CDATA[Shadow Strength]]></name>
+			<dependencyValue>true</dependencyValue>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="24" type="color" groupId="90">
+			<name><![CDATA[Item Icon Color]]></name>
+		</property>
+
+		<property id="50" type="slider" groupId="91">
+			<name><![CDATA[Line Thickness]]></name>
+			<parameters>
+				<postfix/>
+				<minimum>1</minimum>
+				<maximum>200</maximum>
+				<snapInterval>1</snapInterval>
+			</parameters>
+		</property>
+		<property id="51" type="color" groupId="91">
+			<name><![CDATA[Line Color]]></name>
+		</property>
+		<property id="52" type="slider" groupId="91">
+			<name><![CDATA[Line Alpha]]></name>
+			<parameters>
+				<postfix>%</postfix>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<snapInterval>1</snapInterval>
+			</parameters>
+		</property>
+		<property id="53" type="slider" groupId="91">
+			<name><![CDATA[Line Corner Radius]]></name>
+			<parameters>
+				<postfix/>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<snapInterval>1</snapInterval>
+			</parameters>
+		</property>
+		<property id="54" type="color" groupId="91">
+			<name><![CDATA[Top Fill Color]]></name>
+		</property>
+		<property id="55" type="color" groupId="91">
+			<name><![CDATA[Bottom Fill Color]]></name>
+		</property>
+		<property id="56" type="slider" groupId="91">
+			<name><![CDATA[Fill Alpha]]></name>
+			<parameters>
+				<postfix>%</postfix>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<snapInterval>1</snapInterval>
+			</parameters>
+		</property>
+		<property id="57" type="checkBox" groupId="91">
+			<name><![CDATA[Add Shadow]]></name>
+		</property>
+		<property id="58" type="checkBox" groupId="91" dependencyId="57">
+			<dependencyValue>true</dependencyValue>
+			<name><![CDATA[Inner Shadow]]></name>
+		</property>
+		<property id="59" type="color" groupId="91" dependencyId="57">
+			<dependencyValue>true</dependencyValue>
+			<name><![CDATA[Shadow Color]]></name>
+		</property>
+		<property id="60" type="slider" groupId="91" dependencyId="57">
+			<name><![CDATA[Shadow Alpha]]></name>
+			<dependencyValue>true</dependencyValue>
+			<parameters>
+				<postfix>%</postfix>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<snapInterval>1</snapInterval>
+			</parameters>
+		</property>
+		<property id="61" type="stepper" groupId="91" dependencyId="57">
+			<name><![CDATA[Shadow Distance]]></name>
+			<dependencyValue>true</dependencyValue>
+			<parameters>
+				<minimum>-100</minimum>
+				<maximum>100</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="62" type="stepper" groupId="91" dependencyId="57">
+			<name><![CDATA[Shadow Blur]]></name>
+			<dependencyValue>true</dependencyValue>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="63" type="stepper" groupId="91" dependencyId="57">
+			<name><![CDATA[Shadow Strength]]></name>
+			<dependencyValue>true</dependencyValue>
+			<parameters>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<stepSize>1</stepSize>
+			</parameters>
+		</property>
+		<property id="64" type="color" groupId="91">
+			<name><![CDATA[Over Top Fill Color]]></name>
+		</property>
+		<property id="65" type="color" groupId="91">
+			<name><![CDATA[Over Bottom Fill Color]]></name>
+		</property>
+		
+					
+		<property id="90" type="group">
+			<name><![CDATA[Item Style]]></name>
+		</property>
+		<property id="91" type="group">
+			<name><![CDATA[Button Style]]></name>
+		</property>
+		
+	</properties>
+	<template alpha="1" width="100" height="100">
+
+		<properties>
+			<item propertyType="4" embedFonts="false"><![CDATA[<TEXTFORMAT LEADING="2" BLOCKINDENT="3"><P ALIGN="LEFT"><FONT FACE="Tahoma" SIZE="12" COLOR="#6D6D6D" LETTERSPACING="0" KERNING="0">FORM FIELD TEXT</FONT></P></TEXTFORMAT>]]></item>
+			<item propertyType="5" embedFonts="false"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Tahoma" SIZE="11" COLOR="#252525" LETTERSPACING="0" KERNING="0">FORM FIELD TEXT</FONT></P></TEXTFORMAT>]]></item>
+			<item propertyType="10"><![CDATA[1]]></item>
+			<item propertyType="11"><![CDATA[0xFFFFFF]]></item>
+			<item propertyType="12"><![CDATA[100]]></item>
+			<item propertyType="13"><![CDATA[0]]></item>
+			<item propertyType="14"><![CDATA[0xEEEEEE]]></item>
+			<item propertyType="15"><![CDATA[0xFFFFFF]]></item>
+			<item propertyType="16"><![CDATA[100]]></item>
+			<item propertyType="17"><![CDATA[true]]></item>
+			<item propertyType="18"><![CDATA[false]]></item>
+			<item propertyType="19"><![CDATA[0x1B1B1B]]></item>
+			<item propertyType="20"><![CDATA[100]]></item>
+			<item propertyType="21"><![CDATA[1]]></item>
+			<item propertyType="22"><![CDATA[4]]></item>
+			<item propertyType="23"><![CDATA[1]]></item>
+			<item propertyType="24"><![CDATA[0x5E5E5E]]></item>
+			<item propertyType="48" embedFonts="false" backgroundColor="0x444444"><![CDATA[<TEXTFORMAT LEADING="1"><P ALIGN="CENTER"><FONT FACE="Tahoma" SIZE="11" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"><B>SEND</B></FONT></P></TEXTFORMAT>]]></item>
+			<item propertyType="49" backgroundColor="0x444444" embedFonts="false"><![CDATA[<TEXTFORMAT LEADING="1"><P ALIGN="CENTER"><FONT FACE="Tahoma" SIZE="11" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"><B>CLEAR</B></FONT></P></TEXTFORMAT>]]></item>
+			<item propertyType="50"><![CDATA[1]]></item>
+			<item propertyType="51"><![CDATA[0xFFFFFF]]></item>
+			<item propertyType="52"><![CDATA[0]]></item>
+			<item propertyType="53"><![CDATA[0]]></item>
+			<item propertyType="54"><![CDATA[0x6D6D6D]]></item>
+			<item propertyType="55"><![CDATA[0x3B3B3B]]></item>
+			<item propertyType="56"><![CDATA[100]]></item>
+			<item propertyType="57"><![CDATA[true]]></item>
+			<item propertyType="58"><![CDATA[false]]></item>
+			<item propertyType="59"><![CDATA[0x000000]]></item>
+			<item propertyType="60"><![CDATA[26]]></item>
+			<item propertyType="61"><![CDATA[1]]></item>
+			<item propertyType="62"><![CDATA[4]]></item>
+			<item propertyType="63"><![CDATA[1]]></item>
+			<item propertyType="64"><![CDATA[0x8A8A8A]]></item>
+			<item propertyType="65"><![CDATA[0x4F4E4E]]></item>
+			<item propertyType="90"><![CDATA[]]></item>
+			<item propertyType="91"><![CDATA[]]></item>
+		</properties>
+
+		<data>
+			<formConfiguration isDataProvider="true"/>
+			<formStructure isDataProvider="true"/>
+			<configuration_template>widget_configuration_template.xml</configuration_template>
+			<structure_template>widget_structure_template.xml</structure_template>
+			<submitButtonRenderer>MotoExternalContactFormSimpleButtonSlot</submitButtonRenderer>
+			<resetButtonRenderer>MotoExternalContactFormSimpleButtonSlot</resetButtonRenderer>
+			<textItemRenderer>MotoExternalContactFormItem</textItemRenderer>
+			<comboBoxItemRenderer>MotoExternalContactFormSelectItem</comboBoxItemRenderer>
+			<checkBoxItemRenderer>MotoExternalContactFormCheckBoxItem</checkBoxItemRenderer>
+			
+		<attachItemRenderer>MotoExternalContactFormAttachItem</attachItemRenderer><radioButtonItemRenderer>MotoExternalContactFormRadioButtonItem</radioButtonItemRenderer></data>
+	</template>
+</module><module id="17" type="htmlWidget" external="true" url="modules/HTMLWidget.swf" librarySymbolLinkage="HTMLWidget" resizable="true" locked="false" icon="images/modules/htmlwidget_icon.png" isContent="true" category="general">
+	<name><![CDATA[HTML Widget]]></name>
+	<properties>
+	</properties>
+	<template alpha="1" width="100" height="100">
+		<properties>
+		</properties>
+		<data>
+			<file isDataProvider="true"/>
+		</data>
+	</template>
+</module></modules>
+	
+	<popups>
+		<popup id="1" librarySymbolLinkage="WebsitePopup" preview="images/previews/popupTemplatePreview.jpg" backgroundImage="">
+			<name><![CDATA[Website Popup]]></name>
+			<contentHolders>
+				<holder id="15" type="popup" x="0" y="0" width="980" height="700" depth="1">
+					<name><![CDATA[Popup Background]]></name>
+				</holder>
+				<holder id="16" type="popup" x="98" y="161" width="785" height="420" depth="2">
+					<name><![CDATA[Popup Contents]]></name>
+				</holder>
+				<holder id="17" type="popup" x="895" y="139" width="50" height="50" depth="3">
+					<name><![CDATA[Popup Close Button Holder]]></name>
+				</holder>
+			</contentHolders>
+			<template>
+				<objects>
+					<object holder="16" x="0" y="-6" width="500" height="28" rotation="0" alpha="1" blendMode="" scaleX="1" scaleY="1" depth="1" locked="false" lockEffects="false" type="htmlText" buttonMode="false" lockActions="false" click="" autoSize="left" selectable="true" embedFonts="true">
+						<data><![CDATA[<font color="#FFFFFF" size="16" face="standard 07_55">POPUP TITLE</font>]]></data>
+					</object>
+				</objects>
+				<slots>
+					<slot holder="17" x="0" y="0" width="0" height="0" rotation="0" alpha="1" blendMode="" scaleX="1" scaleY="1" depth="0" locked="true" lockEffects="true" buttonMode="false" lockActions="true" click="" slotType="3">
+						<properties/>
+					</slot>
+					<slot holder="15" x="68" y="136" width="843" height="467" rotation="0" alpha="1" blendMode="" scaleX="1" scaleY="1" depth="0" locked="true" lockEffects="true" buttonMode="false" lockActions="true" click="" slotType="6">
+						<name><![CDATA[Popup Background]]></name>
+						<properties>
+							<item propertyType="1"><![CDATA[0x474747]]></item>
+						</properties>
+					</slot>
+				</slots>
+				<modules>
+					<module holder="16" x="0" y="37" width="740" height="379" rotation="0" alpha="1" blendMode="" scaleX="1" scaleY="1" depth="0" locked="false" lockEffects="false" moduleType="5">
+						<data>
+							<objects>
+								<object holder="0" x="0" y="0" width="750" height="0" rotation="0" alpha="1" blendMode="" scaleX="1" scaleY="1" depth="0" locked="false" lockEffects="false" type="htmlText" buttonMode="false" lockActions="false" click="" autoSize="left" selectable="true" embedFonts="true">
+									<data><![CDATA[<font color="#FFFFFF" size="8" face="standard 07_55">LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA.<br><br>LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA.<br><br>LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA.LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA.<br><br>LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA.<br><br>LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA.<br><br>LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA.LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA.<br><br>LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA.LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA.<br><br>LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA.LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA.<br><br>LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA.LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA.<br><br>LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA.LOREM IPSUM DOLOR SIT AMET, CONSEC TETUER ADIPISCING ELIT. PRAESENT VES TIBULUM MOLESTIE LACUS. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTUR IENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA.</font>]]></data>
+								</object>
+							</objects>
+							<slots/>
+							<modules/>
+						</data>
+						<properties>
+							<item propertyType="1"><![CDATA[0x999999]]></item>
+							<item propertyType="2"><![CDATA[0x333333]]></item>
+						</properties>
+					</module>
+				</modules>
+			</template>
+		</popup>
+	</popups>
+
+</motoStructure>

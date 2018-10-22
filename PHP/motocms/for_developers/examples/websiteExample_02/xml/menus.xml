@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<motoMenus>
+
+<menusData>
+	<menu id="1" menuType="1">
+		<title><![CDATA[]]></title>	
+		<data/>
+	</menu>
+</menusData>
+
+<menusStructure>
+	<menuType id="1" labelPropertyID="1">
+		<name><![CDATA[]]></name>
+		<properties>
+			<property/>
+		</properties>
+	</menuType>
+</menusStructure>
+
+</motoMenus>

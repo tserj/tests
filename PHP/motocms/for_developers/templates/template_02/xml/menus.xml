@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<motoMenus>
+
+	<menusData>
+		<menu id="1" menuType="1">
+			<title><![CDATA[Main Website Navigation]]></title>	
+			<data/>
+		</menu>
+	</menusData>
+
+	<menusStructure>
+		<menuType id="1" labelPropertyID="1">
+			<name><![CDATA[Menu with Label]]></name>
+			<properties>
+				<property id="1" type="htmlText">
+					<name><![CDATA[Label]]></name>
+				</property>
+			</properties>
+		</menuType>
+	</menusStructure>
+
+</motoMenus>

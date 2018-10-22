@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<motoStructure>
+
+	<website backgroundImage="" defaultPreloaderLinkageName="WebsitePreloader">
+		<contentHolders>
+			<holder id="1" type="website" x="0" y="0" width="1150" height="700" locked="false" depth="0">
+				<name><![CDATA[On The Entire Website]]></name>
+			</holder>
+		</contentHolders>
+		<properties>
+			<property id="1" type="checkBox">
+				<name><![CDATA[Enable sound effects]]></name>
+			</property>
+		</properties>
+	</website>
+
+	<layouts>
+		<layout id="1">
+			<name><![CDATA[Layout]]></name>
+			<contentHolders>
+				<holder id="2" type="layout" x="0" y="0" width="1150" height="700" locked="false" depth="20">
+					<name><![CDATA[On The Layout]]></name>
+				</holder>
+			</contentHolders>
+		</layout>
+	</layouts>
+
+	<pages>		
+		<page id="1" layoutType="1" preview="images/previews/pageTemplatePreview.jpg">
+			<name><![CDATA[Page]]></name>
+			<contentHolders>
+				<holder id="3" type="page" x="0" y="0" width="1150" height="700" locked="false" depth="10">
+					<name><![CDATA[On The Page]]></name>
+				</holder>
+			</contentHolders>
+			<template>
+				<objects>
+					<object holder="3" x="157" y="336" width="249" height="43" rotation="0" alpha="1" blendMode="normal" scaleX="1" scaleY="1" depth="0" locked="false" lockEffects="false" type="htmlText" buttonMode="false" lockActions="false" click="" autoSize="none" embedFonts="true">
+						<data><![CDATA[<P ALIGN="LEFT"><FONT FACE="Arial MT" SIZE="30" COLOR="#333333" LETTERSPACING="-1" KERNING="0">Useful Today </FONT></P>]]></data>
+					</object>
+					<object holder="3" x="173" y="396" width="354" height="134" rotation="0" alpha="1" blendMode="normal" scaleX="1" scaleY="1" depth="2" locked="false" lockEffects="false" type="htmlText" buttonMode="false" lockActions="false" click="" autoSize="none" embedFonts="false">
+						<data><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Arial" SIZE="14" COLOR="#9A9B9C" LETTERSPACING="-0.5" KERNING="0">Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum auctor pulvinar. Proin ullamcorper urna et felis.</FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Arial" SIZE="14" COLOR="#9A9B9C" LETTERSPACING="-0.5" KERNING="0">Aliquam dapibus tincidunt metus. Praesent justo dolor, lobortis quis, lobortis dignissim, pulvinar ac, lorem. Ves-tibulum sed ante. <FONT COLOR="#008ED0"><A HREF="event:getURL;url=;window=_blank" TARGET=""><B>More...</B></A></FONT></FONT></P></TEXTFORMAT>]]></data>
+					</object>
+					<object holder="3" x="586" y="396" width="380" height="135" rotation="0" alpha="1" blendMode="normal" scaleX="1" scaleY="1" depth="1" locked="false" lockEffects="false" type="htmlText" buttonMode="false" lockActions="false" click="" autoSize="none" embedFonts="false">
+						<data><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Arial" SIZE="14" COLOR="#9A9B9C" LETTERSPACING="-0.5" KERNING="0">Vestibulum ante ipsum primis in faucibus orci luctus et ultri-ces posuere cubilia Curae; </FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Arial" SIZE="14" COLOR="#9A9B9C" LETTERSPACING="-0.5" KERNING="0"></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Arial" SIZE="14" COLOR="#9A9B9C" LETTERSPACING="-0.5" KERNING="0">Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue. Nam elit magna, hendrerit sit amet, tincidunt ac, viverra sed, nulla. Donec porta diam eu massa. Quisque diam lorem, interdum vitae. <FONT COLOR="#008ED0"><A HREF="event:getURL;url=;window=_blank" TARGET=""><B>More...</B></A></FONT></FONT></P></TEXTFORMAT>]]></data>
+					</object>
+					<object holder="3" x="574" y="385" width="8" height="8" rotation="0" alpha="1" blendMode="normal" scaleX="1" scaleY="1" depth="5" locked="false" lockEffects="false" type="shape" buttonMode="false" lockActions="false" click="" lineThickness="1" shape="ellipse" lineAlpha="0" lineColor="0xFFFFFF" colorAlpha="1" colors="0x000000">
+						<data><![CDATA[]]></data>
+					</object>
+					<object holder="3" x="586" y="379" width="99" height="20" rotation="0" alpha="1" blendMode="normal" scaleX="1" scaleY="1" depth="6" locked="false" lockEffects="false" type="htmlText" buttonMode="false" lockActions="false" click="" autoSize="none" embedFonts="false">
+						<data><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Arial" SIZE="12" COLOR="#000000" LETTERSPACING="-0.5" KERNING="0"><B>Friday, July 18</B></FONT></P></TEXTFORMAT>]]></data>
+					</object>
+					<object holder="3" x="161" y="385" width="8" height="8" rotation="0" alpha="1" blendMode="normal" scaleX="1" scaleY="1" depth="3" locked="false" lockEffects="false" type="shape" buttonMode="false" lockActions="false" click="" lineThickness="1" shape="ellipse" colors="0x000000" lineAlpha="0" lineColor="0xFFFFFF" colorAlpha="1">
+						<data><![CDATA[]]></data>
+					</object>
+					<object holder="3" x="173" y="379" width="99" height="20" rotation="0" alpha="1" blendMode="normal" scaleX="1" scaleY="1" depth="4" locked="false" lockEffects="false" type="htmlText" buttonMode="false" lockActions="false" click="" autoSize="none" embedFonts="false">
+						<data><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Arial" SIZE="12" COLOR="#000000" LETTERSPACING="-0.5" KERNING="0"><B>Friday, July 18</B></FONT></P></TEXTFORMAT>]]></data>
+					</object>
+				</objects>
+				<slots/>
+				<modules/>
+			</template>
+		</page>
+	</pages>
+
+	<slots/>
+	<modules/>
+	<popups/>
+
+</motoStructure>

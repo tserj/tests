@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<motoMenus>
+	<menusData>
+		<menu id="1" menuType="1">
+			<title><![CDATA[Main Website Navigation]]></title>
+			<data>
+				<item id="1" parent="0" click="switchPage;page=2" order="1">
+					<properties>
+						<item propertyType="1" embedFonts="true" backgroundColor="0x565656"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Arial MT" SIZE="13" COLOR="#86888A" LETTERSPACING="0" KERNING="0"><B>Home</B></FONT></P></TEXTFORMAT>]]></item>
+					</properties>
+				</item>
+				<item id="2" parent="0" click="switchPage;page=3" order="2">
+					<properties>
+						<item propertyType="1" embedFonts="true" backgroundColor="0x565656"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Arial MT" SIZE="13" COLOR="#86888A" LETTERSPACING="0" KERNING="1"><B>About us</B></FONT></P></TEXTFORMAT>]]></item>
+					</properties>
+				</item>
+				<item id="3" parent="0" click="switchPage;page=4" order="3">
+					<properties>
+						<item propertyType="1" embedFonts="true" backgroundColor="0x565656"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Arial MT" SIZE="13" COLOR="#86888A" LETTERSPACING="0" KERNING="1"><B>News &amp; Events</B></FONT></P></TEXTFORMAT>]]></item>
+					</properties>
+				</item>
+				<item id="4" parent="0" click="switchPage;page=5" order="4">
+					<properties>
+						<item propertyType="1" embedFonts="true" backgroundColor="0x565656"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Arial MT" SIZE="13" COLOR="#86888A" LETTERSPACING="0" KERNING="1"><B>Solutions</B></FONT></P></TEXTFORMAT>]]></item>
+					</properties>
+				</item>
+				<item id="5" parent="0" click="switchPage;page=6" order="5">
+					<properties>
+						<item propertyType="1" embedFonts="true" backgroundColor="0x565656"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Arial MT" SIZE="13" COLOR="#86888A" LETTERSPACING="0" KERNING="1"><B>Contacts</B></FONT></P></TEXTFORMAT>]]></item>
+					</properties>
+				</item>
+			</data>
+		</menu>
+	</menusData>
+	<menusStructure>
+		<menuType id="1" labelPropertyID="1">
+			<name><![CDATA[Menu with Label]]></name>
+			<properties>
+				<property id="1" type="htmlText">
+					<name><![CDATA[Name]]></name>
+				</property>
+			</properties>
+		</menuType>
+	</menusStructure>
+</motoMenus>

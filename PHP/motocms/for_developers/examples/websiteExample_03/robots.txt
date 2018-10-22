@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /*?
+Disallow: *.swf$
+Disallow: *.js$
+Disallow: /admin/
+Disallow: /xml/

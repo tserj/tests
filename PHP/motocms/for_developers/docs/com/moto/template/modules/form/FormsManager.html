@@ -1,0 +1,803 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print">
+<meta content="FormsManager,com.moto.template.modules.form.FormsManager,ERROR_MESSAGE_LABEL_TEMPLATE,FORM_ERROR,INITIALIZE,MESSAGE_FAILED,MESSAGE_SENT,RESET,SUBMIT,VALIDATION_ERROR,handlerFilePath,itemsCollection,messageTextField,resetButton,submitButton,submitFormOnEnter,validateRequiredOnly,resetButtonRect,statusMessageRect,submitButtonRect,getFormItem,init,resetForm" name="keywords">
+<title>com.moto.template.modules.form.FormsManager</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'FormsManager - Moto CMS API Documentation';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Moto CMS API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../index-list.html')" href="../../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../../index.html?com/moto/template/modules/form/FormsManager.html&amp;com/moto/template/modules/form/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;FormsManager</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a>&nbsp;| <a href="#constantSummary">Constants</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class FormsManager"); titleBar_setSubNav(true,true,false,false,true,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.moto.template.modules.form</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class FormsManager</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">FormsManager <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../../images/inherit-arrow.gif"> flash.events.EventDispatcher</td>
+</tr>
+</table>
+<p></p>
+  This class is used for validation the form data and sending it to server if the validation is successful.
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#handlerFilePath">handlerFilePath</a> : String<div class="summaryTableDescription">
+   Server handler file path which is formed from the configuration file name
+   and server handler type.</div>
+</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#itemsCollection">itemsCollection</a> : Array<div class="summaryTableDescription">
+   Form items collection.</div>
+</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#messageTextField">messageTextField</a> : TextField<div class="summaryTableDescription">
+   Form message.</div>
+</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#resetButton">resetButton</a> : Sprite<div class="summaryTableDescription">
+   Form reset button.</div>
+</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#resetButtonRect">resetButtonRect</a> : Rectangle<div class="summaryTableDescription">[read-only]
+   Reset button info XML object.</div>
+</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#statusMessageRect">statusMessageRect</a> : Rectangle<div class="summaryTableDescription">[read-only]
+   Status message info XML object.</div>
+</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#submitButton">submitButton</a> : Sprite<div class="summaryTableDescription">
+   Form submit button.</div>
+</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#submitButtonRect">submitButtonRect</a> : Rectangle<div class="summaryTableDescription">[read-only]
+   Submit button info XML object.</div>
+</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#submitFormOnEnter">submitFormOnEnter</a> : Boolean = false<div class="summaryTableDescription">
+   When it's true pressing the Enter key will submit the form no matter
+   where the focus is right now.</div>
+</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#validateRequiredOnly">validateRequiredOnly</a> : Boolean = true<div class="summaryTableDescription">
+   Defines whether to validate only the required fields.</div>
+</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#FormsManager()">FormsManager</a>(configuration:XML, structure:XML, pathPrefix:String = "")</div>
+<div class="summaryTableDescription">
+   Forms Manager constructor.</div>
+</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getFormItem()">getFormItem</a>(id:Number):<a href="items/FormItem.html">FormItem</a>
+</div>
+<div class="summaryTableDescription">
+   Returns the form item by its ID.</div>
+</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#init()">init</a>():void</div>
+<div class="summaryTableDescription">
+   Initializes form manager.</div>
+</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#resetForm()">resetForm</a>(event:Event = null):void</div>
+<div class="summaryTableDescription">
+   Resets the form.</div>
+</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<table id="summaryTableEvent" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th>Summary</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:formError">formError</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when form error.</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:initialize">initialize</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when initialization is complete.</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:messageFailed">messageFailed</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when message is failed.</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:messageSent">messageSent</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when message is sent.</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:reset">reset</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when reset form.</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:submit">submit</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when submit form.</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:validationError">validationError</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when validation error.</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+</table>
+</div>
+<a name="constantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Constants</div>
+<table id="summaryTableConstant" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ERROR_MESSAGE_LABEL_TEMPLATE">ERROR_MESSAGE_LABEL_TEMPLATE</a> : String = "{LABEL}"<div class="summaryTableDescription">[static]
+   Error message label template for parsing and creating a string.</div>
+</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#FORM_ERROR">FORM_ERROR</a> : String = "formError"<div class="summaryTableDescription">[static]
+   Type of event which is fired when a form structure error is detected.</div>
+</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#INITIALIZE">INITIALIZE</a> : String = "initialize"<div class="summaryTableDescription">[static]
+   Type of event which is fired when the initialization is complete.</div>
+</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#MESSAGE_FAILED">MESSAGE_FAILED</a> : String = "messageFailed"<div class="summaryTableDescription">[static]
+   Type of event which is fired when it's impossible to send the form content.</div>
+</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#MESSAGE_SENT">MESSAGE_SENT</a> : String = "messageSent"<div class="summaryTableDescription">[static]
+   Type of event which is fired when the form is sent successfully.</div>
+</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#RESET">RESET</a> : String = "reset"<div class="summaryTableDescription">[static]
+   Type of event which is fired when the form is reset.</div>
+</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#SUBMIT">SUBMIT</a> : String = "submit"<div class="summaryTableDescription">[static]
+   Type of event which is fired when the form is submitted.</div>
+</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#VALIDATION_ERROR">VALIDATION_ERROR</a> : String = "validationError"<div class="summaryTableDescription">[static]
+   Type of event which is fired when the validation error occurs.</div>
+</td><td class="summaryTableOwnerCol">FormsManager</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="handlerFilePath"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">handlerFilePath</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var handlerFilePath:String</code><p>
+   Server handler file path which is formed from the configuration file name
+   and server handler type.
+   </p></div>
+<a name="itemsCollection"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">itemsCollection</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var itemsCollection:Array</code><p>
+   Form items collection.
+   </p></div>
+<a name="messageTextField"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">messageTextField</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var messageTextField:TextField</code><p>
+   Form message.
+   </p></div>
+<a name="resetButton"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">resetButton</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var resetButton:Sprite</code><p>
+   Form reset button.
+   </p></div>
+<a name="resetButtonRect"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">resetButtonRect</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>resetButtonRect:Rectangle</code>&nbsp;&nbsp;[read-only]<p>
+   Reset button info XML object.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get resetButtonRect():Rectangle</code>
+<br>
+</div>
+<a name="statusMessageRect"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">statusMessageRect</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>statusMessageRect:Rectangle</code>&nbsp;&nbsp;[read-only]<p>
+   Status message info XML object.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get statusMessageRect():Rectangle</code>
+<br>
+</div>
+<a name="submitButton"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">submitButton</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var submitButton:Sprite</code><p>
+   Form submit button.
+   </p></div>
+<a name="submitButtonRect"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">submitButtonRect</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>submitButtonRect:Rectangle</code>&nbsp;&nbsp;[read-only]<p>
+   Submit button info XML object.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get submitButtonRect():Rectangle</code>
+<br>
+</div>
+<a name="submitFormOnEnter"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">submitFormOnEnter</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var submitFormOnEnter:Boolean = false</code><p>
+   When it's true pressing the Enter key will submit the form no matter
+   where the focus is right now.
+   </p></div>
+<a name="validateRequiredOnly"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">validateRequiredOnly</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var validateRequiredOnly:Boolean = true</code><p>
+   Defines whether to validate only the required fields.
+   </p></div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="FormsManager()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">FormsManager</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function FormsManager(configuration:XML, structure:XML, pathPrefix:String = "")</code><p>
+   Forms Manager constructor.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">configuration</span>:XML</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">structure</span>:XML</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">pathPrefix</span>:String</code> (default = "<code></code>")<code></code></td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="getFormItem()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getFormItem</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getFormItem(id:Number):<a href="items/FormItem.html">FormItem</a></code><p>
+   Returns the form item by its ID.
+   Form item ID is get from the XML structure file.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">id</span>:Number</code> &mdash; Form item ID
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="items/FormItem.html">FormItem</a></code> &mdash; 
+                        FormItem object
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="init()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">init</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function init():void</code><p>
+   Initializes form manager.
+   </p></div>
+<a name="resetForm()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">resetForm</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function resetForm(event:Event = null):void</code><p>
+   Resets the form.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:Event</code> (default = <code>null</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<div class="detailSectionHeader">Event detail</div>
+<a name="event:formError"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">formError</td><td class="detailHeaderType">event&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href=""><code>flash.events.ErrorEvent</code></a>
+<br>
+<span class="label">ErrorEvent.type property = </span><a href="../form/FormsManager.html#FORM_ERROR"><code>com.moto.template.modules.form.FormsManager.FORM_ERROR</code></a>
+<br><p>
+  Dispatched when form error.
+    </p><p>
+   Type of event which is fired when a form structure error is detected.
+      </p><p>The properties of the event object have the following values:</p>
+   <table class="innertable">
+       <tr><th>Property</th><th>Value</th></tr>
+          <tr><td>bubbles</td><td>false</td></tr>
+          <tr><td>cancelable</td><td>false</td></tr>
+          <tr><td>currentTarget</td><td>The object that is actively processing the Event object with an event listener.</td></tr>
+          <tr><td>target</td><td>The <code>InteractiveObject</code> instance under the pointing device. The target is not always the object in the display list that registered the event listener. Use the <code>currentTarget</code> property to access the object in the display list that is currently processing the event.</td></tr>
+          <tr><td>type</td><td>FormsManager.FORM_ERROR</td></tr>
+    </table>
+      </div>
+<a name="event:initialize"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">initialize</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href=""><code>flash.events.Event</code></a>
+<br>
+<span class="label">Event.type property = </span><a href="../form/FormsManager.html#INITIALIZE"><code>com.moto.template.modules.form.FormsManager.INITIALIZE</code></a>
+<br><p>
+  Dispatched when initialization is complete.
+    </p><p>
+   Type of event which is fired when the initialization is complete.
+      </p><p>The properties of the event object have the following values:</p>
+   <table class="innertable">
+       <tr><th>Property</th><th>Value</th></tr>
+          <tr><td>bubbles</td><td>false</td></tr>
+          <tr><td>cancelable</td><td>false</td></tr>
+          <tr><td>currentTarget</td><td>The object that is actively processing the Event object with an event listener.</td></tr>
+          <tr><td>target</td><td>The <code>InteractiveObject</code> instance under the pointing device. The target is not always the object in the display list that registered the event listener. Use the <code>currentTarget</code> property to access the object in the display list that is currently processing the event.</td></tr>
+          <tr><td>type</td><td>FormsManager.INITIALIZE</td></tr>
+    </table>
+      </div>
+<a name="event:messageFailed"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">messageFailed</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href=""><code>flash.events.ErrorEvent</code></a>
+<br>
+<span class="label">ErrorEvent.type property = </span><a href="../form/FormsManager.html#MESSAGE_FAILED"><code>com.moto.template.modules.form.FormsManager.MESSAGE_FAILED</code></a>
+<br><p>
+  Dispatched when message is failed.
+    </p><p>
+   Type of event which is fired when it's impossible to send the form content.
+      </p><p>The properties of the event object have the following values:</p>
+   <table class="innertable">
+       <tr><th>Property</th><th>Value</th></tr>
+          <tr><td>text</td><td>Error description.</td></tr>
+          <tr><td>bubbles</td><td>false</td></tr>
+          <tr><td>cancelable</td><td>false</td></tr>
+          <tr><td>currentTarget</td><td>The object that is actively processing the Event object with an event listener.</td></tr>
+          <tr><td>target</td><td>The <code>InteractiveObject</code> instance under the pointing device. The target is not always the object in the display list that registered the event listener. Use the <code>currentTarget</code> property to access the object in the display list that is currently processing the event.</td></tr>
+          <tr><td>type</td><td>FormsManager.MESSAGE_FAILED</td></tr>
+    </table>
+      </div>
+<a name="event:messageSent"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">messageSent</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href=""><code>flash.events.Event</code></a>
+<br>
+<span class="label">Event.type property = </span><a href="../form/FormsManager.html#MESSAGE_SENT"><code>com.moto.template.modules.form.FormsManager.MESSAGE_SENT</code></a>
+<br><p>
+  Dispatched when message is sent.
+    </p><p>
+   Type of event which is fired when the form is sent successfully.
+      </p><p>The properties of the event object have the following values:</p>
+   <table class="innertable">
+       <tr><th>Property</th><th>Value</th></tr>
+          <tr><td>bubbles</td><td>false</td></tr>
+          <tr><td>cancelable</td><td>false</td></tr>
+          <tr><td>currentTarget</td><td>The object that is actively processing the Event object with an event listener.</td></tr>
+          <tr><td>target</td><td>The <code>InteractiveObject</code> instance under the pointing device. The target is not always the object in the display list that registered the event listener. Use the <code>currentTarget</code> property to access the object in the display list that is currently processing the event.</td></tr>
+          <tr><td>type</td><td>FormsManager.MESSAGE_SENT</td></tr>
+    </table>
+      </div>
+<a name="event:reset"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">reset</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href=""><code>flash.events.Event</code></a>
+<br>
+<span class="label">Event.type property = </span><a href="../form/FormsManager.html#RESET"><code>com.moto.template.modules.form.FormsManager.RESET</code></a>
+<br><p>
+  Dispatched when reset form.
+    </p><p>
+   Type of event which is fired when the form is reset.
+      </p><p>The properties of the event object have the following values:</p>
+   <table class="innertable">
+       <tr><th>Property</th><th>Value</th></tr>
+          <tr><td>bubbles</td><td>false</td></tr>
+          <tr><td>cancelable</td><td>false</td></tr>
+          <tr><td>currentTarget</td><td>The object that is actively processing the Event object with an event listener.</td></tr>
+          <tr><td>target</td><td>The <code>InteractiveObject</code> instance under the pointing device. The target is not always the object in the display list that registered the event listener. Use the <code>currentTarget</code> property to access the object in the display list that is currently processing the event.</td></tr>
+          <tr><td>type</td><td>FormsManager.RESET</td></tr>
+    </table>
+      </div>
+<a name="event:submit"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">submit</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href=""><code>flash.events.Event</code></a>
+<br>
+<span class="label">Event.type property = </span><a href="../form/FormsManager.html#SUBMIT"><code>com.moto.template.modules.form.FormsManager.SUBMIT</code></a>
+<br><p>
+  Dispatched when submit form.
+    </p><p>
+   Type of event which is fired when the form is submitted.
+      </p><p>The properties of the event object have the following values:</p>
+   <table class="innertable">
+       <tr><th>Property</th><th>Value</th></tr>
+          <tr><td>bubbles</td><td>false</td></tr>
+          <tr><td>cancelable</td><td>false</td></tr>
+          <tr><td>currentTarget</td><td>The object that is actively processing the Event object with an event listener.</td></tr>
+          <tr><td>target</td><td>The <code>InteractiveObject</code> instance under the pointing device. The target is not always the object in the display list that registered the event listener. Use the <code>currentTarget</code> property to access the object in the display list that is currently processing the event.</td></tr>
+          <tr><td>type</td><td>FormsManager.SUBMIT</td></tr>
+    </table>
+      </div>
+<a name="event:validationError"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">validationError</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href=""><code>flash.events.ErrorEvent</code></a>
+<br>
+<span class="label">ErrorEvent.type property = </span><a href="../form/FormsManager.html#VALIDATION_ERROR"><code>com.moto.template.modules.form.FormsManager.VALIDATION_ERROR</code></a>
+<br><p>
+  Dispatched when validation error.
+    </p><p>
+   Type of event which is fired when the validation error occurs.
+      </p><p>The properties of the event object have the following values:</p>
+   <table class="innertable">
+       <tr><th>Property</th><th>Value</th></tr>
+          <tr><td>text</td><td>Error description.</td></tr>
+          <tr><td>bubbles</td><td>false</td></tr>
+          <tr><td>cancelable</td><td>false</td></tr>
+          <tr><td>currentTarget</td><td>The object that is actively processing the Event object with an event listener.</td></tr>
+          <tr><td>target</td><td>The <code>InteractiveObject</code> instance under the pointing device. The target is not always the object in the display list that registered the event listener. Use the <code>currentTarget</code> property to access the object in the display list that is currently processing the event.</td></tr>
+          <tr><td>type</td><td>FormsManager.VALIDATION_ERROR</td></tr>
+    </table>
+      </div>
+<a name="constantDetail"></a>
+<div class="detailSectionHeader">Constant detail</div>
+<a name="ERROR_MESSAGE_LABEL_TEMPLATE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ERROR_MESSAGE_LABEL_TEMPLATE</td><td class="detailHeaderType">constant</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const ERROR_MESSAGE_LABEL_TEMPLATE:String = "{LABEL}"</code><p>
+   Error message label template for parsing and creating a string.
+   </p></div>
+<a name="FORM_ERROR"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">FORM_ERROR</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const FORM_ERROR:String = "formError"</code><p>
+   Type of event which is fired when a form structure error is detected.
+      </p><p>The properties of the event object have the following values:</p>
+   <table class="innertable">
+       <tr><th>Property</th><th>Value</th></tr>
+          <tr><td>bubbles</td><td>false</td></tr>
+          <tr><td>cancelable</td><td>false</td></tr>
+          <tr><td>currentTarget</td><td>The object that is actively processing the Event object with an event listener.</td></tr>
+          <tr><td>target</td><td>The <code>InteractiveObject</code> instance under the pointing device. The target is not always the object in the display list that registered the event listener. Use the <code>currentTarget</code> property to access the object in the display list that is currently processing the event.</td></tr>
+          <tr><td>type</td><td>FormsManager.FORM_ERROR</td></tr>
+    </table>
+      </div>
+<a name="INITIALIZE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">INITIALIZE</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const INITIALIZE:String = "initialize"</code><p>
+   Type of event which is fired when the initialization is complete.
+      </p><p>The properties of the event object have the following values:</p>
+   <table class="innertable">
+       <tr><th>Property</th><th>Value</th></tr>
+          <tr><td>bubbles</td><td>false</td></tr>
+          <tr><td>cancelable</td><td>false</td></tr>
+          <tr><td>currentTarget</td><td>The object that is actively processing the Event object with an event listener.</td></tr>
+          <tr><td>target</td><td>The <code>InteractiveObject</code> instance under the pointing device. The target is not always the object in the display list that registered the event listener. Use the <code>currentTarget</code> property to access the object in the display list that is currently processing the event.</td></tr>
+          <tr><td>type</td><td>FormsManager.INITIALIZE</td></tr>
+    </table>
+      </div>
+<a name="MESSAGE_FAILED"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">MESSAGE_FAILED</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const MESSAGE_FAILED:String = "messageFailed"</code><p>
+   Type of event which is fired when it's impossible to send the form content.
+      </p><p>The properties of the event object have the following values:</p>
+   <table class="innertable">
+       <tr><th>Property</th><th>Value</th></tr>
+          <tr><td>text</td><td>Error description.</td></tr>
+          <tr><td>bubbles</td><td>false</td></tr>
+          <tr><td>cancelable</td><td>false</td></tr>
+          <tr><td>currentTarget</td><td>The object that is actively processing the Event object with an event listener.</td></tr>
+          <tr><td>target</td><td>The <code>InteractiveObject</code> instance under the pointing device. The target is not always the object in the display list that registered the event listener. Use the <code>currentTarget</code> property to access the object in the display list that is currently processing the event.</td></tr>
+          <tr><td>type</td><td>FormsManager.MESSAGE_FAILED</td></tr>
+    </table>
+      </div>
+<a name="MESSAGE_SENT"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">MESSAGE_SENT</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const MESSAGE_SENT:String = "messageSent"</code><p>
+   Type of event which is fired when the form is sent successfully.
+      </p><p>The properties of the event object have the following values:</p>
+   <table class="innertable">
+       <tr><th>Property</th><th>Value</th></tr>
+          <tr><td>bubbles</td><td>false</td></tr>
+          <tr><td>cancelable</td><td>false</td></tr>
+          <tr><td>currentTarget</td><td>The object that is actively processing the Event object with an event listener.</td></tr>
+          <tr><td>target</td><td>The <code>InteractiveObject</code> instance under the pointing device. The target is not always the object in the display list that registered the event listener. Use the <code>currentTarget</code> property to access the object in the display list that is currently processing the event.</td></tr>
+          <tr><td>type</td><td>FormsManager.MESSAGE_SENT</td></tr>
+    </table>
+      </div>
+<a name="RESET"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">RESET</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const RESET:String = "reset"</code><p>
+   Type of event which is fired when the form is reset.
+      </p><p>The properties of the event object have the following values:</p>
+   <table class="innertable">
+       <tr><th>Property</th><th>Value</th></tr>
+          <tr><td>bubbles</td><td>false</td></tr>
+          <tr><td>cancelable</td><td>false</td></tr>
+          <tr><td>currentTarget</td><td>The object that is actively processing the Event object with an event listener.</td></tr>
+          <tr><td>target</td><td>The <code>InteractiveObject</code> instance under the pointing device. The target is not always the object in the display list that registered the event listener. Use the <code>currentTarget</code> property to access the object in the display list that is currently processing the event.</td></tr>
+          <tr><td>type</td><td>FormsManager.RESET</td></tr>
+    </table>
+      </div>
+<a name="SUBMIT"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">SUBMIT</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const SUBMIT:String = "submit"</code><p>
+   Type of event which is fired when the form is submitted.
+      </p><p>The properties of the event object have the following values:</p>
+   <table class="innertable">
+       <tr><th>Property</th><th>Value</th></tr>
+          <tr><td>bubbles</td><td>false</td></tr>
+          <tr><td>cancelable</td><td>false</td></tr>
+          <tr><td>currentTarget</td><td>The object that is actively processing the Event object with an event listener.</td></tr>
+          <tr><td>target</td><td>The <code>InteractiveObject</code> instance under the pointing device. The target is not always the object in the display list that registered the event listener. Use the <code>currentTarget</code> property to access the object in the display list that is currently processing the event.</td></tr>
+          <tr><td>type</td><td>FormsManager.SUBMIT</td></tr>
+    </table>
+      </div>
+<a name="VALIDATION_ERROR"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">VALIDATION_ERROR</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const VALIDATION_ERROR:String = "validationError"</code><p>
+   Type of event which is fired when the validation error occurs.
+      </p><p>The properties of the event object have the following values:</p>
+   <table class="innertable">
+       <tr><th>Property</th><th>Value</th></tr>
+          <tr><td>text</td><td>Error description.</td></tr>
+          <tr><td>bubbles</td><td>false</td></tr>
+          <tr><td>cancelable</td><td>false</td></tr>
+          <tr><td>currentTarget</td><td>The object that is actively processing the Event object with an event listener.</td></tr>
+          <tr><td>target</td><td>The <code>InteractiveObject</code> instance under the pointing device. The target is not always the object in the display list that registered the event listener. Use the <code>currentTarget</code> property to access the object in the display list that is currently processing the event.</td></tr>
+          <tr><td>type</td><td>FormsManager.VALIDATION_ERROR</td></tr>
+    </table>
+      </div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

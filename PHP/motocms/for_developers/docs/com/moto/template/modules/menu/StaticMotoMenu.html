@@ -1,0 +1,1375 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print">
+<meta content="StaticMotoMenu,com.moto.template.modules.menu.StaticMotoMenu,itemRendererPrefix,init,initListControls" name="keywords">
+<title>com.moto.template.modules.menu.StaticMotoMenu</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'StaticMotoMenu - Moto CMS API Documentation';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Moto CMS API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../index-list.html')" href="../../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../../index.html?com/moto/template/modules/menu/StaticMotoMenu.html&amp;com/moto/template/modules/menu/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;StaticMotoMenu</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a>&nbsp;| <a href="#constantSummary">Constants</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class StaticMotoMenu"); titleBar_setSubNav(true,true,false,false,true,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.moto.template.modules.menu</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class StaticMotoMenu</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">StaticMotoMenu <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../../images/inherit-arrow.gif"> <a href="AbstractMotoMenu.html">AbstractMotoMenu</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../../images/inherit-arrow.gif"> <a href="../AbstractDropDownModule.html">AbstractDropDownModule</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../../images/inherit-arrow.gif"> <a href="../AbstractTreeInfoModule.html">AbstractTreeInfoModule</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../../images/inherit-arrow.gif"> <a href="../AbstractInfoModule.html">AbstractInfoModule</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../../images/inherit-arrow.gif"> <a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../../images/inherit-arrow.gif"> <a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../../images/inherit-arrow.gif"> flash.display.MovieClip</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Implements</td><td><a href="IMotoMenu.html">IMotoMenu</a>, <a href="../../shell/view/components/IMotoObject.html">IMotoObject</a></td>
+</tr>
+</table>
+<p></p>
+  Base class of static menu.
+    <p></p>
+<br>
+<span class="label">Example</span>
+<br>  <p>Module description in the structure:</p>
+  <pre>
+  &lt;module id="+1 to the previous id" type="staticMenu" librarySymbolLinkage="MainMenu" resizable="false" locked="true" icon="images/modules/menu_icon.png" smallIcon="images/modules/menu_small_icon.png"&gt;
+   &lt;name&gt;&lt;![CDATA[Main menu]]&gt;&lt;/name&gt;
+   &lt;template alpha="1"&gt;
+    &lt;data&gt;
+     &lt;menu&gt;&lt;/menu&gt;
+     &lt;dropDown&gt;true&lt;/dropDown&gt;
+     &lt;maxDepth&gt;2&lt;/maxDepth&gt;
+     &lt;maxRootItems&gt;5&lt;/maxRootItems&gt;
+     &lt;dropDownOnRollOver&gt;true&lt;/dropDownOnRollOver&gt;
+     &lt;dropDownMenuType&gt;id of MainSubMenu&lt;/dropDownMenuType&gt;
+     &lt;dropDownItemRenderer&gt;MainSubMenuItemRenderer&lt;/dropDownItemRenderer&gt;
+    &lt;/data&gt;
+   &lt;/template&gt;
+  &lt;/module&gt;
+
+  &lt;module id="+1 to the previous id" type="dynamicMenu" librarySymbolLinkage="MainSubMenu" resizable="false" locked="true" icon="" smallIcon=""/&gt;
+  </pre>
+    Example of extending the <code>StaticMotoMenu</code> class:
+    <p>Main menu class <code>MainMenu</code></p>
+  <div class='listing'><pre>
+  package modules
+  {
+   import com.moto.template.common.Moto;
+   import com.moto.template.common.events.ItemRendererEvent;
+   import com.moto.template.common.events.MotoEvent;
+   import com.moto.template.common.view.IItemRenderer;
+   import com.moto.template.shell.model.vo.MotoObjectVO;
+   import com.moto.template.modules.menu.AbstractMenuItemRenderer;
+   import com.moto.template.modules.menu.StaticMotoMenu;
+   import com.moto.template.common.utils.MotoUtils;
+   import com.google.analytics.core.EventInfo;
+   import flash.display.Sprite;
+   import flash.events.Event;
+   import flash.geom.Point;
+   import flash.geom.Rectangle;
+     import caurina.transitions.Tweener;
+     import flash.display.MovieClip;
+     public class MainMenu extends StaticMotoMenu
+   {
+    private var itemsPositions:Array = [-122, -61, 0, 61, 122];
+      private var hideAnimationDelays:Array = [0.3, 0.25, 0.2, 0.31, 0.4];
+      private var showAnimationDelays:Array = [0.1, 0.05, 0, 0.11, 0.2];
+      private var _preview:MovieClip;
+      public function MainMenu()
+    {
+     super();
+       // Preview
+     _preview = MovieClip(getChildByName("preview"));
+     _preview.width = 777;
+     _preview.height = 60;
+     _preview.visible = false;
+       // Set item renderer prefix
+     itemRendererPrefix = "menuItemRenderer_";
+       addEventListener(INITIALIZATION_ERROR, initializationErrorHandler);
+     addEventListener(INITIALIZATION_COMPLETE, initializationCompleteHandler);
+    }
+      override public function init(vo:MotoObjectVO):void
+    {
+     super.init(vo);
+       if (!limitedMode)
+      Moto.getInstance().eventDispatcher.addEventListener(MotoEvent.SWITCH_PAGE, motoSwitchPageHandler);
+     }
+      override public function getItemRendererSubMenuPoint(
+     itemRenderer:AbstractMenuItemRenderer):Point
+    {
+     return new Point(itemRenderer.x, itemsPositions[itemRenderer.index] + 61);
+    }
+      override public function show():void
+    {
+     if (itemsArranger &amp;&amp; itemsArranger.itemsCollection)
+     {
+      for (var i:uint = 0; i &lt; itemsArranger.itemsCollection.length; i++)
+      {
+       var item:IItemRenderer = itemsArranger.itemsCollection[i] as IItemRenderer;
+       Tweener.addTween(item.getInstance(), {
+        y: Math.round(itemsPositions[i]),
+        time: 1,
+        transition: "easeOutExpo"
+        });
+       (item.getInstance() as MovieClip).play();
+      }
+     }
+       mouseChildren = true;
+     mouseEnabled = true;
+    }
+      override public function hide():void
+    {
+     if (itemsArranger &amp;&amp; itemsArranger.itemsCollection)
+      {
+      for (var i:uint = 0; i &lt; itemsArranger.itemsCollection.length; i++)
+      {
+         var item:AbstractMenuItemRenderer =
+        itemsArranger.itemsCollection[i] as AbstractMenuItemRenderer;
+       MotoUtils.callFunctionWithDelay(item.hide, hideAnimationDelays[i]);
+      }
+     }
+       mouseChildren = false;
+     mouseEnabled = false;
+    }
+      public function recreate():void
+    {
+      if (itemsArranger &amp;&amp; itemsArranger.itemsCollection)
+      {
+      for (var i:uint = 0; i &lt; itemsArranger.itemsCollection.length; i++)
+      {
+       var item:AbstractMenuItemRenderer = itemsArranger.itemsCollection[i] as AbstractMenuItemRenderer;
+       MotoUtils.callFunctionWithDelay(item.show, showAnimationDelays[
+        itemsArranger.itemsCollection.length - 1 - i]);
+      }
+     }
+       if (!limitedMode)
+     {
+      mouseChildren = true;
+      mouseEnabled = true;
+     }
+    }
+      override public function getDimensions():Rectangle
+    {
+     return new Rectangle(0, 0, 777, 60);
+    }
+      public function get subMenuHolder():Sprite
+    {
+     if (currentOpenedSubMenu)
+      return currentOpenedSubMenu.parent as Sprite;
+     else
+      return null;
+    }
+      override protected function itemClickHandler(event:ItemRendererEvent):void
+    {
+     if (!Moto.getInstance().animationIsPlaying)
+      super.itemClickHandler(event);
+    }
+      override public function showSubMenu(itemRenderer:AbstractMenuItemRenderer):void
+    {
+     if (!Moto.getInstance().animationIsPlaying)
+     {
+      super.showSubMenu(itemRenderer);
+        if (subMenuHolder &amp;&amp; subMenuHolder.parent)
+      {
+       // Move sub menu to the back
+       getSubMenuTargetHolder().setChildIndex(subMenuHolder, 0);
+         // Move main menu items
+       for (var i:uint = 0; i &lt; itemsArranger.itemsCollection.length; i++)
+       {
+        var item:IItemRenderer = itemsArranger.itemsCollection[i] as IItemRenderer;
+        if (item.index &gt; subMenuItemRendererIndex &amp;&amp; subMenuHolder.height &gt; 0)
+        {
+         Tweener.addTween(item.getInstance(), {
+          y:Math.round( itemsPositions[i] + subMenuHolder.height + 1),
+          time: 1.5,
+          transition: "easeOutSin"
+         });
+        }
+       }
+      }
+     }
+    }
+      override public function hideSubMenu(removeAllSubMenus:Boolean = false):void
+    {
+     if (subMenuHolder)
+     {
+      if (itemsArranger &amp;&amp; itemsArranger.itemsCollection)
+      {
+       for (var i:uint = 0; i &lt; itemsArranger.itemsCollection.length; i++)
+       {
+        var item:IItemRenderer = itemsArranger.itemsCollection[i] as IItemRenderer;
+        if (item.index &gt; subMenuItemRendererIndex)
+        {
+         Tweener.addTween(item.getInstance(), {
+          y: Math.round(itemsPositions[i]),
+          time: 1.5,
+          transition: "easeInSin"
+         });
+        }
+       }
+      }
+     }
+       super.hideSubMenu(removeAllSubMenus);
+    }
+      private function initializationCompleteHandler(event:Event):void
+    {
+     if (limitedMode)
+     {
+      _preview.visible = !(dataProvider &amp;&amp; dataProvider.length &gt; 0);
+     }
+    }
+      private function initializationErrorHandler(event:Event):void
+    {
+     itemsArranger.removeItems();
+     _preview.visible = limitedMode;
+    }
+      private function motoSwitchPageHandler(event:Event):void
+    {
+      }
+   }
+  }
+  </pre></div>
+    <p>The class of main menu button renderer <code>MainMenuItemRenderer</code></p>
+  <div class='listing'><pre>
+  package modules
+  {
+   import com.moto.template.common.
+   import com.moto.template.common.utils.MotoUtils;
+   import com.moto.template.shell.model.vo.PropertyVO;
+   import com.moto.template.modules.menu.AbstractMenuItemRenderer;
+   import com.moto.template.modules.menu.vo.MenuItemVO;
+     import flash.display.MovieClip;
+   import flash.events.MouseEvent;
+   import flash.text.TextField;
+     public class MainMenuItemRenderer extends AbstractMenuItemRenderer
+   {
+    private var _label:TextField;
+    private var _bg:MovieClip;
+      public function MainMenuItemRenderer()
+    {
+     super();
+       buttonMode = true;
+     mouseChildren = false;
+       var label1:MovieClip = getChildByName("label1") as MovieClip;
+     _label = label1.getChildByName("tf") as TextField;
+     _label.selectable = false;
+     _bg = getChildByName("bg") as MovieClip;
+    }
+      override public function updateRenderer(data:Object):void
+    {
+     super.updateRenderer(data);
+       _label.embedFonts = MotoUtils.convertToBoolean(
+      MenuItemVO(data).getPropertyByID(1).getParameter("embedFonts"));
+     _label.htmlText = String(MenuItemVO(data).getPropertyValueByID(1));
+     MotoUtils.setColor(_bg.rect, uint(MenuItemVO(data).getPropertyValueByID(3)));
+    }
+      override public function hide():void
+    {
+     super.hide();
+     removeEventListeners();
+    }
+      override public function show():void
+    {
+     super.show();
+     MotoUtils.callFunctionWithDelay(createEventListeners, 1);
+    }
+   }
+  }
+  </pre></div>
+    <p>The class of submenu implementation <code>MainSubMenu</code></p>
+  <div class='listing'><pre>
+  package modules
+  {
+   import com.moto.template.common.Moto;
+   import com.moto.template.modules.menu.DynamicMotoMenu;
+   import flash.events.Event;
+     public class MainSubMenu extends DynamicMotoMenu
+   {
+    public function MainSubMenu()
+    {
+     itemsArranger.columns = 1;
+     itemsArranger.verticalSpacing = 1;
+       addEventListener(INITIALIZATION_COMPLETE, initializationCompleteHandler);
+    }
+      private function initializationCompleteHandler(event:Event):void
+    {
+      }
+   }
+  }
+  </pre></div>
+    <p>The class of submenu button renderer <code>MainSubMenuItemRender</code></p>
+  <div class='listing'><pre>
+  package modules
+  {
+   import com.moto.template.modules.menu.AbstractMenuItemRenderer;
+   import com.moto.template.modules.menu.vo.MenuItemVO;
+   import com.moto.template.common.tools.MotoLogger;
+   import com.moto.template.common.utils.MotoUtils;
+     import flash.display.MovieClip;
+   import flash.text.TextField;
+     public class MainSubMenuItemRenderer extends AbstractMenuItemRenderer
+   {
+    private var _label:TextField;
+    private var _bg:MovieClip;
+      public function MainSubMenuItemRenderer()
+    {
+     super();
+       buttonMode = true;
+     mouseChildren = false;
+       var labelHolder:MovieClip = getChildByName("label") as MovieClip;
+     _label = labelHolder.getChildByName("tf") as TextField;
+     _label.selectable = false;
+       var bgHolder:MovieClip = getChildByName("bg") as MovieClip;
+     _bg = bgHolder.getChildByName("rect") as MovieClip;
+    }
+      override public function updateRenderer(data:Object):void
+    {
+     super.updateRenderer(data);
+       _label.embedFonts = MotoUtils.convertToBoolean(
+      MenuItemVO(data).getPropertyByID(1).getParameter("embedFonts"));
+     _label.htmlText = String(MenuItemVO(data).getPropertyValueByID(1));
+       MotoUtils.setColor(_bg, uint(MenuItemVO(data).getPropertyValueByID(3)));
+    }
+   }
+    }
+  </pre></div>
+    <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../menu/AbstractMenuItemRenderer.html" target="">com.moto.template.modules.menu.AbstractMenuItemRenderer</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractDropDownModule.html#allowHideCurrentDropDown">allowHideCurrentDropDown</a> : Boolean = true<div class="summaryTableDescription">
+   Allow hiding the drop down after an item has been selected.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractDropDownModule.html#allowSelectionFromDropDown">allowSelectionFromDropDown</a> : Boolean = true<div class="summaryTableDescription">
+   Allow selecting the subdropdown elements.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractInfoModule.html#autoInitListControls">autoInitListControls</a> : Boolean = true<div class="summaryTableDescription">
+   Automatic initialization of the list controllers after content loading.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractDropDownModule.html#buttonsLocked">buttonsLocked</a> : Boolean<div class="summaryTableDescription">
+   True if buttons are locked and false otherwise.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractDropDownModule.html#currentOpenedDropDown">currentOpenedDropDown</a> : <a href="../../modules/AbstractDropDownModule.html">AbstractDropDownModule</a>
+<div class="summaryTableDescription">
+   Returns current open sub menu.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="AbstractMotoMenu.html#currentOpenedSubMenu">currentOpenedSubMenu</a> : <a href="../menu/AbstractMotoMenu.html">AbstractMotoMenu</a>
+<div class="summaryTableDescription">
+   Returns current open sub menu.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#data">data</a> : XML<div class="summaryTableDescription">
+   Module data XML.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractInfoModule.html#dataProvider">dataProvider</a> : Array<div class="summaryTableDescription">
+   Module data provider.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#defaultApplicationDomain">defaultApplicationDomain</a> : ApplicationDomain<div class="summaryTableDescription">
+   Default application domain for moto object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractDropDownModule.html#dropDownAutoHideTimeout">dropDownAutoHideTimeout</a> : Number = 0<div class="summaryTableDescription">
+   Timeout of automatic subdropdown hiding, in seconds.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractDropDownModule.html#dropDownItemRendererIndex">dropDownItemRendererIndex</a> : int<div class="summaryTableDescription">
+   Sub dropdown item renderer index.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractDropDownModule.html#dropDownItemsParent">dropDownItemsParent</a> : uint = 0<div class="summaryTableDescription">
+   Items to get for the current dropDown from the moduleVO items
+   collection.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="AbstractMotoMenu.html#dropDownMenuType">dropDownMenuType</a> : <a href="../../shell/model/vo/ModuleTypeVO.html">ModuleTypeVO</a>
+<div class="summaryTableDescription">
+   
+   Menu type to use for a dropdown menu which is created on the fly.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractDropDownModule.html#dropDownModuleTypes">dropDownModuleTypes</a> : Array<div class="summaryTableDescription">
+      </div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractDropDownModule.html#dropDownRemoveDelay">dropDownRemoveDelay</a> : Number = 0<div class="summaryTableDescription">
+   Delay in seconds before removing sub dropdown from the display list after
+   hiding.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractDropDownModule.html#dropDownType">dropDownType</a> : <a href="../../shell/model/vo/ModuleTypeVO.html">ModuleTypeVO</a>
+<div class="summaryTableDescription">
+   
+   The DropDown type.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractInfoModule.html#enableLoadDataProvider">enableLoadDataProvider</a> : Boolean = true<div class="summaryTableDescription">
+   Allow loading of dataProvider.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#extra">extra</a> : <a href="../../common/view/MotoExtraObject.html">MotoExtraObject</a>
+<div class="summaryTableDescription">
+   Extra data, dynamic object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#height">height</a> : Number<div class="summaryTableDescription">
+   Indicates the height of the display object, in pixels.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractDropDownModule.html#hideDropDownOnMouseUp">hideDropDownOnMouseUp</a> : Boolean = false<div class="summaryTableDescription">
+   If true - MOUSE_UP stage handler is used for sub dropdown hiding, if
+   false - sub dropdown hides on MOUSE_DOWN stage event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="AbstractMotoMenu.html#hideSubMenuOnMouseUp">hideSubMenuOnMouseUp</a> : Boolean<div class="summaryTableDescription">
+   If true - MOUSE_UP stage handler is used for sub menu hiding, if
+   false - sub menu hides on MOUSE_DOWN stage event.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="AbstractMotoMenu.html#initialized">initialized</a> : Boolean<div class="summaryTableDescription">
+   The module content is loaded, parsed and the module is initialized.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractDropDownModule.html#isDropDown">isDropDown</a> : Boolean<div class="summaryTableDescription">
+   True if dropdown is drop down and false otherwise.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractDropDownModule.html#isDropDownOnRollOver">isDropDownOnRollOver</a> : Boolean<div class="summaryTableDescription">
+   If true - drop down dropdown is shown on item roll over, if false it is
+   shown on click.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#itemRendererPrefix">itemRendererPrefix</a> : String<div class="summaryTableDescription">
+   Item renderer prefix name.</div>
+</td><td class="summaryTableOwnerCol">StaticMotoMenu</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractDropDownModule.html#itemsArranger">itemsArranger</a> : <a href="../../common/tools/MotoArranger.html">MotoArranger</a>
+<div class="summaryTableDescription">
+   Dropdown items arranger
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractDropDownModule.html#level">level</a> : uint = 0<div class="summaryTableDescription">
+   Current sublevel.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#limitedMode">limitedMode</a> : Boolean<div class="summaryTableDescription">
+   
+   Object limited mode;  true if the limited mode is enabled, else false.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#locked">locked</a> : Boolean<div class="summaryTableDescription">
+   Specifies if object is locked.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#maxHeight">maxHeight</a> : Number<div class="summaryTableDescription">
+   
+   Maximal object height.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#maxWidth">maxWidth</a> : Number<div class="summaryTableDescription">
+   
+   Maximal object width.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="AbstractMotoMenu.html#menuItemsData">menuItemsData</a> : Array<div class="summaryTableDescription">
+   Menu items data for the current menu which was collected from menuVO
+   items basing on menuItemsParent value.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="AbstractMotoMenu.html#menuItemsParent">menuItemsParent</a> : uint<div class="summaryTableDescription">
+   Items to get for the current menu from the menuVO items
+   collection.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="AbstractMotoMenu.html#menuVO">menuVO</a> : <a href="vo/MenuVO.html">MenuVO</a>
+<div class="summaryTableDescription">
+   
+   Menu Value Object that defines menu ID, menu type and holds
+   menu items data collection.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#minHeight">minHeight</a> : Number<div class="summaryTableDescription">
+   
+   Minimal object height.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#minWidth">minWidth</a> : Number<div class="summaryTableDescription">
+   
+   Minimal object width.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#moduleVO">moduleVO</a> : <a href="../../shell/model/vo/ModuleVO.html">ModuleVO</a>
+<div class="summaryTableDescription">
+   Module value object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractDropDownModule.html#parentDropDown">parentDropDown</a> : <a href="../../modules/AbstractDropDownModule.html">AbstractDropDownModule</a>
+<div class="summaryTableDescription">
+   Parent dropDown is set when current dropDown was created as a sub dropDown.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="AbstractMotoMenu.html#parentMenu">parentMenu</a> : <a href="../menu/AbstractMotoMenu.html">AbstractMotoMenu</a>
+<div class="summaryTableDescription">
+   Parent menu is set when current menu was created as a sub menu.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#pathPrefix">pathPrefix</a> : String<div class="summaryTableDescription">
+   
+   Prefix of the external assets path.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#preloaderLinkageName">preloaderLinkageName</a> : String<div class="summaryTableDescription">
+   
+   Preloader linkage name.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#properties">properties</a> : Array<div class="summaryTableDescription">
+   Module properties collection.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractDropDownModule.html#selectedItemIndex">selectedItemIndex</a> : int<div class="summaryTableDescription">
+   Index of the selected dropdown item.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="AbstractMotoMenu.html#selectedMenuItemIndex">selectedMenuItemIndex</a> : int<div class="summaryTableDescription">
+   Index of the selected menu item.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="AbstractMotoMenu.html#subMenuAutoHideTimeout">subMenuAutoHideTimeout</a> : Number<div class="summaryTableDescription">
+   Timeout of automatic submenu hiding, in seconds.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="AbstractMotoMenu.html#subMenuItemRendererIndex">subMenuItemRendererIndex</a> : int<div class="summaryTableDescription">
+   Sub menu item renderer index.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="AbstractMotoMenu.html#subMenuRemoveDelay">subMenuRemoveDelay</a> : Number<div class="summaryTableDescription">
+   Delay in seconds before removing sub menu from the display list after
+   hiding.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#vo">vo</a> : <a href="../../shell/model/vo/MotoObjectVO.html">MotoObjectVO</a>
+<div class="summaryTableDescription">
+   Moto object VO.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#width">width</a> : Number<div class="summaryTableDescription">
+   Indicates the width of the display object, in pixels.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractInfoModule.html#xmlData">xmlData</a> : XML<div class="summaryTableDescription">
+   Module data XML.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+</table>
+</div>
+<a name="protectedPropertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProtectedProperty" id="hideInheritedProtectedProperty">
+<a onclick="javascript:setInheritedVisible(false,'ProtectedProperty');" href="#protectedPropertySummary" class="showHideLink"><img src="../../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Protected Properties</a>
+</div>
+<div class="showInheritedProtectedProperty" id="showInheritedProtectedProperty">
+<a onclick="javascript:setInheritedVisible(true,'ProtectedProperty');" href="#protectedPropertySummary" class="showHideLink"><img src="../../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Properties</a>
+</div>
+</div>
+<table id="summaryTableProtectedProperty" class="summaryTable hideInheritedProtectedProperty" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractInfoModule.html#dataProviderPath">dataProviderPath</a> : String = ""<div class="summaryTableDescription">
+   Module data XML path.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#moto">moto</a> : <a href="../../common/IMoto.html">IMoto</a>
+<div class="summaryTableDescription">
+   Singleton Moto instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../AbstractInfoModule.html#structure">structure</a> : Array<div class="summaryTableDescription">
+   Module structure.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#StaticMotoMenu()">StaticMotoMenu</a>()</div>
+<div class="summaryTableDescription">
+   Constructor.</div>
+</td><td class="summaryTableOwnerCol">StaticMotoMenu</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#clearBorder()">clearBorder</a>():void</div>
+<div class="summaryTableDescription">
+   
+   Removes the transformation frame.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#dispose()">dispose</a>():void</div>
+<div class="summaryTableDescription">
+   Disposes moto object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#drawBorder()">drawBorder</a>():void</div>
+<div class="summaryTableDescription">
+   
+   Draws the transformation frame.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractDropDownModule.html#dropDownItemSelected()">dropDownItemSelected</a>(dropDownItemIndex:int, isSetFromDropDown:Boolean = false):void</div>
+<div class="summaryTableDescription">
+   Selects dropdown item by item index.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractTreeInfoModule.html#getChildsDataProvider()">getChildsDataProvider</a>(id:uint, list:Array, types:Array = null):Array</div>
+<div class="summaryTableDescription">
+   Get the list of the specified ID's chilren.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractTreeInfoModule.html">AbstractTreeInfoModule</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractInfoModule.html#getConfigOptionValueByID()">getConfigOptionValueByID</a>(id:String):String</div>
+<div class="summaryTableDescription">
+   Returns configuration option by ID.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractDropDownModule.html#getContentDimensions()">getContentDimensions</a>():Rectangle</div>
+<div class="summaryTableDescription">
+   Gets the content dimensions.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#getDimensions()">getDimensions</a>():Rectangle</div>
+<div class="summaryTableDescription">
+   
+   Returns object dimensions.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractDropDownModule.html#getDropDownTargetHolder()">getDropDownTargetHolder</a>():Sprite</div>
+<div class="summaryTableDescription">
+   Returns sub dropdown target holder.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#getInstance()">getInstance</a>():DisplayObject</div>
+<div class="summaryTableDescription">
+   
+   Returns display object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="AbstractMotoMenu.html#getItemRendererDropDownPoint()">getItemRendererDropDownPoint</a>(itemRenderer:<a href="../../common/view/MotoAnimatedItemRenderer.html">MotoAnimatedItemRenderer</a>):Point</div>
+<div class="summaryTableDescription">
+   
+   Returns item renderer sub dropdown point.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="AbstractMotoMenu.html#getItemRendererSubMenuPoint()">getItemRendererSubMenuPoint</a>(itemRenderer:<a href="../menu/AbstractMenuItemRenderer.html">AbstractMenuItemRenderer</a>):Point</div>
+<div class="summaryTableDescription">
+   Returns item renderer sub menu point.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractTreeInfoModule.html#getItemsByType()">getItemsByType</a>(list:Array, types:Array):Array</div>
+<div class="summaryTableDescription">
+   Get the list of found elements.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractTreeInfoModule.html">AbstractTreeInfoModule</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="AbstractMotoMenu.html#getMenuItemIndexByID()">getMenuItemIndexByID</a>(menuItemID:uint):int</div>
+<div class="summaryTableDescription">
+   Returns menu item index by menu item ID.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="AbstractMotoMenu.html#getMenuItemIndexByIDs()">getMenuItemIndexByIDs</a>(menuItemsIDs:Array):int</div>
+<div class="summaryTableDescription">
+   Returns menu item index by menu item IDs.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="AbstractMotoMenu.html#getMenuItemIndexByPageID()">getMenuItemIndexByPageID</a>(pageID:uint):int</div>
+<div class="summaryTableDescription">
+   Returns menu item index by page ID.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="AbstractMotoMenu.html#getMenuItemRendererByIndex()">getMenuItemRendererByIndex</a>(index:uint):<a href="../menu/AbstractMenuItemRenderer.html">AbstractMenuItemRenderer</a>
+</div>
+<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="AbstractMotoMenu.html#getMenuItemRendererByPageID()">getMenuItemRendererByPageID</a>(pageID:uint):<a href="../menu/AbstractMenuItemRenderer.html">AbstractMenuItemRenderer</a>
+</div>
+<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="AbstractMotoMenu.html#getMenuItemsIDsByPageID()">getMenuItemsIDsByPageID</a>(pageID:uint):Array</div>
+<div class="summaryTableDescription">
+   Returns menu item indexes by page ID.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#getRasterized()">getRasterized</a>():DisplayObject</div>
+<div class="summaryTableDescription">
+   
+   Returns display object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractDropDownModule.html#getRootDropDown()">getRootDropDown</a>():<a href="../../modules/AbstractDropDownModule.html">AbstractDropDownModule</a>
+</div>
+<div class="summaryTableDescription">
+   Gets the root dropDown module.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="AbstractMotoMenu.html#getRootMenu()">getRootMenu</a>():<a href="../menu/AbstractMotoMenu.html">AbstractMotoMenu</a>
+</div>
+<div class="summaryTableDescription">
+   Gets the reference to the main menu.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="AbstractMotoMenu.html#getSubMenuTargetHolder()">getSubMenuTargetHolder</a>():Sprite</div>
+<div class="summaryTableDescription">
+   Returns sub menu target holder.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractDropDownModule.html#hasDropDown()">hasDropDown</a>(itemRenderer:<a href="../../common/view/MotoAnimatedItemRenderer.html">MotoAnimatedItemRenderer</a>, types:Array = null):Boolean</div>
+<div class="summaryTableDescription">
+   Checks if there is the drop down.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="AbstractMotoMenu.html#hasSubMenu()">hasSubMenu</a>(itemRenderer:<a href="../menu/AbstractMenuItemRenderer.html">AbstractMenuItemRenderer</a>, types:Array = null):Boolean</div>
+<div class="summaryTableDescription">
+   Checks if there is the submenu.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractDropDownModule.html#hide()">hide</a>():void</div>
+<div class="summaryTableDescription">
+   Hides menu.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractDropDownModule.html#hideDropDown()">hideDropDown</a>(removeAllDropDowns:Boolean = false):void</div>
+<div class="summaryTableDescription">
+   Hides sub menu.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="AbstractMotoMenu.html#hideSubMenu()">hideSubMenu</a>(removeAllSubMenus:Boolean = false):void</div>
+<div class="summaryTableDescription">
+   Hides sub menu.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#init()">init</a>(vo:<a href="../../shell/model/vo/MotoObjectVO.html">MotoObjectVO</a>):void</div>
+<div class="summaryTableDescription">
+   
+   Initializes moto object with moto object VO.</div>
+</td><td class="summaryTableOwnerCol">StaticMotoMenu</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractDropDownModule.html#itemClickAction()">itemClickAction</a>(itemRenderer:<a href="../../common/view/IItemRenderer.html">IItemRenderer</a>):void</div>
+<div class="summaryTableDescription">
+   Calls an action for the specified itemRenderer.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractDropDownModule.html#lockMenuButtons()">lockMenuButtons</a>():void</div>
+<div class="summaryTableDescription">
+   Locks dropdown buttons.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractDropDownModule.html#setItemSelected()">setItemSelected</a>(dropDownItemIndex:int, isSetFromDropDown:Boolean = false):void</div>
+<div class="summaryTableDescription">
+   Selects dropdown item by item index.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="AbstractMotoMenu.html#setMenuItemSelected()">setMenuItemSelected</a>(menuItemIndex:int, isSetFromSubMenu:Boolean = false):void</div>
+<div class="summaryTableDescription">
+   Selects menu item by item index.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#setSize()">setSize</a>(newWidth:Number, newHeight:Number):void</div>
+<div class="summaryTableDescription">
+   
+   Resizes object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#show()">show</a>():void</div>
+<div class="summaryTableDescription">
+   
+   Shows moto object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractDropDownModule.html#showDropDown()">showDropDown</a>(itemRenderer:<a href="../../common/view/MotoAnimatedItemRenderer.html">MotoAnimatedItemRenderer</a>):void</div>
+<div class="summaryTableDescription">
+   Shows drop down.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="AbstractMotoMenu.html#showSubMenu()">showSubMenu</a>(itemRenderer:<a href="../menu/AbstractMenuItemRenderer.html">AbstractMenuItemRenderer</a>):void</div>
+<div class="summaryTableDescription">
+   Shows sub menu.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractDropDownModule.html#unlockMenuButtons()">unlockMenuButtons</a>():void</div>
+<div class="summaryTableDescription">
+   Unlocks dropdown buttons.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#updateProperty()">updateProperty</a>(propertyVO:<a href="../../shell/model/vo/PropertyVO.html">PropertyVO</a>):void</div>
+<div class="summaryTableDescription">
+   
+   Updates object property.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="AbstractMotoMenu.html#updateSelectedMenuButton()">updateSelectedMenuButton</a>(pageID:uint):void</div>
+<div class="summaryTableDescription">
+   Updates selected menu button based on given page ID.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+</table>
+</div>
+<a name="protectedMethodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Methods</div>
+<div class="showHideLinks">
+<div class="hideInheritedProtectedMethod" id="hideInheritedProtectedMethod">
+<a onclick="javascript:setInheritedVisible(false,'ProtectedMethod');" href="#protectedMethodSummary" class="showHideLink"><img src="../../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Protected Methods</a>
+</div>
+<div class="showInheritedProtectedMethod" id="showInheritedProtectedMethod">
+<a onclick="javascript:setInheritedVisible(true,'ProtectedMethod');" href="#protectedMethodSummary" class="showHideLink"><img src="../../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Methods</a>
+</div>
+</div>
+<table id="summaryTableProtectedMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="AbstractMotoMenu.html#createItemVO()">createItemVO</a>(value:XML, target:<a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a> = null):<a href="../../shell/model/vo/ModuleItemVO.html">ModuleItemVO</a>
+</div>
+<div class="summaryTableDescription">
+   Create <code>MenuItemVO</code> from XML node.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#createTextFieldLinkListener()">createTextFieldLinkListener</a>(targetTextField:TextField):void</div>
+<div class="summaryTableDescription">
+   Creates textfield LINK event listener for the target textfield
+   and adds textFieldLinkHandler as event handler method.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#deselect()">deselect</a>():void</div>
+<div class="summaryTableDescription">
+   Resets the selection of item in the control panel.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractTreeInfoModule.html#getStructure()">getStructure</a>(data:XMLList):Array</div>
+<div class="summaryTableDescription">
+         
+   Returns the structure elements list.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractTreeInfoModule.html">AbstractTreeInfoModule</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractInfoModule.html#initConfiguration()">initConfiguration</a>():void</div>
+<div class="summaryTableDescription">
+   Initialize configuration.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#initListControls()">initListControls</a>(dataProvider:Array):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">StaticMotoMenu</td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="AbstractMotoMenu.html#isMenuItemLinkedToPage()">isMenuItemLinkedToPage</a>(menuItemVO:<a href="vo/MenuItemVO.html">MenuItemVO</a>, pageID:uint):Boolean</div>
+<div class="summaryTableDescription">
+   Checks whether the menuItemVO contains the link to the page with the pageID identifier.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractDropDownModule.html#itemClickHandler()">itemClickHandler</a>(event:<a href="../../common/events/ItemRendererEvent.html">ItemRendererEvent</a>):void</div>
+<div class="summaryTableDescription">
+   Opens link or sub menu.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractDropDownModule.html#itemOutHandler()">itemOutHandler</a>(event:<a href="../../common/events/ItemRendererEvent.html">ItemRendererEvent</a>):void</div>
+<div class="summaryTableDescription">
+   Resets rollOveredItemRendererIndex to -1.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractDropDownModule.html#itemOverHandler()">itemOverHandler</a>(event:<a href="../../common/events/ItemRendererEvent.html">ItemRendererEvent</a>):void</div>
+<div class="summaryTableDescription">
+   Handles the itemRenderer mouseOver event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractInfoModule.html#loadDataProvider()">loadDataProvider</a>():void</div>
+<div class="summaryTableDescription">
+   Load content of <code>dataProvider</code> from the url value of the <code>dataProviderPath</code> variable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractInfoModule.html#loadingCompleteHandler()">loadingCompleteHandler</a>(event:Event):void</div>
+<div class="summaryTableDescription">
+         </div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractInfoModule.html#loadingErrorHandler()">loadingErrorHandler</a>(event:Event = null):void</div>
+<div class="summaryTableDescription">
+   The loading error handler.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractInfoModule.html#loadingProgressHandler()">loadingProgressHandler</a>(event:ProgressEvent):void</div>
+<div class="summaryTableDescription">
+   The loading progress handler.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractInfoModule.html">AbstractInfoModule</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../AbstractDropDownModule.html#mouseDownOutsideHandler()">mouseDownOutsideHandler</a>(event:MouseEvent):void</div>
+<div class="summaryTableDescription">
+   Hides sub menu.</div>
+</td><td class="summaryTableOwnerCol"><a href="../AbstractDropDownModule.html">AbstractDropDownModule</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="AbstractMotoMenu.html#preInitDropDown()">preInitDropDown</a>(dropDownModule:<a href="../../modules/AbstractDropDownModule.html">AbstractDropDownModule</a>):void</div>
+<div class="summaryTableDescription">
+   
+      </div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractMotoMenu.html">AbstractMotoMenu</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#textFieldLinkHandler()">textFieldLinkHandler</a>(event:TextEvent):void</div>
+<div class="summaryTableDescription">
+   Handles textfields LINK events and generates MotoEvent with the
+   event text as parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoObject.html#updateDimensions()">updateDimensions</a>():void</div>
+<div class="summaryTableDescription">
+   Reports the environment that the object dimensions were changed.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoObject.html">AbstractMotoObject</a></td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<div class="showHideLinks">
+<div class="hideInheritedEvent" id="hideInheritedEvent">
+<a onclick="javascript:setInheritedVisible(false,'Event');" href="#eventSummary" class="showHideLink"><img src="../../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Events</a>
+</div>
+<div class="showInheritedEvent" id="showInheritedEvent">
+<a onclick="javascript:setInheritedVisible(true,'Event');" href="#eventSummary" class="showHideLink"><img src="../../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Events</a>
+</div>
+</div>
+<table id="summaryTableEvent" class="summaryTable hideInheritedEvent" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th>Summary</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#event:initializationComplete">initializationComplete</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when module is initialized.</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#event:initializationError">initializationError</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when module initialization failed due to an error.</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#event:initializationProgress">initializationProgress</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched while module initializing progresses.</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+</table>
+</div>
+<a name="constantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Constants</div>
+<div class="showHideLinks">
+<div class="hideInheritedConstant" id="hideInheritedConstant">
+<a onclick="javascript:setInheritedVisible(false,'Constant');" href="#constantSummary" class="showHideLink"><img src="../../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Constants</a>
+</div>
+<div class="showInheritedConstant" id="showInheritedConstant">
+<a onclick="javascript:setInheritedVisible(true,'Constant');" href="#constantSummary" class="showHideLink"><img src="../../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Constants</a>
+</div>
+</div>
+<table id="summaryTableConstant" class="summaryTable hideInheritedConstant" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#INITIALIZATION_COMPLETE">INITIALIZATION_COMPLETE</a> : String = "initializationComplete"<div class="summaryTableDescription">[static]
+   The AbstractMotoModule.INITIALIZATION_COMPLETE constant defines the value
+   of the type property of an moto module initialization complete event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#INITIALIZATION_ERROR">INITIALIZATION_ERROR</a> : String = "initializationError"<div class="summaryTableDescription">[static]
+   The AbstractMotoModule.INITIALIZATION_ERROR constant defines the value
+   of the type property of an moto module error event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../shell/view/components/AbstractMotoModule.html#INITIALIZATION_PROGRESS">INITIALIZATION_PROGRESS</a> : String = "initializationProgress"<div class="summaryTableDescription">[static]
+   The AbstractMotoModule.INITIALIZATION_ERROR constant defines the value
+   of the type property of an moto module progress event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../shell/view/components/AbstractMotoModule.html">AbstractMotoModule</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="itemRendererPrefix"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">itemRendererPrefix</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>itemRendererPrefix:String</code>&nbsp;&nbsp;[read-write]<p>
+   Item renderer prefix name.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get itemRendererPrefix():String</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set itemRendererPrefix(value:String):void</code>
+<br>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="StaticMotoMenu()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">StaticMotoMenu</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function StaticMotoMenu()</code><p>
+   Constructor.
+   </p></div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="init()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">init</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function init(vo:<a href="../../shell/model/vo/MotoObjectVO.html">MotoObjectVO</a>):void</code><p>
+   
+   Initializes moto object with moto object VO.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">vo</span>:<a href="../../shell/model/vo/MotoObjectVO.html">MotoObjectVO</a></code> &mdash; Moto object VO.
+   </td>
+</tr>
+</table>
+</div>
+<a name="initListControls()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">initListControls</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected override function initListControls(dataProvider:Array):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">dataProvider</span>:Array</code></td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

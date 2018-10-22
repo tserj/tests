@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<motoContent>
+	
+	<website>
+		<objects/>
+		<slots/>
+		<modules/>
+		<properties>
+			<item propertyType="1"><![CDATA[true]]></item>
+		</properties>
+	<elements>
+<loginForm>
+	<properties>
+		<item propertyType="1" embedFonts="false"><![CDATA[<font face="Tahoma" size="11" color="#000000">Password:</font>]]></item>
+		<item propertyType="2" embedFonts="false"><![CDATA[<font face="Tahoma" size="11" color="#B11B1B">Wrong password.</font>]]></item>
+		<item propertyType="3" embedFonts="false"><![CDATA[<font face="Tahoma" size="11" color="#FFFFFF">Enter</font>]]></item>
+		<item propertyType="4"><![CDATA[19]]></item>
+		<item propertyType="5"><![CDATA[10]]></item>
+		<item propertyType="6"><![CDATA[300]]></item>
+		<item propertyType="7"><![CDATA[0x838383]]></item>
+		<item propertyType="8"><![CDATA[0x5A5A5A]]></item>
+		<item propertyType="9"><![CDATA[0x000000]]></item>
+		<item propertyType="10"><![CDATA[0x4E4E4E]]></item>
+		<item propertyType="11" embedFonts="false"><![CDATA[<font face="Tahoma" size="11" color="#242424">******</font>]]></item>
+		<item propertyType="12"><![CDATA[0xFFFFFF]]></item>
+		<item propertyType="13"><![CDATA[0xa9a9a9]]></item>
+		<item propertyType="14"><![CDATA[true]]></item>
+		<item propertyType="15"><![CDATA[0xd6d5d3]]></item>
+		<item propertyType="16"><![CDATA[0xA5A4A3]]></item>
+		<item propertyType="17"><![CDATA[0x000000]]></item>
+		<item propertyType="18"><![CDATA[80]]></item>
+		<item propertyType="19"><![CDATA[5]]></item>
+		<item propertyType="20"><![CDATA[5]]></item>
+	</properties>
+</loginForm>
+</elements></website>
+	
+	<layouts>
+		<layout layoutType="1">
+			<objects/>
+			<slots/>
+			<modules/>
+		</layout>
+		<layout layoutType="2">
+			<objects/>
+			<slots/>
+			<modules/>
+		</layout>
+	</layouts>
+	
+	<pages>
+		<page id="1" parent="0" linkable="true" removable="false" noIndex="false" noFollow="false" pageType="1">
+			<properties/>
+			<objects/>
+			<slots/>
+			<modules/>
+			<name><![CDATA[Splash Page]]></name>
+			<title><![CDATA[Splash Page]]></title>
+			<url><![CDATA[]]></url>
+			<description><![CDATA[]]></description>
+			<keywords><![CDATA[]]></keywords>
+		</page>
+	</pages>
+	
+	<popups/>
+
+</motoContent>

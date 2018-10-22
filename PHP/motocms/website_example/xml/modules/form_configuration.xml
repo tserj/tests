@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contactFormConfiguration> 
+	<emailTo>your_email@domain.com</emailTo>
+	<serverProcessorType>php</serverProcessorType>
+	<serverProcessorFileName>contact</serverProcessorFileName>
+	<validateRequiredOnly>false</validateRequiredOnly>
+	<submitFormOnEnter>false</submitFormOnEnter>
+	<messageSentText>Thank you for your message.</messageSentText>
+	<messageSentFailedText>Sorry, your message couldn't be sent</messageSentFailedText>
+	<formProcessingText>processing...</formProcessingText>
+	<smtpServer>localhost</smtpServer>
+	<smtpPort>25</smtpPort>
+	<plainText>false</plainText>
+	<emailFromSource>2</emailFromSource>
+	<subjectSource>Contact Form from your site</subjectSource>
+	<checkBoxSelected><![CDATA[Yes]]></checkBoxSelected>
+	<checkBoxUnselected><![CDATA[No]]></checkBoxUnselected>
+	<radioButtonUnselected><![CDATA[Not selected]]></radioButtonUnselected>
+	<validationErrorMessages>
+		<message type="fieldIsRequired">{LABEL} is required.</message>
+		<message type="emailNotValid">{LABEL} - is not valid email address.</message>
+		<message type="minCharsLimitError">{LABEL} - The specified number of characters in a field is less than a required minimum.</message>
+		<message type="reqExpError">{LABEL} - The specified string does not match with the regular expression.</message>
+		<message type="biggerThanMaxError">{LABEL} - The specified number is greater than an acceptable biggest number for this field.</message>
+		<message type="lowerThanMinError">{LABEL} - The specified number is lower than an acceptable lowest number for this field.</message>
+		<message type="notANumberError">{LABEL} - The data is not a number.</message>
+		<message type="negativeError">{LABEL} - The specified number must not be negative.</message>
+		<message type="minRequirementError">{LABEL} - The minimum number of variants is not selected</message>
+		<message type="maxRequirementError">{LABEL} - The number of variants selected exceeds the maximum</message>
+		<message type="shouldBeEqualError">{LABEL} - values do not match</message>
+		<message type="dateIsNotValidError">{LABEL} - date has wrong format</message>
+	</validationErrorMessages>
+</contactFormConfiguration>

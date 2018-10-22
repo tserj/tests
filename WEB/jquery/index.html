@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+         <meta http-equiv="Content-Type" content="text/html;" />
+         <title>Парсер XML файлов на jQuery | pcvector.net </title>
+		 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+	
+$(document).ready(function () {
+	  
+    $.ajax({
+        type: "GET",
+        url: "http://www.pro-filmi.ru/?feed=rss2",
+        dataType: "xml",
+        success: xmlParser
+    });
+});
+
+function xmlParser(xml) {
+
+    $('#load').fadeOut();
+
+    $(xml).find("item").each(function () {
+
+        $(".main").append('<div class="book"><div class="title">' + $(this).find("title").text() + '</div><div class="description">' + $(this).find('encoded').text() + '</div><div class="date">Опубликовано ' + $(this).find("pubDate").text() + '</div></div>');
+        $(".book").fadeIn(1000);
+
+    });
+	
+	$('img').attr({ width: 200, Height: 150 });
+
+}
+
+</script>
+
+<style> 
+.main{
+margin:0 auto;
+}
+ 
+.book{
+width:220px;
+height:300px;
+float:left;
+margin:10px;
+border:1px #dedede solid;
+padding:5px;
+display:none;
+overflow: hidden;
+}
+
+.title{
+margin-bottom:6px;}
+ 
+.description{font-size:11px; font-family:Geneva, Arial, Helvetica, sans-serif;}
+
+.date{font-size:10px; color:#999; margin-top:4px;}
+
+.loader{
+height:11px;
+}
+
+</style> 
+</head>
+
+<body>
+
+Оригинальная статья тут: http://pcvector.net/scripts/layout_and_interface/296-parser-xml-faylov-na-jquery.html
+
+<div class="main">
+<div align="center" class="loader"><img src="loader.gif" id="load" width="16" height="11" align="absmiddle"/></div>
+</div>
+<div class="clear"></div>
+
+
+
+</body>
+</html>

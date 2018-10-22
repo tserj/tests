@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<motoMenus>
+
+<menusData/>
+
+<menusStructure>
+	<menuType id="1" labelPropertyID="1">
+		<name><![CDATA[Menu with Label and Color]]></name>
+		<properties>
+			<property id="1" type="htmlText">
+				<name><![CDATA[Name]]></name>
+			</property>
+			<property id="2" type="htmlText">
+				<name><![CDATA[Short name]]></name>
+			</property>
+			<property id="3" type="color">
+				<name><![CDATA[Item color]]></name>
+			</property>
+		</properties>
+	<template id="0" parent="0" click="" order="0"><properties><item propertyType="1" embedFonts="true"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="standard 07_55" SIZE="16" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0">BUTTON</FONT></P></TEXTFORMAT>]]></item><item propertyType="2" embedFonts="true"><![CDATA[<font face="standard 07_55" color="#FFFFFF" size="8">partners</font>]]></item><item propertyType="3"><![CDATA[0x76AD2E]]></item></properties></template></menuType>
+</menusStructure>
+
+</motoMenus>

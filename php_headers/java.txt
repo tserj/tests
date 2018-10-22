@@ -1,0 +1,52 @@
+HTTP_ACCEPT = text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+HTTP_ACCEPT_LANGUAGE = 
+HTTP_HOST = www.bot.ru
+HTTP_REFERER = 
+HTTP_USER_AGENT = Java/1.5.0_15
+REMOTE_ADDR = 127.0.0.1
+SCRIPT_FILENAME = X:/home/bot.ru/www/index.php
+SERVER_NAME = www.bot.ru
+HTTP_HOST = www.bot.ru
+SERVER_ADDR = 127.0.0.1
+SERVER_PORT = 80
+SERVER_SOFTWARE = Apache/2.2.4 (Win32) mod_ssl/2.2.4 OpenSSL/0.9.8d PHP/5.2.4
+SERVER_PROTOCOL = HTTP/1.1
+REQUEST_METHOD = GET
+QUERY_STRING = 
+PHP_SELF = /index.php
+REQUEST_URI = /
+SCRIPT_NAME = /index.php
+********************************************************************************
+[HTTP_USER_AGENT] => Java/1.5.0_15
+    [HTTP_HOST] => www.bot.ru
+    [HTTP_ACCEPT] => text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+    [HTTP_CONNECTION] => keep-alive
+    [PATH] => \usr\local\ImageMagick;\usr\local\php5;C:\Perl\bin\;C:\Program Files\MiKTeX 2.7\miktex\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32\wbem;C:\Program Files\Intel\DMIX;c:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\Windows Imaging";C:\Program Files\cvsnt;C:\Program Files\Windows Imaging\;E:\3rd-party\
+    [SystemRoot] => C:\WINDOWS
+    [COMSPEC] => C:\WINDOWS\system32\cmd.exe
+    [PATHEXT] => .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH
+    [WINDIR] => C:\WINDOWS
+    [SERVER_SIGNATURE] => <address>Apache/2.2.4 (Win32) mod_ssl/2.2.4 OpenSSL/0.9.8d PHP/5.2.4 Server at www.bot.ru Port 80</address>
+
+    [SERVER_SOFTWARE] => Apache/2.2.4 (Win32) mod_ssl/2.2.4 OpenSSL/0.9.8d PHP/5.2.4
+    [SERVER_NAME] => www.bot.ru
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [REMOTE_ADDR] => 127.0.0.1
+    [DOCUMENT_ROOT] => X:/home/bot.ru/www
+    [SERVER_ADMIN] => admin@localhost
+    [SCRIPT_FILENAME] => X:/home/bot.ru/www/index.php
+    [REMOTE_PORT] => 2135
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => 
+    [REQUEST_URI] => /
+    [SCRIPT_NAME] => /index.php
+    [PHP_SELF] => /index.php
+    [REQUEST_TIME] => 1215501812
+    [argv] => Array
+        (
+        )
+
+    [argc] => 0

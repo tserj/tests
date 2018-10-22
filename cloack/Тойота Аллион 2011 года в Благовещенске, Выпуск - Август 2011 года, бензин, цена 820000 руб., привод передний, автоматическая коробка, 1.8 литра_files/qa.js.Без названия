@@ -1,0 +1,106 @@
+(function ($, win, doc, undefined) {
+
+    /**
+     * @author Kirill @Nemoden K. <kovalchuk@drom.ru>
+     * $ Date: Mon 03 Dec 2012 07:07:24 PM VLAT $
+     */
+    function parse_url(url) {
+        var tokens;
+        if (url === undefined) {
+            return;
+        }
+        tokens = url.match(/(https?:\/\/)?(:?www\.)?([a-z0-9\-\.]+)\.([a-z]{2,5})(.*)/);
+        return {
+            scheme: tokens[1],
+                www: tokens[2],
+                domain: tokens[3],
+                zone: tokens[4],
+                path: tokens[5]
+        };
+    }
+
+    /**
+     * @author Kirill "Nemoden" K <kovalchuk@drom.ru>
+     * $ Date: Mon 03 Dec 2012 07:07:38 PM VLAT $
+     */
+    function ajax_add_callback(action) {
+        var parsed,
+            path;
+        parsed = parse_url(action);
+        if (action === undefined || parsed === undefined) { // not a valid url
+            return "/?cb=?";
+        }
+        path = parsed.path;
+        if (path.indexOf("cb=?") != -1) {
+            return action;
+        }
+        if (path === undefined) { // no path
+            return action + '/?cb=?';
+        }
+        if (path.indexOf("?") == -1) { // no query string
+            return action + '?cb=?';
+        }
+        return action + '&cb=?';
+    }
+
+    var Qa = {
+        initialized: false,
+
+        settings: {
+            ajaxUrl: '//www.drom.ru/ajax/qa.php'
+        },
+
+        callbacks: {
+            focusQuestion: function () {
+                $('#question_ta').focus();
+            },
+
+            focusName: function () {
+                $('#name_input').focus();
+            },
+
+            focusEmail: function () {
+                $('#email_input').focus();
+            },
+
+            focusAnswer: function(question_id) {
+                $('#answer_ta_question_'+question_id).focus();
+            },
+        },
+
+        _init: function() {
+            var me = this;
+            $(doc).on('click', '.js-load-qa-form', function() {
+                var promise = me.fetchForm();
+                promise.done(function (response) {
+                    $('#ask_question_wrapper').html(response.html);
+                    $("#ask_question_wrapper").show();
+                });
+            });
+            this.initalized = true;
+        },
+
+        doRequest: function(request, data) {
+            var data = data || {};
+            data['action'] = request;
+            return $.getJSON(ajax_add_callback(this.settings.ajaxUrl), data);
+        },
+
+        fetchForm: function() {
+            var data = {
+                bull_id: this.settings.bull_id
+            };
+            return this.doRequest('getForm', data);
+        },
+
+        init: function(settings) {
+            var settings = settings || {};
+            if (!this.initialized) {
+                this.settings = $.extend(this.settings, settings);
+                this._init();
+            }
+        },
+    };
+
+    win.Qa = Qa;
+}(jQuery, this, document));

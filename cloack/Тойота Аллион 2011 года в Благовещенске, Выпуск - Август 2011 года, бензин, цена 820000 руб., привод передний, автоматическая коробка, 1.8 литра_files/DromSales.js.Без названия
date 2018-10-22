@@ -1,0 +1,154 @@
+'use strict';
+(function(window) {
+    /**
+     * [DromSales description]
+     * @type {Object}
+     */
+    window.DromSales = {
+        /**
+         * Пожаловаться на объявление (модальное окно)
+         * @param {object} options
+         * @return undefined
+         */
+        initBullComplain: function(options) {
+            if (!options || !options.bullId || !DromModal) {
+                return;
+            }
+
+            var alreadyReported = false;
+            var unexpectedErrText = 'Что-то пошло не так. Пожалуйста, попробуйте позже.';
+
+            var infoMessages = {
+                DETAILS: 'Пожалуйста, укажите подробности!',
+                BULL_LINK: 'Пожалуйста, вставьте ссылку на другое объявление!',
+                CHEAT: 'Пожалуйста, точно укажите, какой именно обман вы имеете ввиду',
+                SCAM: 'Укажите, пожалуйста, в чем заключается мошенничество. ' +
+                    'Обратите внимание! Для жалоб на обман продавца, не имеющий ' +
+                    'предполагаемого преступного умысла, предусмотрен вариант жалобы &laquo;Обман&raquo;',
+            };
+
+            options.formSelector = options.formSelector || '[data-complain-form]';
+            options.triggerSelector = options.triggerSelector || '[data-add-complain]';
+
+            var getMessageByReason = function(reasonId) {
+                var result = '';
+                switch (parseInt(reasonId)) {
+                    case 7:
+                    case 8: {
+                        result = infoMessages.DETAILS;
+                        break;
+                    }
+                    case 4: {
+                        result = infoMessages.BULL_LINK;
+                        break;
+                    }
+                    case 6: {
+                        result = infoMessages.CHEAT;
+                        break;
+                    }
+                    case 12: {
+                        result = infoMessages.SCAM;
+                        break;
+                    }
+                    default: {}
+                }
+                return result;
+            };
+
+            var checkForm = function(reasonId, definition) {
+                reasonId = parseInt(reasonId);
+                var success = true;
+
+                if (reasonId === 0) {
+                    success = false;
+                    alert('Пожалуйста, укажите причину');
+                } else if ((!definition && (reasonId === 7 || reasonId === 8 || reasonId === 6 || reasonId === 12)) ||
+                    (reasonId === 4 && !(/drom\.ru/igm.test(definition)))) {
+                    alert(getMessageByReason(reasonId));
+                    success = false;
+                }
+
+                return success;
+            };
+
+            $(function() {
+                $(options.triggerSelector).on('click', function(ev) {
+                    ev.preventDefault();
+                    if (alreadyReported) {
+                        alert(
+                            'Вы уже сообщили нам недавно о проблеме с этим объявлением. ' +
+                            'Модератор обязательно рассмотрит ваше обращение, спасибо!'
+                        );
+                        return;
+                    }
+
+                    new DromModal({
+                        openOnInit: true,
+                        html: $(options.formSelector).eq(0).html(),
+                        afterOpen: function() {
+                            var complainModal = this;
+                            var $form = complainModal.tpl.$content.find('form').eq(0);
+                            var $reasonEl = $form.find('[name="reason"]');
+                            var $definitionEl = $form.find('[name="complain"]');
+
+                            $reasonEl.on('change', function() {
+                                var message = getMessageByReason(parseInt($(this).val()));
+                                var $messageHolder = $form.find('[data-complain-form-info]');
+
+                                if (message.length > 0) {
+                                    $messageHolder.html('(' + message + ')');
+                                } else {
+                                    $messageHolder.html('');
+                                }
+                            });
+
+                            $form.on('submit', function(e) {
+                                e.preventDefault();
+
+                                var reasonId = $reasonEl.val();
+                                var definition = $definitionEl.val();
+
+                                if (!checkForm(reasonId, definition)) {
+                                    return;
+                                }
+
+                                complainModal.loading();
+                                $.ajax({
+                                    url: '/auto/',
+                                    type: 'post',
+                                    data: {
+                                        'request': 'ajax_add_complain',
+                                        'crossdomain_ajax_request': 2,
+                                        'bullid': options.bullId,
+                                        'reason': reasonId,
+                                        'complain': definition,
+                                    },
+                                    dataType: 'json',
+                                })
+                                .done(function(data) {
+                                    alreadyReported = true;
+                                    complainModal.close();
+                                    if (data && data.error) {
+                                        if (data.message) {
+                                            alert(data.message);
+                                        } else {
+                                            alert(unexpectedErrText);
+                                        }
+                                    } else {
+                                        alert('Спасибо! Модератор рассмотрит это объявление более пристально.');
+                                    }
+                                })
+                                .fail(function() {
+                                    alert(unexpectedErrText);
+                                })
+                                .always(function() {
+                                    complainModal.loading(false);
+                                });
+                            })
+                        }
+                    });
+                });
+            });
+        },
+    };
+})(window);

@@ -1,0 +1,104 @@
+(function (root, factory) {
+    if ("function" === typeof define && define.amd) {
+        define("bzr-auto_parts", [], factory);
+    } else {
+        root.BZRAutoParts = factory();
+    }
+}(window, function () {
+
+    var $ = jQuery;
+
+    /* кешируем раз в час */
+    var salt = (function() {
+        var date = new Date();
+
+        return [
+            date.getUTCFullYear(),
+            (date.getUTCMonth() + 1),
+            date.getUTCDate(),
+            date.getUTCHours()
+        ].join('');
+    })();
+
+    var SCRIPT_URL = '//www.farpost.ru/resources/js/drom-auto_parts.js?_' + salt;
+    var CONTENT_URL = 'https://baza.drom.ru/drom/auto_parts/export';
+
+    return {
+        init: function (cfg) {
+            var externalDfd = new $.Deferred(),
+                requireController = new $.Deferred(),
+                promise = externalDfd.promise();
+
+            var config = $.extend(
+                {
+                    model: '',
+                    body: '',
+                    cityId: 0,
+                    $container: '',
+                    isOwner: false,
+                    loadAsync: true,
+                    frameWasReceivedFromVin: false,
+                    loadContent: [
+                        {bulletins:[], title: null, block: 'auto_parts', searchWithBody: false, searchByDelivery: false},
+                        {bulletins:[], title: null, block: 'wheel', searchWithBody: false, searchByDelivery: false}
+                    ]
+                }, cfg
+            );
+
+            if (!config.model.length || !config.$container.length) {
+                externalDfd.fail("modelId or container is empty");
+                return promise;
+            }
+
+            if ("function" === typeof requirejs) {
+                requirejs([SCRIPT_URL], function (DromAutoPartsController) {
+                    requireController.resolve(DromAutoPartsController);
+                }, function () {
+                    requireController.reject();
+                });
+            } else {
+                $.ajax({url: SCRIPT_URL, dataType: "script", cache: true}).done(function () {
+                    requireController.resolve(window.DromAutoPartsController);
+                }).fail(function () {
+                    requireController.reject();
+                })
+            }
+
+            var loadContent;
+
+            if (config.loadAsync) {
+                loadContent = $.ajax({
+                    url: CONTENT_URL,
+                    data: {
+                        model: config.model,
+                        body: config.body,
+                        cityId: config.cityId,
+                        frameWasReceivedFromVin: config.frameWasReceivedFromVin
+                    },
+                    xhrFields: {
+                        withCredentials: true
+                    }
+                });
+            } else {
+                loadContent = [config.loadContent];
+            }
+
+            $.when(requireController, loadContent)
+                .done(function (DromAutoPartsController, contentRes) {
+                    var content = contentRes[0];
+
+                    var controller = new DromAutoPartsController(
+                        config, content
+                    );
+                    controller.process();
+
+                    externalDfd.resolve();
+                })
+                .fail(function () {
+                    externalDfd.fail("");
+                });
+
+            return promise;
+        }
+    }
+}));

@@ -1,0 +1,391 @@
+;(function (root, factory) {
+    if ("function" === typeof define && define.amd) {
+        define([], factory);
+    } else {
+        root.DromAutoPartsController = factory();
+    }
+}(window, function () {
+    /**
+     * @var {jQuery} $
+     */
+    var $ = jQuery;
+
+    /**
+     * @typedef {Object} BulletinDataT
+     * @property {int} id
+     * @property {string} price
+     * @property {string} url
+     * @property {string} thumb
+     * @property {string} subject
+     */
+
+    /**
+     * @param {BulletinDataT} data
+     * @constructor
+     */
+    function Bulletin(data) {
+        this.id = data.id || 0;
+        this.price = data.price || '';
+        this.url = data.url || '';
+        this.thumb = data.thumb || '';
+        this.subject = data.subject || '';
+    }
+
+    Bulletin.Template =
+        '<div class="b-info-block b-info-block_like-text b-info-block_width_168" data-holder="bulletin">' +
+            '<a class="b-info-block__cont b-info-block__cont_state_reviews" href="__url__" data-action="show_bulletin">' +
+                '<div class="b-info-block__image b-info-block__image_reset">' +
+                    '<div class="b-image-cont b-image-cont_aspectRatio b-image-cont_aspectRatio_4-3">' +
+                        '<div class="b-image b-image_type_centred-image b-image-cont__inner">' +
+                            '<img style="vertical-align:middle;max-width:100%;width:auto; /* Sales legacy fix */" class="b-image__image" src="__thumb__">' +
+                        '</div>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="b-info-block__info">' +
+                    '<span class="b-info-block__title b-link">__subject__</span>' +
+                '</div>' +
+            '</a>' +
+            '<div class=".b-info-block__header b-info-block__text_normal">__price__</div>' +
+        '</div>';
+
+    $.extend(Bulletin.prototype, {
+        /**
+         * @returns {string}
+         */
+        getPrice: function () {
+            var result = '';
+            if (this.price.length) {
+                result = ('Цена <b>' + this.price + '</b>').replace(/ /g, '\u00a0');
+            }
+
+            return result;
+        },
+
+        /**
+         * @returns {string}
+         */
+        getUrl: function () {
+            return this.url;
+        },
+
+        /**
+         * @returns {string}
+         */
+        getThumb: function () {
+            return this.thumb;
+        },
+
+        /**
+         * @returns {string}
+         */
+        getSubject: function () {
+            return this.subject;
+        },
+
+        /**
+         * @returns {string}
+         */
+        render: function () {
+            return Bulletin.Template
+                .replace('__url__', this.getUrl())
+                .replace('__thumb__', this.getThumb())
+                .replace('__subject__', this.getSubject())
+                .replace('__price__', this.getPrice())
+        }
+    });
+
+    /**
+     * @typedef {Object} DataT
+     * @property {BulletinDataT[]} bulletins
+     * @property {{url: string, name: string}} title
+     * @property {string} block
+     * @property {boolean} searchWithBody
+     * @property {boolean} searchByDelivery
+     */
+
+    /**
+     * @param {ConfigT} config
+     * @param {DataT} data
+     * @constructor
+     */
+    function Widget(config, data)  {
+        this.data = data;
+        this.config = config;
+    }
+
+    Widget.Template = (
+        '<div data-name="__name__">' +
+        '<h3 class="b-title b-title_type_h3" style="margin-bottom:20px !important;">' +
+        '<a class="b-link b-link_theme_dark" href="__title_url__" data-action="show_bulletin">__title_name__</a>' +
+        '</h3>' +
+        '<div class="b-random-group b-random-group_margin_r-b-size-s-s b-media-cont">__bulletins__</div>' +
+        '</div>'
+    );
+
+    $.extend(Widget.prototype, {
+        /**
+         * @return {string}
+         */
+        getName: function () {
+           return this.data.block;
+        },
+
+        /**
+          * @returns {string}
+         */
+        render: function () {
+            var bulletins = this._getBulletins();
+            if (!bulletins.length) {
+                this._notifyDummyEmpty();
+                return '';
+            }
+
+            if (!this.config.loadAsync) {
+                return '';
+            }
+
+            var bulletinsHtml = this._renderBulletins(bulletins);
+
+            return Widget.Template
+                .replace('__name__', this.getName())
+                .replace('__title_url__', this._getTitleUrl())
+                .replace('__title_name__', this._getTitle())
+                .replace('__bulletins__', bulletinsHtml)
+        },
+
+        /**
+         * @return boolean|null
+         * @private
+         */
+        _searchWithBody: function () {
+            var result = null;
+            if (typeof this.data.searchWithBody === "boolean") {
+                result = this.data.searchWithBody;
+            }
+
+            return result;
+        },
+
+        /**
+         * @return boolean|null
+         * @private
+         */
+        _searchByDelivery: function () {
+            var result = null;
+            if (typeof this.data.searchByDelivery === "boolean") {
+                result = this.data.searchByDelivery;
+            }
+
+            return result;
+        },
+
+        /**
+         * @param {Bulletin[]} bulletins
+         * @return String
+         * @private
+         */
+        _renderBulletins: function (bulletins) {
+            return bulletins.reduce(
+                function (html, bulletin) {
+                    return html + bulletin.render();
+                },
+                ''
+            );
+        },
+
+        /**
+         * @return Bulletin[]
+         * @private
+         */
+        _getBulletins: function () {
+            var bulletins = [],
+                dataBulletins = this.data.bulletins || [];
+
+            for (var i = 0, len = dataBulletins.length; i < len; ++i) {
+                bulletins.push(new Bulletin(dataBulletins[i]));
+            }
+
+            return bulletins;
+        },
+        /**
+         * @returns {{url: string, name: string}|*}
+         * @private
+         */
+        _getTitle: function () {
+            var title = 'Запчасти на ' + this.config.model;
+            if (this.data.title && this.data.title.name) {
+                title = this.data.title.name;
+            }
+
+            return title;
+        },
+
+        /**
+         * @returns {string}
+         * @private
+         */
+        _getTitleUrl: function () {
+            var url = 'http://baza.drom.ru';
+            if (this.data.title && this.data.title.url) {
+                url = this.data.title.url;
+            }
+
+            return url;
+        },
+
+        /** @private */
+        _notifyDummyShow: function () {
+            if (this.config.isDamaged) {
+                this._dummyStatistics('drom_bulletin_parts_widget_visible_damaged');
+            } else {
+                this._dummyStatistics('drom_bulletin_parts_widget_visible');
+            }
+        },
+
+        /** @private */
+        _notifyDummyClick: function () {
+            if (this.config.isDamaged) {
+                this._dummyStatistics('drom_bulletin_parts_widget_click_damaged');
+            } else {
+                this._dummyStatistics('drom_bulletin_parts_widget_click');
+            }
+        },
+
+        /** @private */
+        _notifyDummyEmpty: function () {
+            if (!this.config.body || !this.config.body.length) {
+                this._dummyStatistics('drom_bulletin_parts_widget_empty_body');
+            } else {
+                this._dummyStatistics('drom_bulletin_parts_widget_empty_result');
+            }
+        },
+
+        /**
+         * @param {string} action
+         * @private
+         */
+        _dummyStatistics: function (action) {
+            var specifiedAction = action + '_' + this.getName(), searchWithBody, searchByDelivery;
+            searchWithBody = this._searchWithBody();
+            if (searchWithBody !== null) {
+                if (searchWithBody) {
+                    specifiedAction += '_with_body';
+                } else {
+                    specifiedAction += '_without_body';
+                }
+            }
+
+            if (this.config.frameWasReceivedFromVin) {
+                specifiedAction += '_from_vin';
+            }
+
+            searchByDelivery = this._searchByDelivery();
+            if (searchByDelivery) {
+                specifiedAction += '_delivery';
+            }
+
+            if (this.config.isOwner) {
+                specifiedAction += '_owner';
+            }
+
+            var ajax = {
+                cache: false,
+                data: {'action': specifiedAction},
+                xhrFields: {
+                    withCredentials: true
+                }
+            };
+            return $.ajax('https://baza.drom.ru/dummy.txt', ajax);
+        }
+    });
+
+    /**
+     * @typedef {Object} ConfigT
+     * @property {jQuery} $container
+     * @property {string} model
+     * @property {string} body
+     * @property {string} engine
+     * @property {bool} isDamaged
+     * @property {bool} isOwner
+     * @property {bool} loadAsync
+     * @property {bool} frameWasReceivedFromVin
+     */
+
+    /**
+     * @param {ConfigT} config
+     * @param {DataT[]} data
+     *
+     * @constructor
+     */
+    function DromAutoPartsController(config, data) {
+        this.$container = config.$container;
+        this.config = config;
+        this.data = data;
+        this.isRunning = false;
+        this.widgets = [];
+        $.each(data, $.proxy(function (i, widgetData) {
+            this.widgets.push(new Widget(config, widgetData));
+        }, this));
+    }
+
+    $.extend(DromAutoPartsController.prototype, {
+        process: function () {
+            if (this.isRunning) {
+                return;
+            }
+
+            this.isRunning = true;
+            var windowHeight = $(window).height();
+            var alreadyRendered = !this.config.loadAsync;
+
+            $.each(this.widgets, $.proxy(function (i, widget) {
+                var html = widget.render(), $widget;
+                if (!html && !alreadyRendered) {
+                    return;
+                }
+                var eventName = 'scroll.main-page-feed_' + widget.getName();
+
+                if (!alreadyRendered) {
+                    $widget = $(html);
+                    if (i > 0) {
+                        $widget.css({'margin-top': '30px'});
+                    }
+
+                    this.$container.append($widget);
+                } else {
+                    $widget = this.$container.find('[data-name="' + widget.getName() + '"]');
+                }
+
+                var visibilityCheckDfr = new $.Deferred();
+                var $firstItem = $widget.find('[data-holder="bulletin"]:first');
+
+                if ($firstItem.length) {
+                    var ensureFeedVisible = $.proxy(function () {
+                        visibilityCheckDfr.reject();
+                        visibilityCheckDfr = new $.Deferred();
+                        visibilityCheckDfr.done($.proxy(function () {
+                            var rect;
+
+                            rect = $firstItem[0].getBoundingClientRect();
+
+                            if (false == (rect.top < (windowHeight - 150))) {
+                                return;
+                            }
+
+                            $(window).off(eventName);
+                            widget._notifyDummyShow();
+                        }, this));
+                        setTimeout(visibilityCheckDfr.resolve.bind(visibilityCheckDfr), 150);
+                    }, this);
+
+                    $(window).on(eventName, ensureFeedVisible);
+                }
+
+                $widget.on('click', '[data-action="show_bulletin"]', function () { widget._notifyDummyClick(); });
+            }, this));
+
+        }
+    });
+
+    return DromAutoPartsController;
+}));

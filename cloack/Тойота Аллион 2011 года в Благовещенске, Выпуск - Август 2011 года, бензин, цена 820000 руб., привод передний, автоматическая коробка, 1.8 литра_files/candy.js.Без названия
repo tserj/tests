@@ -1,0 +1,103 @@
+/**
+ * @author Kirill @Nemoden K. <kovalchuk@drom.ru>
+ * $ Date: Wed 15 Jun 2016 03:39:25 PM VLAT $
+ * $ Version: 1.0.4 $
+ */
+(function($, win, doc, undefined) {
+
+    var DromCandy = {
+        initialized: false,
+        handlers: {
+            noop: function($zone) {},
+            tgb: function($zone) {
+                var $wrapper = $zone.parent(),
+                    $topWrapper = $wrapper.closest('.js-removable-candy-wrapper'),
+                    $img = $wrapper.find('.b-image, .b-media-cont__banner-image').eq(0) || false,
+                    $title = $wrapper.find('.b-media-cont__banner-title .b-link, .b-info-block__title').eq(0) || false,
+                    $header = $wrapper.find('.b-info-block__header b').eq(0) || false,
+
+                    bLinkHref = $zone.find('a').attr('href'),
+                    bImgSrc = $zone.find('a img').attr('src'),
+                    bText = $zone.find('p a, .b-info-block__title').text(),
+                    bHeaderText = $zone.find('.b-info-block__header b').text(),
+                    bHash = $zone.attr('id'),
+                    bHint = $zone.find('a').attr('title');
+
+                $wrapper.attr('href', bLinkHref);
+                $wrapper.attr('title', bHint);
+                $wrapper.attr('target', '_blank');
+                $wrapper.data('hash', bHash);
+                $wrapper.attr('data-hash', bHash);
+                $img.attr('src', bImgSrc);
+
+                $title.text(bText);
+                $header.text(bHeaderText);
+                $zone.html("").css({display:'block', position: 'absolute', width: '1px', height: '1px'});
+                $wrapper.show();
+                if ($topWrapper.length > 0) {
+                    $topWrapper.show();
+                }
+            },
+            mega: function($zone) {
+                var $wrapper = $zone.parent(),
+                    $topWrapper = $wrapper.closest('.js-removable-candy-wrapper'),
+                    $img = $wrapper.find('>.b-info-block__image>.b-image'),
+                    $title = $wrapper.find('>.b-info-block__info>.b-info-block__title'),
+                    $header = $wrapper.find('.b-info-block__header b'),
+
+                    bLinkHref = $zone.data('url'),
+                    bImgSrc = $zone.data('image-src'),
+                    bText = $zone.data('text'),
+                    bHeaderText = $zone.data('title'),
+                    bHash = $zone.data('hash'),
+                    bHint = $zone.data('hint');
+
+                $wrapper.attr('href', bLinkHref);
+                $wrapper.attr('title', bHint);
+                $wrapper.attr('target', '_blank');
+                $wrapper.data('hash', bHash);
+                $wrapper.attr('data-hash', bHash);
+                $img.attr('src', bImgSrc);
+
+                $title.text(bText);
+                $header.text(bHeaderText);
+                $zone.html("").css({display:'block', position: 'absolute', width: '1px', height: '1px'});
+                $wrapper.show();
+                if ($topWrapper.length > 0) {
+                    $topWrapper.show();
+                }
+            }
+        },
+
+        init: function(url) {
+            if (!this.initialized) {
+                var script = doc.createElement('script');
+                script.src = url;
+                script.async = true;
+                script.charset = 'utf-8';
+                doc.body.appendChild(script);
+                this.initialized = true;
+            }
+        },
+
+        addHandler: function(handler, settings) {
+            if (this.initialized) {
+                console.log("Candies are already initialized, no reason to add handlers afterwards");
+            }
+        }
+    };
+
+    win.addEventListener("CandyPlaceReady", function(data) {
+        var zoneId = data.detail.zoneId,
+            $zone = $('[data-zone-id='+zoneId+']'),
+            handlerName = $zone.data('handler') || "";
+        console.log('zone id ' + zoneId + ' ready');
+        if (handlerName.length > 0) {
+            DromCandy.handlers[handlerName].call(null, $zone);
+        }
+    }, false);
+
+    win.DromCandy = DromCandy;
+
+
+}(jQuery, window, document));

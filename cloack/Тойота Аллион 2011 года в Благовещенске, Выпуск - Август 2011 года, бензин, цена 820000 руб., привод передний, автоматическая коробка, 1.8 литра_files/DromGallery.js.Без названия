@@ -1,0 +1,280 @@
+/* global $, PhotoSwipe, PhotoSwipeUI_Default, document */
+/* eslint camelcase: 0 */
+/* eslint no-constant-condition: 0 */
+
+'use strict';
+
+/**
+ * PhotoSwipe
+ */
+(function() {
+    /**
+     * DOMReady
+     */
+    $(function() {
+        initDromGallery();
+        $(document).on('init_drom_gallery', initDromGallery);
+    });
+
+    /**
+     * [initDromGallery description]
+     * @return {[type]} [description]
+     */
+    function initDromGallery() {
+        var $pswpMarkup = $(
+            '<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">' +
+            '<div class="pswp__bg"></div>' +
+            '<div class="pswp__scroll-wrap">' +
+            '<div class="pswp__container">' +
+            '<div class="pswp__item"></div>' +
+            '<div class="pswp__item"></div>' +
+            '<div class="pswp__item"></div>' +
+            '</div>' +
+            '<div class="pswp__ui pswp__ui--hidden">' +
+            '<div class="pswp__top-bar">' +
+            '<div class="pswp__counter"></div>' +
+            '<button class="pswp__button pswp__button--close" ' +
+            'title="Закрыть (Esc)"></button>' +
+            '<button class="pswp__button pswp__button--fs" ' +
+            'title="Полноэкранный режим"></button>' +
+            '<button class="pswp__button pswp__button--zoom" ' +
+            'title="Приблизить/отдалить"></button>' +
+            '<div class="pswp__preloader">' +
+            '<div class="pswp__preloader__icn">' +
+            '<div class="pswp__preloader__cut">' +
+            '<div class="pswp__preloader__donut"></div>' +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">' +
+            '<div class="pswp__share-tooltip"></div>' +
+            '</div>' +
+            '<button class="pswp__button pswp__button--arrow--left" ' +
+            'title="Назад"></button>' +
+            '<button class="pswp__button pswp__button--arrow--right" ' +
+            'title="Вперёд"></button>' +
+            '<div class="pswp__caption">' +
+            '<div class="pswp__caption__center"></div>' +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '</div>'
+        );
+
+        if (!$('.pswp').length) {
+            $pswpMarkup.appendTo('body');
+        }
+
+        var galleryAttr = 'data-drom-gallery';
+        var gallerySel = '[' + galleryAttr + ']';
+        var $items = $(gallerySel);
+        var hashData = parseHash();
+
+        var storage = {};
+
+        /**
+         * Fill storage with data
+         */
+        $items.each(function() {
+            var $this = $(this);
+            var slug = $this.attr(galleryAttr);
+
+            if (storage[slug] === undefined) {
+                storage[slug] = [];
+            }
+
+            storage[slug].push(
+                getItemData(
+                    $this
+                )
+            );
+        });
+
+        /**
+         * Open gallery on load
+         */
+        if (hashData.pid && hashData.gid && storage[hashData.gid]) {
+            openGallery(hashData.pid - 1, hashData.gid, storage[hashData.gid], true);
+        }
+
+        /**
+         * Open gallery on preview click
+         */
+        $items.on('click', function(ev) {
+            if (ev.shiftKey || ev.ctrlKey || ev.metaKey || ev.which === 2) {
+                return true;
+            }
+
+            ev.preventDefault();
+
+            var index = 0;
+            var $item = $(this);
+            var slug = $item.attr(galleryAttr);
+            var items = storage[slug];
+
+            for (var i = 0; i < items.length; i++) {
+                if ($item[0] === items[i].$el[0]) {
+                    index = i;
+                    break;
+                }
+            }
+
+            if (index >= 0) {
+                openGallery(index, slug, items);
+            }
+        });
+
+        /**
+         * Open gallery manually
+         */
+        $(document).on('open_drom_gallery', function(ev, options) {
+            if (typeof options !== 'object' &&
+                options.id === undefined) {
+                return false;
+            }
+
+            var index = (options.index !== undefined ? options.index : 0);
+            openGallery(index, options.id, storage[options.id], true);
+            return true;
+        });
+    }
+
+    /**
+     * Parse hash
+     * @return {object} — hash data
+     */
+    function parseHash() {
+        var hash = window.location.hash.substring(1);
+        var params = {};
+
+        if (hash.length < 5) {
+            return params;
+        }
+
+        var vars = hash.split('&');
+
+        for (var i = 0; i < vars.length; i++) {
+            if (vars[i]) {
+                var pair = vars[i].split('=');
+                if (pair.length >= 2) {
+                    params[pair[0]] = pair[1];
+                }
+            }
+        }
+
+        return params;
+    }
+
+    /**
+     * Get item params from jQ element
+     * @param  {object} $el — element
+     * @return {object} item data
+     */
+    function getItemData($el) {
+        var size = $el.attr('data-size').split('x');
+        var width = parseInt(size[0], 10);
+        var height = parseInt(size[1], 10);
+        var src = $el.attr('href');
+        var data = {
+            $el: $el,
+            src: src,
+            msrc: $el.find('img')[0] ? $el.find('img')[0].src : '',
+            title: $el.attr('title'),
+            w: 0,
+            h: 0
+        };
+        var errorMsg =
+            '<div class="pswp__error-msg">' +
+            'Произошла ошибка<br /><br />' +
+            '<a href="' + src + '" target="_blank">' +
+            'Открыть изображение в новой вкладке' +
+            '</a>' +
+            '</div>';
+
+        if (!isNaN(width) && !isNaN(height)) {
+            data.w = width;
+            data.h = height;
+        }
+
+        if (data.w <= 0 || data.h <= 0) {
+            return {
+                $el: $el,
+                html: errorMsg
+            };
+        }
+
+        return data;
+    }
+
+    /**
+     * Open photoswipe
+     * @param  {number} index
+     * @param  {string} slug
+     * @param  {array} items
+     * @param  {bool} disableAnimation
+     */
+    function openGallery(index, slug, items, disableAnimation) {
+        if ($('.pswp').hasClass('pswp--open')) {
+            return false;
+        }
+
+        var gallery;
+        var options = {
+            galleryUID: slug,
+            bgOpacity: 0.8,
+            showHideOpacity: true,
+            history: true,
+            preload: [1, 3],
+            // maxSpreadZoom: 2,
+            errorMsg: '<div class="pswp__error-msg">Не удалось загрузить ' +
+            '<a href="%url%" target="_blank">изображение</a></div>',
+            shareButtons: false ? [
+                {
+                    id: 'download',
+                    label: 'Загрузить оригинал',
+                    url: '{{raw_image_url}}',
+                    download: true
+                }
+            ] : [],
+            getThumbBoundsFn: function(itemIndex) {
+                var item = items[itemIndex];
+                var thumbnail = item.$el.find('img')[0];
+                var pageYScroll = window.pageYOffset || document.documentElement.scrollTop;
+                var rect = thumbnail ? thumbnail.getBoundingClientRect() : { left: 0, top: 0, width: 0 };
+
+                return {
+                    x: rect.left,
+                    y: rect.top + pageYScroll,
+                    w: rect.width
+                };
+            },
+            getDoubleTapZoom: function(isMouseClick, item) {
+                if (isMouseClick) {
+                    return 2;
+                }
+
+                return item.initialZoomLevel < 0.7 ? 1 : 1.5;
+            }
+        };
+
+        if (disableAnimation) {
+            options.showAnimationDuration = 0;
+        }
+
+        options.index = parseInt(index, 10);
+
+        if (isNaN(options.index)) {
+            return false;
+        }
+
+        gallery = new PhotoSwipe(
+            $('.pswp')[0],
+            PhotoSwipeUI_Default,
+            items,
+            options
+        );
+
+        gallery.init();
+    }
+}());

@@ -1,0 +1,14 @@
+mlarson                 -    NULL
+testuser@wiley.com      -    testpass
+cochrane@wiley.com      -    cochrane12-cps
+vkhaladj                -    NULL
+gkhristi                -    NULL
+ademidov                -    NULL
+fterlov                 -    NULL
+mtyukavkina             -    NULL
+bmetzger                -    NULL
+*                       -    NULL
+bhicklin                -    NULL
+tempuser@wiley.com      -    tempuser
+pctb@wiley.com          -    pctb21
+vysedov                 -    NULL

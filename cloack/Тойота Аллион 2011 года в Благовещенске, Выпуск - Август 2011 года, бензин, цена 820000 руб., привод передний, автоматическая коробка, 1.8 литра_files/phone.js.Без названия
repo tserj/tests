@@ -1,0 +1,150 @@
+/**
+ * -*- coding: windows-1251 -*-
+ *
+ * { @link https://ru.wikipedia.org/wiki/MSISDN }
+ * { @link http://www.kodtelefona.ru/ }
+ * @author Kirill @Nemoden K. <kovalchuk@drom.ru>
+ */
+
+(function($, document, g, undefined) {
+
+    /**
+     * Phone constructor
+     * @use
+     * phone = new Phone(phoneNumber);
+     * phone.normalize();
+     * 
+     * @param {[type]} phone [description]
+     */
+    function Phone(phone) {
+        if (!(this instanceof Phone)) {
+            return new Phone(phone);
+        }
+
+        this._normalized = '';
+        this._internalPhone = phone.toString();
+        this._isNormalized = false;
+        try {
+            this._normalized = this.normalize();
+            this._isNormalized = true;
+        }
+        catch (error) {
+            this._isNormalized = false;
+        }
+    }
+
+    /**
+     * isValid tells whether phone number is valid or not
+     * @use
+     * if (Phone.isValid("+79242303030")) {
+     *     console.log('phone is valid');
+     * }
+     * @param  {string}  phone phone number to check
+     * @return {Boolean}       whether is valid or not
+     */
+    Phone.isValid = function(phone) {
+        // if can normalize, it's a valid phone number
+        try {
+            return (new Phone(phone)).isNormalized();
+        } catch (e) {
+            return false;
+        }
+        return true;
+    };
+
+    Phone.prototype = {
+        /**
+         * isNormalized tells whether phone is normalized or not
+         * @return {Boolean}
+         */
+        isNormalized: function() {
+            return this._isNormalized;
+        },
+        /**
+         * normalize normalizes phone number
+         * @return {string} normalized phone number
+         * @throws {string} If can not normalize phone number
+         */
+        normalize: function() {
+            var nums = this._internalPhone.replace(/\D/g, ''),
+                correntMSISDN;
+            if (nums.length===0) {
+                throw "Empty";
+            }
+
+            if (nums.length === 10 && nums[0] === '9') {
+                nums = '7' + nums;
+            }
+            if (nums.match(/^89/)) {
+                nums = nums.replace(/^89/, '79');
+            }
+
+            if (nums.match(/^8351/)) {
+                nums = nums.replace(/^8/, '7');
+            }
+
+            correntMSISDN = nums.match(/^380/) && nums.length == 12 || // ua
+                            nums.match(/^375/) && nums.length == 12 || // by
+                            nums.match(/^79/) && nums.length == 11 || // kz
+                            nums.match(/^996/) && nums.length == 12 || // kg (kyrgyzstan)
+                            nums.match(/^77/) && nums.length == 11 || // ru
+                            nums.match(/^7351/) && nums.length === 11; //rostelekom
+
+            if (correntMSISDN) {
+                this._normalized = nums;
+            }
+            else {
+                throw "Could not normalize " + this._internalPhone;
+            }
+            return this._normalized;
+        },
+        /**
+         * getNormalized getter for normalized phone
+         * @return {string}
+         */
+        getNormalized: function() {
+            return this._normalized;
+        }
+    };
+
+    // phone validator for form fields
+    $(document).on('blur keyup paste init', 'input.validate_phone', function(e) {
+        var $this = $(this),
+            allow_empty = !$this.hasClass('required') || $this.hasClass('allow_empty'),
+            phone = $this.val(),
+            hasMask = $this.data('mask').length,
+            mask,
+            maskNumersLength,
+            NO_NUMBERS = /\D+/g,
+            phoneNumbers = phone.toString().replace(NO_NUMBERS, ''),
+            validState = 'valid',
+            inValidState = 'invalid';
+        if (hasMask) {
+            mask = $this.data('mask');
+            maskNumersLength = mask.toString().replace(NO_NUMBERS, '').length;
+            if (phoneNumbers.length === maskNumersLength || phoneNumbers.length === 0 && allow_empty) {
+                $this.trigger(validState);
+                return;
+            }
+            $this.trigger(inValidState);
+        }
+        else {
+            if (phone.length === 0 && allow_empty) {
+                $this.trigger(validState);
+                return;
+            }
+            phone = new Phone(phone);
+            if (phone.isNormalized()) {
+                $this.trigger(validState);
+                return;
+            }
+            else {
+                $this.trigger(inValidState);
+                return;
+            }
+        }
+    });
+
+    g.Phone = Phone;
+
+}(jQuery, document, window));

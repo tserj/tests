@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=windows-1251">
+   <title></title>  
+   
+<style type="text/css"> 
+ 
+div.footnote_new, div.footnote_new_active {
+  position: absolute;
+  z-index: 10;
+  display: none;
+  width: 200px;
+  font-size: 11px;
+  padding: 3px;
+  color: #666;
+  background: #FBFBE5;
+  border: 1px solid #C3C3C3
+  text-align: left;
+}
+div.footnote_new_active { display: block }
+ 
+#x_image { position: absolute; right: 5px; top: 5px }
+ 
+</style> 
+
+</head>
+<body text="#000000" bgcolor="#ffffff" background="" >
+
+<script> 
+
+window.document.onmousemove = getXYPosition;
+
+var CURSOR_X = 0;
+var CURSOR_Y = 0;
+
+function getXYPosition(e) {
+    x = y = 0;
+    if (window && window.event) { 
+        var cursor = window.event;
+        window.event.cancelBubble = true;
+    } else {
+        var cursor = e;
+    }
+
+    if (cursor.pageX || cursor.pageY) {
+        x=cursor.pageX;
+        y=cursor.pageY;
+    } else if (cursor.clientX || cursor.clientY) {
+        x=cursor.clientX + document.body.scrollLeft;
+        y=cursor.clientY + document.body.scrollTop;
+    } else if (cursor.screenX || cursor.screenY) {
+        x=cursor.screenX;
+        y=cursor.screenY;
+    }
+    
+    debug("X:"+x+"<br/>Y:"+y);
+    CURSOR_X = x;
+    CURSOR_Y = y;
+} 
+
+function showFootnote(txt, width, height, newDivName, insertDiv) {
+    layer = document.getElementById(newDivName);
+    if (layer) return;
+
+    f = document.createElement("div");
+    f.setAttribute("id", newDivName);
+    f.setAttribute("style", "display: block; top: 0px; left: 0px; width:200px; height:auto;");
+    f.setAttribute("class", "footnote_new");
+    document.body.appendChild(f);
+    
+    f.opacityFilter = 0;
+    fn = "deleteLayer('"+newDivName+"')"; 
+    f.innerHTML = '<img src="x.gif" height="13" width="13" border="0" id="x_image" style="cursor:pointer; float:right;" onclick="'+fn+'"; /><div style="padding: 10px">' + txt + '</div>';
+    f.className = 'footnote_new_active';
+
+    f.style.display = 'block';
+    f.style.textAlign = 'left';
+    
+    o = document.getElementById(insertDiv);
+
+    var o_coords = absPosition(o);
+    var f_coords = absPosition(f);
+    
+    var calculatedTop = (f.offsetTop + (o_coords.top - f_coords.top));
+    var calculatedLeft = (f.offsetLeft + (o_coords.left - f_coords.left) + 20);
+
+    if (calculatedTop + f.offsetHeight > document.body.offsetHeight) calculatedTop = document.body.offsetHeight - f.offsetHeight;
+    if (calculatedLeft + 200 > document.body.offsetWidth) calculatedLeft = document.body.offsetWidth - 220;
+
+    f.style.top = calculatedTop + 'px';
+    f.style.left = calculatedLeft + 'px'; 
+
+    closeTimer(500, newDivName); 
+}
+
+function deleteLayer(name) { 
+    my_div = document.getElementById(name); 
+    if (my_div) {
+        my_div.parentNode.removeChild(my_div);
+    }
+}
+
+function absPosition(obj) { 
+      var left = tops = 0; 
+      right = obj.offsetWidth;
+      bottom = obj.offsetHeight;
+      while(obj) { 
+            left += obj.offsetLeft; 
+            tops += obj.offsetTop;
+            obj = obj.offsetParent; 
+      } 
+      return { left:left, right:right + left, top:tops, bottom:bottom + tops }; 
+} 
+
+function isInDiv(id) {
+    if (CURSOR_X == 0 && CURSOR_Y == 0) return false;
+    layer = absPosition(document.getElementById(id));
+    return (CURSOR_X >= layer.left && CURSOR_X <= layer.right &&
+            CURSOR_Y >= layer.top && CURSOR_Y <= layer.bottom)
+}
+
+function closeTimer(time, id) { 
+    into = isInDiv(id);
+    //alert(into);
+    if (!into) { 
+        fn = "deleteLayer('"+id+"')";
+        var t = setTimeout(fn, time);
+    } else {
+        fn = "closeTimer("+time+",'"+id+"')";
+        var t = setTimeout(fn, 100);
+    }
+}
+
+function createTable(row, col, txt) {
+    table = "<table border=\"1\">"
+    for (i=0; i<eval(row); i++) {
+        table += "<tr>";
+        for (j=0; j<eval(col); j++) {
+            table += "<td>";    
+            table += txt;
+            table += "</td>";
+        }
+        table += "</tr>";
+    }
+    table += "</table>"
+    return table;
+}
+
+function debug(txt) {
+    layer = document.getElementById('debug');
+    layer.innerHTML = txt; 
+}         
+
+</script>
+ <br/>
+ <br/>
+ <br/>
+ <div style="border: 1px #F00 dashed; display: inline-block;" id="test" onMouseOver="showFootnote(createTable(2,2,'some text'), '100px','150px', 'test2', 'test');"> 
+    some text
+ </div>
+ 
+ <br/>
+ <br/>
+ <br/> 
+ <br/>
+ <br/>
+ <br/>
+ <div id="debug">
+ </div> 
+
+</body>
+</html>

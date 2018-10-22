@@ -1,0 +1,31 @@
+.footnote {
+    position: absolute;
+    z-index: 13000;  
+    margin : 0px;
+    padding : 0px;
+    display: block;
+    font-size: 11px;
+    padding: 3px;
+    color: #fff;
+    text-align: left;    
+}
+
+.footnote_top {
+    height: 3px;    
+    background: url(../images/bubbleTop.png); 
+    background-repeat: no-repeat;
+}
+
+.footnote_middle {
+    padding: 10px;
+    background: url(../images/bubble.png);
+    background-repeat: repeat;
+}
+ 
+.footnote_bottom { 
+    height: 3px;
+    background: url(../images/bubbleBottom.png);
+    background-repeat: no-repeat;
+}
+ 
+#x_image { position: absolute; right: 5px; top: 5px }
